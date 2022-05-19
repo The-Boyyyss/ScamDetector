@@ -1,1 +1,1 @@
-# IsThisAScam
+# Scam Detector
