@@ -11,7 +11,7 @@ struct homeScreen:View{
     var body: some View{
         ZStack{
             Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
-                    .edgesIgnoringSafeArea(.all)
+                .edgesIgnoringSafeArea(.all)
             
             VStack{
                 Image("scam-Detector-logo2")
@@ -32,9 +32,10 @@ struct homeScreen:View{
                         .overlay(
                             RoundedRectangle(cornerRadius: 65)
                                 .stroke(Color.white, lineWidth: 5)
-                            )
+                        )
 
                 }.padding()
+                
                 
                 Button{}
                 label:{
@@ -62,7 +63,6 @@ struct homeScreen:View{
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.system(size: 30))
-
                 }
                 
                 Button{}
@@ -77,12 +77,8 @@ struct homeScreen:View{
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.system(size: 30))
-
                 }
-                
-                
             }
-        
         }
     }
 }
