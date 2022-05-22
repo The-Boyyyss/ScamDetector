@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CC80EEBD283998A90064B52B /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEBC283998A90064B52B /* Results.swift */; };
+		CC80EEC428399E320064B52B /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC328399E320064B52B /* Answer.swift */; };
+		CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */; };
+		CC80EECA2839AE310064B52B /* QTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC92839AE310064B52B /* QTNode.swift */; };
+		CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EECB2839BECD0064B52B /* QTErrors.swift */; };
 		FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */; };
 		FBB15534283347FF003A67D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15533283347FF003A67D2 /* ContentView.swift */; };
 		FBB1553628334800003A67D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB1553528334800003A67D2 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		CC80EEBC283998A90064B52B /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		CC80EEC328399E320064B52B /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesitonTree.swift; sourceTree = "<group>"; };
+		CC80EEC92839AE310064B52B /* QTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNode.swift; sourceTree = "<group>"; };
+		CC80EECB2839BECD0064B52B /* QTErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTErrors.swift; sourceTree = "<group>"; };
 		FBB1552E283347FF003A67D2 /* Scam-Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scam-Detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scam_DetectorApp.swift; sourceTree = "<group>"; };
 		FBB15533283347FF003A67D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,7 +49,8 @@
 		CC80EEBE283998B80064B52B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CC80EEBC283998A90064B52B /* Results.swift */,
+				CC80EEC52839ADBF0064B52B /* QuestionTree */,
+				CC80EEC128399E0A0064B52B /* Results */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -51,6 +60,41 @@
 			children = (
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CC80EEC128399E0A0064B52B /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				CC80EEC228399E1B0064B52B /* Answer */,
+				CC80EEBC283998A90064B52B /* Results.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		CC80EEC228399E1B0064B52B /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				CC80EEC328399E320064B52B /* Answer.swift */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		CC80EEC52839ADBF0064B52B /* QuestionTree */ = {
+			isa = PBXGroup;
+			children = (
+				CC80EEC82839AE240064B52B /* QTNode */,
+				CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */,
+				CC80EECB2839BECD0064B52B /* QTErrors.swift */,
+			);
+			path = QuestionTree;
+			sourceTree = "<group>";
+		};
+		CC80EEC82839AE240064B52B /* QTNode */ = {
+			isa = PBXGroup;
+			children = (
+				CC80EEC92839AE310064B52B /* QTNode.swift */,
+			);
+			path = QTNode;
 			sourceTree = "<group>";
 		};
 		FBB15525283347FF003A67D2 = {
@@ -171,9 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
+				CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */,
+				CC80EECA2839AE310064B52B /* QTNode.swift in Sources */,
 				FBB155402833481F003A67D2 /* Splash.swift in Sources */,
 				FBB1554528335160003A67D2 /* Home.swift in Sources */,
+				CC80EEC428399E320064B52B /* Answer.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
+				CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */,
 				CC80EEBD283998A90064B52B /* Results.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

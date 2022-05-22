@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class Results {
+    var answers : [Answer] = []
+    
+    
+}
