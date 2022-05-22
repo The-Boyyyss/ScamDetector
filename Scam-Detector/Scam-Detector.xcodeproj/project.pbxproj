@@ -12,6 +12,7 @@
 		CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */; };
 		CC80EECA2839AE310064B52B /* QTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC92839AE310064B52B /* QTNode.swift */; };
 		CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EECB2839BECD0064B52B /* QTErrors.swift */; };
+		CC80EECE2839C6FF0064B52B /* TestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EECD2839C6FF0064B52B /* TestCode.swift */; };
 		FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */; };
 		FBB15534283347FF003A67D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15533283347FF003A67D2 /* ContentView.swift */; };
 		FBB1553628334800003A67D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB1553528334800003A67D2 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesitonTree.swift; sourceTree = "<group>"; };
 		CC80EEC92839AE310064B52B /* QTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNode.swift; sourceTree = "<group>"; };
 		CC80EECB2839BECD0064B52B /* QTErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTErrors.swift; sourceTree = "<group>"; };
+		CC80EECD2839C6FF0064B52B /* TestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCode.swift; sourceTree = "<group>"; };
 		FBB1552E283347FF003A67D2 /* Scam-Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scam-Detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scam_DetectorApp.swift; sourceTree = "<group>"; };
 		FBB15533283347FF003A67D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				FBB15533283347FF003A67D2 /* ContentView.swift */,
 				FBB1553528334800003A67D2 /* Assets.xcassets */,
 				FBB1553728334800003A67D2 /* Preview Content */,
+				CC80EECD2839C6FF0064B52B /* TestCode.swift */,
 			);
 			path = "Scam-Detector";
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC80EECE2839C6FF0064B52B /* TestCode.swift in Sources */,
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
 				CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */,
 				CC80EECA2839AE310064B52B /* QTNode.swift in Sources */,
