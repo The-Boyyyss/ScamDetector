@@ -1,25 +1,25 @@
 //
-//  ScamDetect.swift
+//  Questions.swift
 //  Scam-Detector
 //
-//  Created by phillip chadwick on 2022-05-21.
+//  Created by phillip chadwick on 2022-05-22.
 //
 
 import SwiftUI
 import Foundation
 
-struct scamDetect:View {
+struct scamDetect_Questions:View {
     
     var body: some View {
         
         ZStack {
-            viewTemplates.buildDoubleStripeView()
+            scamDetectViewTemplates.buildDoubleStripeView()
             
             VStack {
                 
                 ZStack (alignment: .leading) {
                     
-                    Rectangle() 
+                    Rectangle()
                         .fill(.white)
                     
                     Image("scam-Detector-logo1")
@@ -31,7 +31,7 @@ struct scamDetect:View {
                     Rectangle()
                         .fill(.yellow)
                         .opacity(0.5)
-                        .frame(width: (UIScreen.main.bounds.width * 0.85) * 0.5, height: 75, alignment: .center)
+                        .frame(width: (UIScreen.main.bounds.width * 0.85) * 0.2, height: 75, alignment: .center)
                 }
                 .frame(width: UIScreen.main.bounds.width * 0.85, height: 75, alignment: .center)
                 .cornerRadius(10)
@@ -48,21 +48,21 @@ struct scamDetect:View {
                 VStack {
                     
                     Button("Pop-Up") {}
-                        .frame(width: 270, height: 80, alignment: .center)
+                        .frame(width: 270, height: uSizes.sWidth * 0.27, alignment: .center)
                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         .font(.system(size: 30))
                     
                     Button("Called Them") {}
-                        .frame(width: 270, height: 80, alignment: .center)
+                        .frame(width: 270, height: uSizes.sWidth * 0.27, alignment: .center)
                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         .font(.system(size: 30))
                     
                     Button("Called You") {}
-                        .frame(width: 270, height: 80, alignment: .center)
+                        .frame(width: 270, height: uSizes.sWidth * 0.27, alignment: .center)
                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                         .foregroundColor(.white)
                         .cornerRadius(10)

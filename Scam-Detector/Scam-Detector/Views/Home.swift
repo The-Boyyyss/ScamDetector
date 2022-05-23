@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct homeScreen: View{
-    @State var detectScam: Bool = true
+    @State var detectScam: Bool = false
     
     var body: some View{
         ZStack{
@@ -27,7 +27,7 @@ struct homeScreen: View{
                             .padding(.bottom, 100)
                         
                         
-                        Button{}
+                        Button{detectScam = true}
                         label:{
                             Text("Detect Scam")
                                 .frame(width: 350, height: 150, alignment: .center)

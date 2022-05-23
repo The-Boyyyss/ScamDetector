@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct viewTemplates {
+struct scamDetectViewTemplates {
     
     static func buildDoubleStripeView() -> some View {
         return ZStack {
@@ -16,16 +16,17 @@ struct viewTemplates {
             
             Rectangle()
                 .fill(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
-                .frame(width: 300, height: 85, alignment: .bottomLeading)
+                .frame(width: uSizes.sWidth, height: uSizes.sWidth * 0.26, alignment: .bottomLeading)
                 .cornerRadius(10)
                 .transformEffect(CGAffineTransform(rotationAngle: -35  * (.pi / 180)))
-                .position(x: 250, y: 160)
+                .position(x: uSizes.sWidth * 0.8, y: uSizes.sHeight * 0.28)
             
             Rectangle()
                 .fill(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
-                .frame(width: 600, height: 85, alignment: .bottom)
+                .frame(width: uSizes.sWidth * 2, height: uSizes.sWidth * 0.26, alignment: .bottom)
                 .transformEffect(CGAffineTransform(rotationAngle: -35 * (.pi / 180)))
-                .position(x: 200, y: 530)
+                .position(x: uSizes.sWidth * 0.8, y: uSizes.sHeight * 0.93)
         }
     }
+    
 }
