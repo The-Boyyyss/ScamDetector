@@ -17,67 +17,71 @@ struct homeScreen:View{
                 Image("scam-Detector-logo2")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 400, height: 250)
-                    .padding(.bottom, 100)
+                    .frame(width: UIScreen.main.bounds.width * 0.92, height: UIScreen.main.bounds.height*0.2)
+                    .padding(.bottom, UIScreen.main.bounds.height*0.09)
+                    .padding(.top, -UIScreen.main.bounds.height*0.09)
                 
                 
-                Button{}
-                label:{
+                
+                
+                NavigationLink(destination: moreInfoScreen(), label:{
                     Text("Detect Scam")
-                        .frame(width: 350, height: 150, alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.18, alignment: .center)
                         .background(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
                         .foregroundColor(Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255))
                         .cornerRadius(65)
-                        .font(.system(size: 50, weight: .bold))
+                        .font(.system(size: UIScreen.main.bounds.width * 0.13, weight: .bold))
                         .overlay(
                             RoundedRectangle(cornerRadius: 65)
                                 .stroke(Color.white, lineWidth: 5)
                         )
 
-                }.padding()
+                }).padding()
                 
                 
-                Button{}
-                label:{
+                
+                NavigationLink(destination: moreInfoScreen(), label:{
                     HStack{
                         Image(systemName: "bookmark")
-                            .padding(.trailing, 10)
+                            .padding(.trailing, UIScreen.main.bounds.width*0.05)
                         Text("Bookmarks")
                     }
-                        .frame(width: 270, height: 80, alignment: .center)
+                        .frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.height*0.1, alignment: .center)
                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                        .font(.system(size: 30))
-                }
+                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                }).padding()
+                       
                 
-                Button{}
-                label:{
+                
+                NavigationLink(destination: moreInfoScreen(), label:{
                     HStack{
                         Image(systemName: "info.circle")
-                            .padding(.trailing, 10)
+                            .padding(.trailing, UIScreen.main.bounds.width*0.05)
                         Text("Information")
                     }
-                    .frame(width: 270, height: 80, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.height*0.1, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    .font(.system(size: 30))
-                }
+                    .font(.system(size: UIScreen.main.bounds.width*0.08))
+                }).padding()
                 
-                Button{}
-                label:{
+                
+                
+                NavigationLink(destination: moreInfoScreen(), label:{
                     HStack{
                         Image(systemName: "phone.fill")
-                            .padding(.trailing, 10)
+                            .padding(.trailing, UIScreen.main.bounds.width*0.05)
                         Text("Emergency Contact")
                     }
-                    .frame(width: 270, height: 80, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.height*0.1, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    .font(.system(size: 30))
-                }
+                    .font(.system(size: UIScreen.main.bounds.width*0.08))
+                }).padding()
             }
         }
     }
@@ -88,4 +92,6 @@ struct homeScreen:View{
 // For Buttons: https://www.hackingwithswift.com/books/ios-swiftui/buttons-and-images
 // For rgb colors: https://stackoverflow.com/questions/56452386/color-rgb-initializer-not-working-as-background-in-swiftui
 //https://www.appcoda.com/swiftui-buttons/
+
+//Navigation link: https://developer.apple.com/documentation/swiftui/navigationlink
 

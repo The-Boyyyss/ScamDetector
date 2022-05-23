@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct splashScreen: View {
 
     @State var isActive:Bool = false
@@ -27,7 +25,7 @@ struct splashScreen: View {
                             .scaledToFit()
                             .frame(width: 250, height: 200)
                             
-                    }
+                    }.padding(.bottom, 100)
                 }
             }
             .onAppear {

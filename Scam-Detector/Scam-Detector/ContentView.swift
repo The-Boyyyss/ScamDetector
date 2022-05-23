@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        splashScreen()
+        NavigationView{
+            splashScreen()
+            //homeScreen()
+            //moreInfoScreen()
+            //moreInfoSelected()
+            //moreInfoSelectedDetails()
+        }
     }
 }
 
