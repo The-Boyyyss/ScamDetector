@@ -12,7 +12,7 @@ struct EmergencyContact_Add: View {
     @Binding var name: String;
     @Binding var number: String;
     
-    @State var inputNumber = "";
+    @State var inputNumber: String = "";
     @State var inputName: String = "";
     
     var body: some View {
