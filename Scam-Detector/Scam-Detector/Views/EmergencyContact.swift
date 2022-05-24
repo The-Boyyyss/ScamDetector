@@ -11,6 +11,8 @@ struct EmergencyContact: View {
     @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = "";
     @AppStorage(StorageKeys.emergencyNumber.rawValue) private var emergencyNumber = "";
     
+    @State var hasContact: Bool = false;
+    
     var body: some View {
         NavigationView{
             ZStack(alignment: .top){
@@ -19,15 +21,28 @@ struct EmergencyContact: View {
                 VStack(alignment: .center){
                     HStack(alignment: .top){
                         Image(systemName: "phone.fill")
+                            .padding(.trailing, UIScreen.main.bounds.width*0.05)
+                            .padding(.top, UIScreen.main.bounds.height*0.02)
                         Text("Emergency Contact")
                     }
-                    Spacer().frame(height: 300)
+                    .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                    .font(.system(size: UIScreen.main.bounds.width*0.08, weight: .bold))
+                    .padding(.bottom, UIScreen.main.bounds.height*0.04)
+                    .padding(.top, -UIScreen.main.bounds.height*0.05)
+                    Spacer().frame(height: 100)
                     
                     if emergencyName.isEmpty || emergencyNumber.isEmpty {
                         
-                        NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber)){
-                            Text("Add Emergency Contact")
-                        }
+                        NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $hasContact), isActive: $hasContact){
+                            Button("Add Emergency Contact"){
+                                hasContact = true;
+                            }
+                            .frame(width: 270, height: 80, alignment: .center)
+                            .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .font(.system(size: 30))
+                        }                        
                     }
                     else {
                         VStack(){
@@ -37,24 +52,31 @@ struct EmergencyContact: View {
                                 guard let call = URL(string: formatted) else { return };
                                 UIApplication.shared.open(call);
                             }
-                            Spacer().frame(height: 10);
+                            .frame(width: 270, height: 80, alignment: .center)
+                            .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .font(.system(size: 30))
+                            Spacer().frame(height: 50);
                             
-                            NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber)){
-                                Text("Update Emergency Contact")
+                            NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $hasContact), isActive: $hasContact){
+                                Button("Update Emergency Contact"){
+                                    hasContact = true;
+                                }
+                                .frame(width: 270, height: 80, alignment: .center)
+                                .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                                .font(.system(size: 30))
                             }
                         }
                     }
                 }
+                .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
             }
         }
     }
 }
-
-//struct EmergencyContact_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EmergencyContact()
-//    }
-//}
 
 // REFERENCE
 // Make a phone call https://localcoder.org/how-to-create-tappable-url-phone-number-in-swiftui
