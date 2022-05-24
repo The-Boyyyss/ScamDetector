@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Adding our designs' custom colors by extending the Color struct for resuablility
 extension Color {
     
     static let customLightGreen = Color("customColor1")

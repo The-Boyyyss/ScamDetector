@@ -5,35 +5,40 @@
 //  Created by Danny Deng on 2022-05-21.
 //
 //  Ref:
-//  Progress Bar: https://www.simpleswiftguide.com/how-to-build-linear-progress-bar-in-swiftui/
+//  Color Bar: https://www.simpleswiftguide.com/how-to-build-linear-progress-bar-in-swiftui/
 
 import Foundation
 import SwiftUI
 
 struct ResultPage: View {
-    @State var colorBarValue: CGFloat = 0.0
+    
     @State var currentColor: Color = .green
+    @State var showPopUp: Bool = false
     
     @ViewBuilder
     var body: some View {
         VStack {
-            ColorProgressBar(value: $colorBarValue, color: $currentColor).frame(height: 60)
+            ColorBar(color: $currentColor)
+                .frame(height: UIScreen.main.bounds.height * 0.1)
                 .padding()
             Spacer()
             
             VStack() {
                 Text("Message Status of the Scam").padding()
                 
-                if colorBarValue >= 1 && currentColor == .red {
-                    Button("Button1") {}.padding()
-                    Button("Button2") {}.padding()
-                    Button("Button3") {}.padding()
-                } else if colorBarValue >= 1 && currentColor == .green {
-                    Button("Button1") {}.padding()
+                if currentColor == .red {
+                    Button(action: {
+                        showPopUp.toggle()
+                    }, label: {
+                        Text("What to do?")
+                    }).sheet(isPresented: $showPopUp, content: { ResultPopUp() })
+                           
+                    Button("Call For Help") {}.padding()
+                    Button("Home") {}.padding()
                 }
                 
-                Button("Increase Progress") {
-                    self.colorBarValue += 0.2
+                else if currentColor == .green {
+                    Button("Home") {}.padding()
                 }
 
                 Button("Change to Red") {
@@ -44,10 +49,9 @@ struct ResultPage: View {
                     self.currentColor = .green
                 }
             }
-            .frame(width: 280, height: 420, alignment: .top)
+            .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
             .background(Color.customDarkGreen)
             .cornerRadius(20.0)
-            .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(.black, lineWidth: 2.0))
             Spacer()
         }.padding().background(Color.customLightGreen)
     }
