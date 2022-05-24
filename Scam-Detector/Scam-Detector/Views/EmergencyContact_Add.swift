@@ -15,6 +15,7 @@ struct EmergencyContact_Add: View {
     
     @State var inputNumber: String = "";
     @State var inputName: String = "";
+    @State var showAlert: Bool = false;
     
     var body: some View {
         ZStack(alignment: .top){
@@ -66,6 +67,7 @@ struct EmergencyContact_Add: View {
                 Button("Submit"){
                     // Uncomment for empty textfield check
                     // if inputName.isEmpty || inputNumber.isEmpty {
+                        // showAlert = true;
                         // return;
                     // }
                     name = inputName;
@@ -80,6 +82,11 @@ struct EmergencyContact_Add: View {
             }
             .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
         }
+        .alert("Error", isPresented: $showAlert, actions: {
+            Button("Try Again", role: .cancel, action: {})
+        }, message: {
+            Text("Please Fill All Fields")
+        })
     }
 }
 
