@@ -10,6 +10,10 @@
 		C9282790283C471D00B10F5A /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C928278F283C471D00B10F5A /* EmergencyContact.swift */; };
 		C9282792283C552100B10F5A /* EmergencyContact_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9282791283C552100B10F5A /* EmergencyContact_Add.swift */; };
 		C9282797283C6DEA00B10F5A /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9282796283C6DEA00B10F5A /* StorageEnums.swift */; };
+		596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B8503283AD74E0085AC27 /* ColorThemes.swift */; };
+		59DEB4DD2839C64200702925 /* ResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DEB4DC2839C64200702925 /* ResultPage.swift */; };
+		59DEB4E42839CC2B00702925 /* ColorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DEB4E32839CC2B00702925 /* ColorBar.swift */; };
+		59F555B3283B06B60083832C /* ResultPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F555B2283B06B60083832C /* ResultPopUp.swift */; };
 		CC80EEBD283998A90064B52B /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEBC283998A90064B52B /* Results.swift */; };
 		FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */; };
 		FBB15534283347FF003A67D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15533283347FF003A67D2 /* ContentView.swift */; };
@@ -23,6 +27,10 @@
 		C928278F283C471D00B10F5A /* EmergencyContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		C9282791283C552100B10F5A /* EmergencyContact_Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyContact_Add.swift; sourceTree = "<group>"; };
 		C9282796283C6DEA00B10F5A /* StorageEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
+		596B8503283AD74E0085AC27 /* ColorThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemes.swift; sourceTree = "<group>"; };
+		59DEB4DC2839C64200702925 /* ResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPage.swift; sourceTree = "<group>"; };
+		59DEB4E32839CC2B00702925 /* ColorBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBar.swift; sourceTree = "<group>"; };
+		59F555B2283B06B60083832C /* ResultPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUp.swift; sourceTree = "<group>"; };
 		CC80EEBC283998A90064B52B /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		FBB1552E283347FF003A67D2 /* Scam-Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scam-Detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scam_DetectorApp.swift; sourceTree = "<group>"; };
@@ -50,6 +58,20 @@
 				C9282796283C6DEA00B10F5A /* StorageEnums.swift */,
 			);
 			path = Utils;
+		596B8505283AE7010085AC27 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				596B8503283AD74E0085AC27 /* ColorThemes.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		59DEB4E52839CC6C00702925 /* ColorBar */ = {
+			isa = PBXGroup;
+			children = (
+				59DEB4E32839CC2B00702925 /* ColorBar.swift */,
+			);
+			path = ColorBar;
 			sourceTree = "<group>";
 		};
 		CC80EEBE283998B80064B52B /* Models */ = {
@@ -87,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				C9282795283C6DC700B10F5A /* Utils */,
+				596B8505283AE7010085AC27 /* Utilities */,
 				CC80EEC028399A2F0064B52B /* Controllers */,
 				CC80EEBE283998B80064B52B /* Models */,
 				FBB15541283348F1003A67D2 /* Views */,
@@ -109,6 +132,9 @@
 		FBB15541283348F1003A67D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				59DEB4E52839CC6C00702925 /* ColorBar */,
+				59DEB4DC2839C64200702925 /* ResultPage.swift */,
+				59F555B2283B06B60083832C /* ResultPopUp.swift */,
 				FBB1553F2833481F003A67D2 /* Splash.swift */,
 				FBB1554428335160003A67D2 /* Home.swift */,
 				C928278F283C471D00B10F5A /* EmergencyContact.swift */,
@@ -188,6 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9282792283C552100B10F5A /* EmergencyContact_Add.swift in Sources */,
+				59DEB4DD2839C64200702925 /* ResultPage.swift in Sources */,
+				59F555B3283B06B60083832C /* ResultPopUp.swift in Sources */,
+				596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */,
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
 				C9282797283C6DEA00B10F5A /* StorageEnums.swift in Sources */,
 				FBB155402833481F003A67D2 /* Splash.swift in Sources */,
@@ -195,6 +224,7 @@
 				FBB1554528335160003A67D2 /* Home.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
 				CC80EEBD283998A90064B52B /* Results.swift in Sources */,
+				59DEB4E42839CC2B00702925 /* ColorBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
