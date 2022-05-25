@@ -126,9 +126,9 @@
 		FBB15541283348F1003A67D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				59DEB4E52839CC6C00702925 /* ColorBar */,
 				C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */,
 				C93E289A283DEA5F001A101C /* EmergencyContact.swift */,
-				59DEB4E52839CC6C00702925 /* ColorBar */,
 				59DEB4DC2839C64200702925 /* ResultPage.swift */,
 				59F555B2283B06B60083832C /* ResultPopUp.swift */,
 				FBB1553F2833481F003A67D2 /* Splash.swift */,
