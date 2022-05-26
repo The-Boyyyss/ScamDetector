@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView{
-            splashScreen()
-            //homeScreen()
+            //splashScreen()
+            homeScreen()
             //moreInfoScreen()
             //moreInfoSelected()
             //moreInfoSelectedDetails()

@@ -13,6 +13,14 @@ struct moreInfoSelected:View{
         ZStack{
             Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
                     .edgesIgnoringSafeArea(.all)
+            
+            Rectangle()
+                .fill(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
+                .frame(width: 500, height: UIScreen.main.bounds.height*1.2, alignment: .bottomLeading)
+                .cornerRadius(10)
+                .transformEffect(CGAffineTransform(rotationAngle: -15  * (.pi / 180)))
+                .position(x: 75, y: 350)
+            
             VStack{
                 Text("Phone Scam")
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))

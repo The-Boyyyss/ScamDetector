@@ -13,13 +13,21 @@ struct homeScreen:View{
             Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
                 .edgesIgnoringSafeArea(.all)
             
+            Rectangle()
+                .fill(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
+                .frame(width: 1000, height: 225, alignment: .bottomLeading)
+                .cornerRadius(10)
+                .transformEffect(CGAffineTransform(rotationAngle: -35  * (.pi / 180)))
+                .position(x: 250, y: 850)
+            
             VStack{
                 Image("scam-Detector-logo2")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: UIScreen.main.bounds.width * 0.92, height: UIScreen.main.bounds.height*0.2)
-                    .padding(.bottom, UIScreen.main.bounds.height*0.09)
+                    .frame(width: UIScreen.main.bounds.width * 0.92, height: UIScreen.main.bounds.height*0.25)
+                    .padding(.bottom, UIScreen.main.bounds.height*0.085)
                     .padding(.top, -UIScreen.main.bounds.height*0.09)
+                    .position(x: 222, y: 125)
                 
                 
                 
@@ -27,16 +35,16 @@ struct homeScreen:View{
                 NavigationLink(destination: moreInfoScreen(), label:{
                     Text("Detect Scam")
                         .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.18, alignment: .center)
-                        .background(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
+                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                         .foregroundColor(Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255))
-                        .cornerRadius(65)
+                        .cornerRadius(35)
                         .font(.system(size: UIScreen.main.bounds.width * 0.13, weight: .bold))
                         .overlay(
-                            RoundedRectangle(cornerRadius: 65)
-                                .stroke(Color.white, lineWidth: 5)
+                            RoundedRectangle(cornerRadius: 35)
+                                .stroke(Color.white, lineWidth: 3.5)
                         )
 
-                }).padding()
+                }).padding (UIScreen.main.bounds.width*0.01)
                 
                 
                 
@@ -51,7 +59,7 @@ struct homeScreen:View{
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         .font(.system(size: UIScreen.main.bounds.width*0.08))
-                }).padding()
+                }).padding (UIScreen.main.bounds.width*0.01)
                        
                 
                 
@@ -66,22 +74,23 @@ struct homeScreen:View{
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.system(size: UIScreen.main.bounds.width*0.08))
-                }).padding()
+                }).padding (UIScreen.main.bounds.width*0.01)
                 
                 
                 
                 NavigationLink(destination: moreInfoScreen(), label:{
                     HStack{
                         Image(systemName: "phone.fill")
-                            .padding(.trailing, UIScreen.main.bounds.width*0.05)
-                        Text("Emergency Contact")
+                            .padding(.trailing, UIScreen.main.bounds.width*0.085)
+                        Text("Contact")
                     }
                     .frame(width: UIScreen.main.bounds.width*0.7, height: UIScreen.main.bounds.height*0.1, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.system(size: UIScreen.main.bounds.width*0.08))
-                }).padding()
+                }).padding (UIScreen.main.bounds.width*0.01)
+                
             }
         }
     }

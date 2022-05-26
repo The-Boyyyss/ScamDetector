@@ -23,7 +23,7 @@ struct splashScreen: View {
                         Image("scam-Detector-logo1")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 250, height: 200)
+                            .frame(width: UIScreen.main.bounds.width*0.85, height: UIScreen.main.bounds.height*0.3)
                             
                     }.padding(.bottom, 100)
                 }

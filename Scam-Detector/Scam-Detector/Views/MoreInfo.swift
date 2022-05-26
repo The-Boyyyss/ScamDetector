@@ -16,18 +16,23 @@ struct moreInfoScreen:View{
         ZStack{
             Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
                     .edgesIgnoringSafeArea(.all)
+            
+            Rectangle()
+                .fill(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
+                .frame(width: 1000, height: 250, alignment: .bottomLeading)
+                .cornerRadius(10)
+                .transformEffect(CGAffineTransform(rotationAngle: -35  * (.pi / 180)))
+                .position(x: 250, y: 350)
 
             VStack{
-
-                HStack{
-                    Image(systemName: "info.circle.fill")
-                        .padding(.trailing, UIScreen.main.bounds.width*0.05)
-                    Text("More Information")
-                    }
-                    .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                    .font(.system(size: UIScreen.main.bounds.width*0.08, weight: .bold))
-                    .padding(.bottom, UIScreen.main.bounds.height*0.04)
-                    .padding(.top, -UIScreen.main.bounds.height*0.05)
+                VStack{
+                    Text("Scam")
+                    Text("Information")
+                }
+                .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                .font(.system(size: UIScreen.main.bounds.width*0.11, weight: .bold))
+                .padding(.bottom, UIScreen.main.bounds.height*0.03)
+                .padding(.top, -UIScreen.main.bounds.height*0.05)
 
 
 
