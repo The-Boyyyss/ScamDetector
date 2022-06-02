@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0FFE582848477300AC86CA /* QTNodeChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE572848477300AC86CA /* QTNodeChildren.swift */; };
+		CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */; };
 		CC80EEBD283998A90064B52B /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEBC283998A90064B52B /* Results.swift */; };
 		CC80EEC428399E320064B52B /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC328399E320064B52B /* Answer.swift */; };
 		CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */; };
 		CC80EECA2839AE310064B52B /* QTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC92839AE310064B52B /* QTNode.swift */; };
 		CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EECB2839BECD0064B52B /* QTErrors.swift */; };
 		CC80EECE2839C6FF0064B52B /* TestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EECD2839C6FF0064B52B /* TestCode.swift */; };
+		CC80EEE0284453D80064B52B /* QTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEDF284453D80064B52B /* QTData.swift */; };
 		FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */; };
 		FBB15534283347FF003A67D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15533283347FF003A67D2 /* ContentView.swift */; };
 		FBB1553628334800003A67D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB1553528334800003A67D2 /* Assets.xcassets */; };
@@ -22,12 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0FFE572848477300AC86CA /* QTNodeChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNodeChildren.swift; sourceTree = "<group>"; };
+		CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamDetectAnswer.swift; sourceTree = "<group>"; };
 		CC80EEBC283998A90064B52B /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		CC80EEC328399E320064B52B /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesitonTree.swift; sourceTree = "<group>"; };
 		CC80EEC92839AE310064B52B /* QTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNode.swift; sourceTree = "<group>"; };
 		CC80EECB2839BECD0064B52B /* QTErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTErrors.swift; sourceTree = "<group>"; };
 		CC80EECD2839C6FF0064B52B /* TestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCode.swift; sourceTree = "<group>"; };
+		CC80EEDF284453D80064B52B /* QTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTData.swift; sourceTree = "<group>"; };
 		FBB1552E283347FF003A67D2 /* Scam-Detector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scam-Detector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scam_DetectorApp.swift; sourceTree = "<group>"; };
 		FBB15533283347FF003A67D2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC0FFE562848475800AC86CA /* QTNodeChildren */ = {
+			isa = PBXGroup;
+			children = (
+				CC0FFE572848477300AC86CA /* QTNodeChildren.swift */,
+			);
+			path = QTNodeChildren;
+			sourceTree = "<group>";
+		};
+		CC0FFE59284848C400AC86CA /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				CC80EECB2839BECD0064B52B /* QTErrors.swift */,
+				CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		CC80EEBE283998B80064B52B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +107,10 @@
 		CC80EEC52839ADBF0064B52B /* QuestionTree */ = {
 			isa = PBXGroup;
 			children = (
+				CC0FFE59284848C400AC86CA /* Enums */,
+				CC80EEDE284453AE0064B52B /* QTData */,
 				CC80EEC82839AE240064B52B /* QTNode */,
 				CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */,
-				CC80EECB2839BECD0064B52B /* QTErrors.swift */,
 			);
 			path = QuestionTree;
 			sourceTree = "<group>";
@@ -94,9 +118,18 @@
 		CC80EEC82839AE240064B52B /* QTNode */ = {
 			isa = PBXGroup;
 			children = (
+				CC0FFE562848475800AC86CA /* QTNodeChildren */,
 				CC80EEC92839AE310064B52B /* QTNode.swift */,
 			);
 			path = QTNode;
+			sourceTree = "<group>";
+		};
+		CC80EEDE284453AE0064B52B /* QTData */ = {
+			isa = PBXGroup;
+			children = (
+				CC80EEDF284453D80064B52B /* QTData.swift */,
+			);
+			path = QTData;
 			sourceTree = "<group>";
 		};
 		FBB15525283347FF003A67D2 = {
@@ -219,7 +252,9 @@
 			files = (
 				CC80EECE2839C6FF0064B52B /* TestCode.swift in Sources */,
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
+				CC80EEE0284453D80064B52B /* QTData.swift in Sources */,
 				CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */,
+				CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */,
 				CC80EECA2839AE310064B52B /* QTNode.swift in Sources */,
 				FBB155402833481F003A67D2 /* Splash.swift in Sources */,
 				FBB1554528335160003A67D2 /* Home.swift in Sources */,
@@ -227,6 +262,7 @@
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
 				CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */,
 				CC80EEBD283998A90064B52B /* Results.swift in Sources */,
+				CC0FFE582848477300AC86CA /* QTNodeChildren.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
