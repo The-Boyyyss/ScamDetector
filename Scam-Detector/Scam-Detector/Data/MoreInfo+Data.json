@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "scamType": "phone",
+        "sysImg": "phone.circle",
+        "moreInfo":{
+            "id":1,
+            "whatItIs":"Test Phone 1",
+            "whatToDo":"Test Phone 2",
+            "howToPrevent":"Test Phone 3"
+        }
+    },
+    
+    {
+        "id":2,
+        "scamType": "email",
+        "sysImg": "mail.fill",
+        "moreInfo":{
+            "id":2,
+            "whatItIs":"Test Email 1",
+            "whatToDo":"Test Email 2",
+            "howToPrevent":"Test Email 3"
+        }
+    },
+    
+    {
+        "id":3,
+        "scamType": "inPerson",
+        "sysImg": "person.circle.fill",
+        "moreInfo":{
+            "id":3,
+            "whatItIs":"Test Person 1",
+            "whatToDo":"Test Person 2",
+            "howToPrevent":"Test Person 3"
+        }
+    }
+]

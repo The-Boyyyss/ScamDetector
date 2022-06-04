@@ -12,17 +12,12 @@ struct moreInfoScreen:View{
 
     @State var info: String = ""
 
+    let data: [scamTypes]
+
     var body: some View{
         ZStack{
             Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
                     .edgesIgnoringSafeArea(.all)
-            
-            Rectangle()
-                .fill(Color(red: 130 / 255, green: 163 / 255, blue: 161 / 255))
-                .frame(width: 1000, height: 250, alignment: .bottomLeading)
-                .cornerRadius(10)
-                .transformEffect(CGAffineTransform(rotationAngle: -35  * (.pi / 180)))
-                .position(x: 250, y: 350)
 
             VStack{
                 VStack{
@@ -34,35 +29,31 @@ struct moreInfoScreen:View{
                 .padding(.bottom, UIScreen.main.bounds.height*0.03)
                 .padding(.top, -UIScreen.main.bounds.height*0.05)
 
-
-
                 CustomTextField(ourText: $info, placeholder: Text("Search"), systemImage: "magnifyingglass")
-
 
                 ScrollView {
                     VStack(spacing: 15) {
-                            ForEach(1..<6) { index in
-                                NavigationLink(destination: moreInfoSelected(), label: {
+                        ForEach(data, id: \.id) { data in
+                                //NavigationLink(destination: moreInfoSelected(), label: {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 25)
                                         .fill(.white)
                                         .shadow(radius: 10)
-                                        .frame(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.3)
+                                        .frame(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.2)
                                         .padding()
                                     VStack{
-                                        Text("Heading")
-                                            .padding()
-                                            .padding(.bottom, 20)
-                                            .padding(.top, 15)
-                                        Image(systemName: "doc.text.fill")
+                                        Text(data.scamType)
+                                            .padding(.top, 25)
+                                            .padding(.bottom, 10)
+                                        Image(systemName: data.sysImg)
                                             .font(.system(size: 50))
-                                            .padding(.top, 15)
+                                            .padding(.bottom, 25)
                                     }
                                         .font(.system(size: 30))
                                         .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                                        .padding(.bottom, 100)
+                                        .padding(.bottom, 25)
                                 }
-                            })
+                            //})
                         }
                     }
                 }
@@ -70,6 +61,7 @@ struct moreInfoScreen:View{
         }
     }
 }
+
 
 
 // Refrence:
