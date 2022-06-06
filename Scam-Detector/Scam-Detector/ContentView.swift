@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    @StateObject var settings = passID()
+    
     var body: some View {
         NavigationView{
-            splashScreen()
-            //homeScreen()
-            //moreInfoScreen(data: loadData.load(name: "MoreInfo+Data"))
-            //moreInfoSelected()
-            //moreInfoSelectedDetails()
-        }
+            //splashScreen()
+            homeScreen().environmentObject(settings)
+        }.environmentObject(settings)
     }
 }
 

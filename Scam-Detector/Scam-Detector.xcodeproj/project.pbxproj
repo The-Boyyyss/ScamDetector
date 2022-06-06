@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB5BC769284AF19F003C48E6 /* loadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC768284AF19F003C48E6 /* loadData.swift */; };
-		FB5BC76F284AF9BF003C48E6 /* scamTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC76E284AF9BF003C48E6 /* scamTypes.swift */; };
+		FB5BC779284B33D2003C48E6 /* scamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC778284B33D2003C48E6 /* scamInfo.swift */; };
 		FB677116283AA76E002880FD /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB677115283AA76E002880FD /* Shared.swift */; };
 		FB68D9AF28401B91004E1F2E /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68D9AB28401B91004E1F2E /* Splash.swift */; };
 		FB68D9B028401B91004E1F2E /* moreInfo+Selected+Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68D9AC28401B91004E1F2E /* moreInfo+Selected+Details.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		FB5BC768284AF19F003C48E6 /* loadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadData.swift; sourceTree = "<group>"; };
-		FB5BC76E284AF9BF003C48E6 /* scamTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scamTypes.swift; sourceTree = "<group>"; };
+		FB5BC778284B33D2003C48E6 /* scamInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scamInfo.swift; sourceTree = "<group>"; };
 		FB677115283AA76E002880FD /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		FB68D9AB28401B91004E1F2E /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		FB68D9AC28401B91004E1F2E /* moreInfo+Selected+Details.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "moreInfo+Selected+Details.swift"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		CC80EEBE283998B80064B52B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FB5BC76E284AF9BF003C48E6 /* scamTypes.swift */,
+				FB5BC778284B33D2003C48E6 /* scamInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,12 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB5BC76F284AF9BF003C48E6 /* scamTypes.swift in Sources */,
 				FB68D9B028401B91004E1F2E /* moreInfo+Selected+Details.swift in Sources */,
 				FB68D9B228401B91004E1F2E /* moreInfo+Selected.swift in Sources */,
 				FB68D9B128401B91004E1F2E /* MoreInfo.swift in Sources */,
 				FB677116283AA76E002880FD /* Shared.swift in Sources */,
 				FB68D9B428402875004E1F2E /* Home.swift in Sources */,
+				FB5BC779284B33D2003C48E6 /* scamInfo.swift in Sources */,
 				FB68D9AF28401B91004E1F2E /* Splash.swift in Sources */,
 				FB5BC769284AF19F003C48E6 /* loadData.swift in Sources */,
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,

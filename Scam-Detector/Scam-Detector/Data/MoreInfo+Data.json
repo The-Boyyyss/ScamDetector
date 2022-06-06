@@ -1,37 +1,37 @@
 [
     {
         "id":1,
-        "scamType": "phone",
+        "scamType": "Phone Scam",
         "sysImg": "phone.circle",
         "moreInfo":{
             "id":1,
-            "whatItIs":"Test Phone 1",
-            "whatToDo":"Test Phone 2",
-            "howToPrevent":"Test Phone 3"
+            "whatItIs":"What it is for Phone scam",
+            "whatToDo":"What to Do for Phone scam",
+            "howToPrevent":"How to prevent for Phone scam"
         }
     },
     
     {
         "id":2,
-        "scamType": "email",
+        "scamType": "Email Scam",
         "sysImg": "mail.fill",
         "moreInfo":{
             "id":2,
-            "whatItIs":"Test Email 1",
-            "whatToDo":"Test Email 2",
-            "howToPrevent":"Test Email 3"
+            "whatItIs":"What it is for Email scam",
+            "whatToDo":"What to Do for Email scam",
+            "howToPrevent":"How to prevent for Email scam"
         }
     },
     
     {
         "id":3,
-        "scamType": "inPerson",
+        "scamType": "In-Person Scam",
         "sysImg": "person.circle.fill",
         "moreInfo":{
             "id":3,
-            "whatItIs":"Test Person 1",
-            "whatToDo":"Test Person 2",
-            "howToPrevent":"Test Person 3"
+            "whatItIs":"What it is for In Person scam",
+            "whatToDo":"What to Do for In Person scam",
+            "howToPrevent":"How to prevent for In Person scam"
         }
     }
 ]

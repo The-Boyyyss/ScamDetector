@@ -12,7 +12,7 @@ struct moreInfoScreen:View{
 
     @State var info: String = ""
 
-    let data: [scamTypes]
+    let data: [scamInfo]
 
     var body: some View{
         ZStack{
@@ -34,7 +34,7 @@ struct moreInfoScreen:View{
                 ScrollView {
                     VStack(spacing: 15) {
                         ForEach(data, id: \.id) { data in
-                                //NavigationLink(destination: moreInfoSelected(), label: {
+                                NavigationLink(destination: moreInfoSelected(data: data), label: {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 25)
                                         .fill(.white)
@@ -53,7 +53,7 @@ struct moreInfoScreen:View{
                                         .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .padding(.bottom, 25)
                                 }
-                            //})
+                            })
                         }
                     }
                 }
@@ -64,6 +64,36 @@ struct moreInfoScreen:View{
 
 
 
+struct ExtractedView: View{
+    let data: scamInfo
+    var body: some View{
+        NavigationLink(destination: moreInfoSelected(data: data), label: {
+            ZStack{
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(.white)
+                    .shadow(radius: 10)
+                    .frame(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.2)
+                    .padding()
+                VStack{
+                    Text(data.scamType)
+                        .padding(.top, 25)
+                        .padding(.bottom, 10)
+                    Image(systemName: data.sysImg)
+                        .font(.system(size: 50))
+                        .padding(.bottom, 25)
+                }
+                    .font(.system(size: 30))
+                    .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                    .padding(.bottom, 25)
+            }
+        })
+    }
+}
+
+
+
+
 // Refrence:
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-horizontal-and-vertical-scrolling-using-scrollview
 // https://www.youtube.com/watch?v=9QhhpeYKjOs&t=106s
+// https://www.youtube.com/watch?v=BCSP_uh0co0
