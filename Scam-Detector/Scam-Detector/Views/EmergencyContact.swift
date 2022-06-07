@@ -10,8 +10,8 @@ import SwiftUI
 struct EmergencyContact: View {
     @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = "";
     @AppStorage(StorageKeys.emergencyNumber.rawValue) private var emergencyNumber = "";
-    
-    @State var hasContact: Bool = false;
+
+    @State var showAddPage: Bool = false;
     
     var body: some View {
         NavigationView{
@@ -33,9 +33,9 @@ struct EmergencyContact: View {
                     
                     if emergencyName.isEmpty || emergencyNumber.isEmpty {
                         
-                        NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $hasContact), isActive: $hasContact){
+                        NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $showAddPage), isActive: $showAddPage){
                             Button("Add Emergency Contact"){
-                                hasContact = true;
+                                showAddPage = true;
                             }
                             .frame(width: 270, height: 80, alignment: .center)
                             .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
@@ -59,9 +59,9 @@ struct EmergencyContact: View {
                             .font(.system(size: 30))
                             Spacer().frame(height: 50);
                             
-                            NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $hasContact), isActive: $hasContact){
+                            NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $showAddPage), isActive: $showAddPage){
                                 Button("Update Emergency Contact"){
-                                    hasContact = true;
+                                    showAddPage = true;
                                 }
                                 .frame(width: 270, height: 80, alignment: .center)
                                 .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
