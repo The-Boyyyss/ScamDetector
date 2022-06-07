@@ -10,5 +10,6 @@ import Foundation
 public enum StorageKeys: String {
     case
         emergencyName,
-        emergencyNumber
+        emergencyNumber,
+        emergencyExists
 }
