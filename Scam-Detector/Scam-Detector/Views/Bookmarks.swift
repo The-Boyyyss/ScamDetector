@@ -57,8 +57,9 @@ struct Bookmarks: View {
                                                 .foregroundColor(.white)
                                                 .font(.system(size: 30))
                                                 .frame(maxWidth: UIScreen.main.bounds.width * 0.45)
-                                            Image(systemName: "arrowshape.zigzag.forward")
+                                            Image(systemName: "chevron.right")
                                                 .foregroundColor(.white)
+                                                .font(.system(size: 30))
                                         }
                                         .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                     }

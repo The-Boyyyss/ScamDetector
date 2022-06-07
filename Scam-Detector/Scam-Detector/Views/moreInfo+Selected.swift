@@ -99,7 +99,7 @@ struct moreInfoSelected:View{
                         .padding()
                         .onTapGesture{
                             // Testing
-                            print(bookmarks.bookmarkedInfo)
+                            // print(bookmarks.bookmarkedInfo)
                             bookmarks.bookmarkedInfo.insert(data, at: 0)
                         }
                 }
