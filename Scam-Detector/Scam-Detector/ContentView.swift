@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var settings = passID()
+    let bookmarks = BookmarkManager()
     
     var body: some View {
         NavigationView{

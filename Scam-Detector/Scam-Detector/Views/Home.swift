@@ -40,7 +40,7 @@ struct homeScreen:View{
                 
                 
                 
-                NavigationLink(destination: splashScreen(), label:{
+                NavigationLink(destination: Bookmarks(), label:{
                     HStack{
                         Image(systemName: "bookmark")
                             .padding(.trailing, UIScreen.main.bounds.width*0.05)

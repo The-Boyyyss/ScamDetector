@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C9A903F8284F229D00C238EF /* Bookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A903F7284F229D00C238EF /* Bookmarks.swift */; };
+		C9A903FA284F230A00C238EF /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A903F9284F230A00C238EF /* BookmarkManager.swift */; };
+		C9A90402284F30F600C238EF /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A90400284F30F600C238EF /* StorageEnums.swift */; };
+		C9A90403284F30F600C238EF /* ColorThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A90401284F30F600C238EF /* ColorThemes.swift */; };
 		FB5BC769284AF19F003C48E6 /* loadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC768284AF19F003C48E6 /* loadData.swift */; };
 		FB5BC779284B33D2003C48E6 /* scamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC778284B33D2003C48E6 /* scamInfo.swift */; };
 		FB677116283AA76E002880FD /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB677115283AA76E002880FD /* Shared.swift */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C9A903F7284F229D00C238EF /* Bookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarks.swift; sourceTree = "<group>"; };
+		C9A903F9284F230A00C238EF /* BookmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
+		C9A90400284F30F600C238EF /* StorageEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
+		C9A90401284F30F600C238EF /* ColorThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemes.swift; sourceTree = "<group>"; };
 		FB5BC768284AF19F003C48E6 /* loadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadData.swift; sourceTree = "<group>"; };
 		FB5BC778284B33D2003C48E6 /* scamInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scamInfo.swift; sourceTree = "<group>"; };
 		FB677115283AA76E002880FD /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
@@ -50,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C9A903FD284F2E3900C238EF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C9A90401284F30F600C238EF /* ColorThemes.swift */,
+				C9A90400284F30F600C238EF /* StorageEnums.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		CC80EEBE283998B80064B52B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				FB5BC768284AF19F003C48E6 /* loadData.swift */,
+				C9A903F9284F230A00C238EF /* BookmarkManager.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -82,6 +100,7 @@
 				FB68D9AD28401B91004E1F2E /* MoreInfo.swift */,
 				FB68D9AE28401B91004E1F2E /* moreInfo+Selected.swift */,
 				FB68D9B328402875004E1F2E /* Home.swift */,
+				C9A903F7284F229D00C238EF /* Bookmarks.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +124,7 @@
 		FBB15530283347FF003A67D2 /* Scam-Detector */ = {
 			isa = PBXGroup;
 			children = (
+				C9A903FD284F2E3900C238EF /* Utilities */,
 				FBE3F9892848592300C950C6 /* Data */,
 				FB677114283AA75F002880FD /* Shared */,
 				CC80EEC028399A2F0064B52B /* Controllers */,
@@ -207,12 +227,16 @@
 			files = (
 				FB68D9B028401B91004E1F2E /* moreInfo+Selected+Details.swift in Sources */,
 				FB68D9B228401B91004E1F2E /* moreInfo+Selected.swift in Sources */,
+				C9A903F8284F229D00C238EF /* Bookmarks.swift in Sources */,
 				FB68D9B128401B91004E1F2E /* MoreInfo.swift in Sources */,
 				FB677116283AA76E002880FD /* Shared.swift in Sources */,
+				C9A903FA284F230A00C238EF /* BookmarkManager.swift in Sources */,
 				FB68D9B428402875004E1F2E /* Home.swift in Sources */,
+				C9A90402284F30F600C238EF /* StorageEnums.swift in Sources */,
 				FB5BC779284B33D2003C48E6 /* scamInfo.swift in Sources */,
 				FB68D9AF28401B91004E1F2E /* Splash.swift in Sources */,
 				FB5BC769284AF19F003C48E6 /* loadData.swift in Sources */,
+				C9A90403284F30F600C238EF /* ColorThemes.swift in Sources */,
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
 			);
