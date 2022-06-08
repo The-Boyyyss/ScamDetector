@@ -9,7 +9,6 @@ import SwiftUI
 
 /// Bookmarks Page View
 struct Bookmarks: View {
-    
     @EnvironmentObject var bookmarks: BookmarkManager
     
     var body: some View {

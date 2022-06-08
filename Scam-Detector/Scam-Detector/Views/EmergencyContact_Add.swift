@@ -8,6 +8,7 @@
 import SwiftUI
 import Combine
 
+/// Add/Update Emergency Contact Page View
 struct EmergencyContact_Add: View {
     @Binding var name: String;
     @Binding var number: String;

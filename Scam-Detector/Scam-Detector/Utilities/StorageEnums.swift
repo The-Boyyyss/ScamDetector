@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Keys for local storage in an enum
 public enum StorageKeys: String {
     case
         emergencyName,
