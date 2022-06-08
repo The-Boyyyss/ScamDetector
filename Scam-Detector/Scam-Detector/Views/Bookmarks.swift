@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Bookmarks Page View
 struct Bookmarks: View {
     
     @EnvironmentObject var bookmarks: BookmarkManager
@@ -19,9 +20,9 @@ struct Bookmarks: View {
             VStack(alignment: .center){
                 Text("Bookmarks")
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                    .font(.system(size: UIScreen.main.bounds.width*0.08, weight: .bold))
+                    .font(.system(size: UIScreen.main.bounds.width*0.1, weight: .bold))
                     .padding(.bottom, UIScreen.main.bounds.height*0.04)
-                    .padding(.top, -UIScreen.main.bounds.height*0.05)
+                    .padding(.top, -UIScreen.main.bounds.height*0.08)
                 
                 ScrollView(.vertical){
                     VStack(){
@@ -70,7 +71,6 @@ struct Bookmarks: View {
                 }
             }
             .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
-            
         }
     }
 }

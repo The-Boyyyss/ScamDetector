@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B8503283AD74E0085AC27 /* ColorThemes.swift */; };
+		59DEB4DD2839C64200702925 /* ResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DEB4DC2839C64200702925 /* ResultPage.swift */; };
+		59DEB4E42839CC2B00702925 /* ColorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59DEB4E32839CC2B00702925 /* ColorBar.swift */; };
+		59F555B3283B06B60083832C /* ResultPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F555B2283B06B60083832C /* ResultPopUp.swift */; };
+		C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289A283DEA5F001A101C /* EmergencyContact.swift */; };
+		C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */; };
 		C9A903F8284F229D00C238EF /* Bookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A903F7284F229D00C238EF /* Bookmarks.swift */; };
 		C9A903FA284F230A00C238EF /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A903F9284F230A00C238EF /* BookmarkManager.swift */; };
 		C9A90402284F30F600C238EF /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A90400284F30F600C238EF /* StorageEnums.swift */; };
-		C9A90403284F30F600C238EF /* ColorThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A90401284F30F600C238EF /* ColorThemes.swift */; };
 		FB5BC769284AF19F003C48E6 /* loadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC768284AF19F003C48E6 /* loadData.swift */; };
 		FB5BC779284B33D2003C48E6 /* scamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC778284B33D2003C48E6 /* scamInfo.swift */; };
 		FB677116283AA76E002880FD /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB677115283AA76E002880FD /* Shared.swift */; };
@@ -27,10 +32,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		596B8503283AD74E0085AC27 /* ColorThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemes.swift; sourceTree = "<group>"; };
+		59DEB4DC2839C64200702925 /* ResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPage.swift; sourceTree = "<group>"; };
+		59DEB4E32839CC2B00702925 /* ColorBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBar.swift; sourceTree = "<group>"; };
+		59F555B2283B06B60083832C /* ResultPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUp.swift; sourceTree = "<group>"; };
+		C93E289A283DEA5F001A101C /* EmergencyContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
+		C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact_Add.swift; sourceTree = "<group>"; };
 		C9A903F7284F229D00C238EF /* Bookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarks.swift; sourceTree = "<group>"; };
 		C9A903F9284F230A00C238EF /* BookmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
 		C9A90400284F30F600C238EF /* StorageEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
-		C9A90401284F30F600C238EF /* ColorThemes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorThemes.swift; sourceTree = "<group>"; };
 		FB5BC768284AF19F003C48E6 /* loadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadData.swift; sourceTree = "<group>"; };
 		FB5BC778284B33D2003C48E6 /* scamInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scamInfo.swift; sourceTree = "<group>"; };
 		FB677115283AA76E002880FD /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
@@ -58,10 +68,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59DEB4E52839CC6C00702925 /* ColorBar */ = {
+			isa = PBXGroup;
+			children = (
+				59DEB4E32839CC2B00702925 /* ColorBar.swift */,
+			);
+			path = ColorBar;
+			sourceTree = "<group>";
+		};
 		C9A903FD284F2E3900C238EF /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				C9A90401284F30F600C238EF /* ColorThemes.swift */,
+				596B8503283AD74E0085AC27 /* ColorThemes.swift */,
 				C9A90400284F30F600C238EF /* StorageEnums.swift */,
 			);
 			path = Utilities;
@@ -95,6 +113,11 @@
 		FB68D9AA28401B91004E1F2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				59DEB4E52839CC6C00702925 /* ColorBar */,
+				C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */,
+				C93E289A283DEA5F001A101C /* EmergencyContact.swift */,
+				59DEB4DC2839C64200702925 /* ResultPage.swift */,
+				59F555B2283B06B60083832C /* ResultPopUp.swift */,
 				FB68D9AB28401B91004E1F2E /* Splash.swift */,
 				FB68D9AC28401B91004E1F2E /* moreInfo+Selected+Details.swift */,
 				FB68D9AD28401B91004E1F2E /* MoreInfo.swift */,
@@ -236,9 +259,14 @@
 				FB5BC779284B33D2003C48E6 /* scamInfo.swift in Sources */,
 				FB68D9AF28401B91004E1F2E /* Splash.swift in Sources */,
 				FB5BC769284AF19F003C48E6 /* loadData.swift in Sources */,
-				C9A90403284F30F600C238EF /* ColorThemes.swift in Sources */,
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
+				59DEB4DD2839C64200702925 /* ResultPage.swift in Sources */,
+				59F555B3283B06B60083832C /* ResultPopUp.swift in Sources */,
+				596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */,
+				C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */,
+				C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */,
+				59DEB4E42839CC2B00702925 /* ColorBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

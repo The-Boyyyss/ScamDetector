@@ -70,7 +70,7 @@ struct homeScreen:View{
                 
                 
                 
-                NavigationLink(destination: splashScreen(), label:{
+                NavigationLink(destination: EmergencyContact(), label:{
                     HStack{
                         Image(systemName: "phone.fill")
                             .padding(.trailing, UIScreen.main.bounds.width*0.085)
@@ -82,7 +82,6 @@ struct homeScreen:View{
                     .cornerRadius(10)
                     .font(.system(size: UIScreen.main.bounds.width*0.08))
                 }).padding(UIScreen.main.bounds.width*0.01)
-                
             }
         }
     }
