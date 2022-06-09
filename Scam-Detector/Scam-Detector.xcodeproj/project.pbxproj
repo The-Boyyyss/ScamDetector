@@ -74,7 +74,6 @@
 		CC80EEBE283998B80064B52B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CC80EEC52839ADBF0064B52B /* QuestionTree */,
 				CC80EEC128399E0A0064B52B /* Results */,
 			);
 			path = Models;
@@ -83,6 +82,7 @@
 		CC80EEC028399A2F0064B52B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CC80EEC52839ADBF0064B52B /* QuestionTree */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

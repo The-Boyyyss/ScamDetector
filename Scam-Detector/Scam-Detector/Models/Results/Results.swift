@@ -7,6 +7,6 @@
 
 import Foundation
 
-class Results {
+struct Results {
     var answers : [Answer] = []
 }

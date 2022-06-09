@@ -51,7 +51,6 @@ public struct QTData {
     func buildNode(nodeID: (Int, Int), parentNode: QTNode? = nil) -> QTNode? {
         // make sure the entry exists
         guard nodeInfo[dataKeyFromId(nodeID: nodeID)] != nil else {
-            print("[ERROR] Node entry does not exist in dictionary")
             return nil
         }
         /// converted node id into dictionary key
