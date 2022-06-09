@@ -151,6 +151,7 @@
 		FBB15530283347FF003A67D2 /* Scam-Detector */ = {
 			isa = PBXGroup;
 			children = (
+				CC80EED9283B5CCB0064B52B /* Utilities */,
 				CC80EEC028399A2F0064B52B /* Controllers */,
 				CC80EEBE283998B80064B52B /* Models */,
 				FBB15541283348F1003A67D2 /* Views */,
@@ -174,6 +175,7 @@
 		FBB15541283348F1003A67D2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC80EED3283B59E30064B52B /* ScamDetect */,
 				FBB1553F2833481F003A67D2 /* Splash.swift */,
 				FBB1554428335160003A67D2 /* Home.swift */,
 			);
@@ -257,6 +259,8 @@
 				CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */,
 				CC80EECA2839AE310064B52B /* QTNode.swift in Sources */,
 				FBB155402833481F003A67D2 /* Splash.swift in Sources */,
+				CC80EEDB283B5CEA0064B52B /* uSizes.swift in Sources */,
+				CC80EED0283A16E90064B52B /* ScamDetect.swift in Sources */,
 				FBB1554528335160003A67D2 /* Home.swift in Sources */,
 				CC80EEC428399E320064B52B /* Answer.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,

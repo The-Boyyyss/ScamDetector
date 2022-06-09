@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct splashScreen: View {
 
     @State var isActive:Bool = false
