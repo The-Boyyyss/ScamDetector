@@ -37,7 +37,6 @@ struct scamDetect:View {
     
     var body: some View {
         
-        
         if (isTip) {
             scamDetect_Tips(isTip: $isTip, node: $node, answerIndex: $answerIndex)
         }
