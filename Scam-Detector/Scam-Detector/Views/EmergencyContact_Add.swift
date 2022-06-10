@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 import Combine
 
 struct EmergencyContact_Add: View {
@@ -19,7 +20,7 @@ struct EmergencyContact_Add: View {
     
     var body: some View {
         ZStack(alignment: .top){
-            Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
+            Color.customLightGreen
                                 .edgesIgnoringSafeArea(.all)
             VStack(alignment: .center, spacing: 0){
                 HStack(alignment: .top){

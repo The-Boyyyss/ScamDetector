@@ -12,47 +12,47 @@ import SwiftUI
 
 struct ResultPage: View {
     
-    @State var currentColor: Color = .green
+    @State var currentQuestion: Int = 1
     @State var showPopUp: Bool = false
     
     @ViewBuilder
     var body: some View {
         VStack {
-            ColorBar(color: $currentColor)
-                .frame(height: UIScreen.main.bounds.height * 0.1)
-                .padding()
-            Spacer()
+            ProgressIndicator(currentQuestion: $currentQuestion).padding()
             
             VStack() {
-                Text("Message Status of the Scam").padding()
-                
-                if currentColor == .red {
+                Text("<Message Status of the Scam>").padding()
+                if currentQuestion == 5 {
                     Button(action: {
                         showPopUp.toggle()
                     }, label: {
                         Text("What to do?")
                     }).sheet(isPresented: $showPopUp, content: { ResultPopUp() })
+                        .buttonStyle(CustomButton())
                            
-                    Button("Call For Help") {}.padding()
-                    Button("Home") {}.padding()
+                    Button("Call For Help") {}.buttonStyle(CustomButton())
+                    Button("Home") {}.buttonStyle(CustomButton())
                 }
                 
-                else if currentColor == .green {
-                    Button("Home") {}.padding()
+                else if currentQuestion == 3 {
+                    Button("Home") {}.buttonStyle(CustomButton())
                 }
 
-                Button("Change to Red") {
-                    self.currentColor = .red
-                }
-
-                Button("Change to Green") {
-                    self.currentColor = .green
+                Button("Increase count") {
+                    self.currentQuestion += 1
                 }
             }
             .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
-            .background(Color.customDarkGreen)
+            .background(.white)
             .cornerRadius(20.0)
             Spacer()
-        }.padding().background(Color.customLightGreen)
+        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).padding().background(Color.customLightGreen)
+    }
+}
+
+// THIS IS ONLY FOR PREVIEW DURING DEVELOPMENT
+struct ResultPage_Previews: PreviewProvider {
+    static var previews: some View {
+        ResultPage()
     }
 }

@@ -26,11 +26,10 @@ struct ResultPopUp: View {
             }, label: {
                 Text("Close")
                     .foregroundColor(.white)
-                    .padding()
+                    .padding(5)
             })
-            .padding(10)
-            .background(Color.customButtonColor)
-            .cornerRadius(20.0)
+            .buttonStyle(CustomButton())
+            Spacer()
         }
     }
 }
