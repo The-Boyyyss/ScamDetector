@@ -10,6 +10,7 @@
 import Foundation
 import SwiftUI
 
+/// A component that is for stylizing the buttons and can be applied through .buttonStyle(CustomButton())
 struct CustomButton: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {

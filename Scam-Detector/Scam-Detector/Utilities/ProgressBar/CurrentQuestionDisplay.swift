@@ -8,6 +8,9 @@
 import Foundation
 import SwiftUI
 
+/// The main component of the progress indicator
+/// It is a circle that is overlayed with a text field
+/// The text variable is a binding that represents the current question.
 struct CurrentQuestionDisplay: View {
     @Binding var questionNum: Int
     

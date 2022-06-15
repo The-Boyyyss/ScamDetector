@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
+/// A component that is used for the background for all views.
+/// Can be applied by doing .background(GradientBackground().blueGradient)
 struct GradientBackground {
     
     let blueGradient = LinearGradient(
