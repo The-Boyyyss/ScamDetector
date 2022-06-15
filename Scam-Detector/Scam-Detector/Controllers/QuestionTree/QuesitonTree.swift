@@ -48,6 +48,11 @@ struct QuestionTree {
         return currentNode
     }
     
+    mutating func reset() -> QTNode {
+        currentNode = parentNode
+        return currentNode
+    }
+    
     /// returns to the previous question node if not at the parent
     mutating func previousQuestion() {
         

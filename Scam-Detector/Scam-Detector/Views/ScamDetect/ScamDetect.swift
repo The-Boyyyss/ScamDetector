@@ -10,21 +10,24 @@ import Foundation
 
 struct scamDetect:View {
     @State var progressColor: Color = .red
-    @State var node: QTNode = QuestionTree.instance.parentNode
-    @State var reponse: [String] = []
+    @State var howtoFix: [String] = []
     @State var results: Bool = false
     
     init() {
     }
     
     var body: some View {
-        if (results == true) {
-            ResultPage()
-        }
-        else {
-            scamDetect_Questions(node: $node, response: $reponse, results: $results)
-        }
-        
+        VStack {
+            if (results == true) {
+                ResultPage()
+            }
+            else {
+                scamDetect_Questions(howtoFix: $howtoFix, results: $results)
+            }
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(GradientBackground().blueGradient)
+        .frame(width: uSizes.sWidth, height: uSizes.sHeight)
+            
     }
 }
 
