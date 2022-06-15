@@ -8,9 +8,7 @@
 import SwiftUI
 
 @main
-struct Scam_DetectorApp: App {
-    let test = TestCode.buildAndTestQT()
-    
+struct Scam_DetectorApp: App {    
     var body: some Scene {
         WindowGroup {
             ContentView()

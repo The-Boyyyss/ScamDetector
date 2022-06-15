@@ -24,7 +24,7 @@ class QTNode {
     /// The question to be given to the user
     let question: String
     /// The steps you can take to fix the problem that occurs if you answer yes to this question
-    let howToFix: String?
+    let howToFix: String
     /// The QTNode that led to this question node
     let parentNode: QTNode?
     /// Nodes that contain all possible answers to this question (max 3)
@@ -38,7 +38,7 @@ class QTNode {
         self.childrenNodes = nil
     }
     
-    init(id: (Int, Int), question: String, howToFix: String?, parentNode: QTNode? = nil) {
+    init(id: (Int, Int), question: String, howToFix: String, parentNode: QTNode? = nil) {
         self.id = id
         self.question = question
         self.howToFix = howToFix

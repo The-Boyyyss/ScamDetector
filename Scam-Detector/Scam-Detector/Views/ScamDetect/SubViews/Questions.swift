@@ -10,16 +10,22 @@ import Foundation
 
 struct scamDetect_Questions:View {
     
-    @Binding var node: tNode
-    @Binding var answerIndex: Int
-    @Binding var isTip: Bool
+    @Binding var node: QTNode
+    @Binding var response: [String]
+    @Binding var results: Bool
     
     
-    func makeButton(name: String, answer: Int) -> some View {
+    
+    func makeButton(name: String, answer: ScamDetectAnswer) -> some View {
         return AnyView(Button(name) {
-            answerIndex = answer
-            
-            isTip = true
+            do {
+                try node = QuestionTree.instance.answerQuestion(givenAnswer: answer)
+                response.append(node.howToFix)
+            }
+            catch {
+                print("no children")
+                results = true
+            }
         })
             .frame(width: uSizes.sWidth * 0.85, height: uSizes.sWidth * 0.27, alignment: .center)
             .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
@@ -31,7 +37,6 @@ struct scamDetect_Questions:View {
     var body: some View {
         
         ZStack {
-            scamDetectViewTemplates.buildDoubleStripeView()
             
             VStack {
                 
@@ -67,13 +72,8 @@ struct scamDetect_Questions:View {
                 .frame(width:  uSizes.sWidth * 0.85, height: uSizes.sHeight * 0.3, alignment: .center)
                 
                 VStack {
-//                    for i in stride(from: 0, to: node.children.count, by: 1) {
-//                        let btn = makeButton(name: node.answers[i], answer: i)
-//                        btn()
-//                    }
-                    ForEach(0..<node.children.count) { i in
-                        makeButton(name: node.answers[i], answer: i)
-                    }
+                    makeButton(name: "yes", answer: ScamDetectAnswer.Yes)
+                    makeButton(name: "No", answer: ScamDetectAnswer.No)
                 }
                 .frame(width: uSizes.sWidth * 0.85, height: uSizes.sHeight * 0.45, alignment: .bottom)
             }

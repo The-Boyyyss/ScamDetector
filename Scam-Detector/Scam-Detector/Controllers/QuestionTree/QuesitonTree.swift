@@ -30,7 +30,7 @@ struct QuestionTree {
     }
     
     /// sets the current node to the node that corrisponds to the answer at the given index or throws an error if that index is out of range
-    mutating func answerQuestion(givenAnswer: ScamDetectAnswer) throws {
+    mutating func answerQuestion(givenAnswer: ScamDetectAnswer) throws -> QTNode {
         
         // there should be children to traverse too otherwise throw an error
         guard currentNode.childrenNodes != nil && currentNode.childrenNodes?.child1 != nil && currentNode.childrenNodes?.child2 != nil else {
@@ -44,6 +44,8 @@ struct QuestionTree {
         else {
             currentNode = currentNode.childrenNodes!.child2!
         }
+        print(currentNode.id)
+        return currentNode
     }
     
     /// returns to the previous question node if not at the parent
