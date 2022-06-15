@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct splashScreen: View {
 
     @State var isActive:Bool = false
@@ -21,7 +19,7 @@ struct splashScreen: View {
             VStack {
                 if self.isActive {
                     if self.hasContact{
-                       homeScreen()
+                        homeScreen()
                     }
                    else {
                         EmergencyContact()

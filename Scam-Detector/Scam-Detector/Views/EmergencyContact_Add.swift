@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Foundation
 import Combine
 
 struct EmergencyContact_Add: View {
+    
     @Binding var name: String;
     @Binding var number: String;
     @Binding var isFinished: Bool;
@@ -21,7 +23,7 @@ struct EmergencyContact_Add: View {
     
     var body: some View {
         ZStack(alignment: .top){
-            Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
+            Color.customLightGreen
                                 .edgesIgnoringSafeArea(.all)
             VStack(alignment: .center, spacing: 0){
                 HStack(alignment: .top){
@@ -67,7 +69,6 @@ struct EmergencyContact_Add: View {
                 Spacer().frame(height: 50)
                 
                 Button("Submit"){
-                    // Uncomment for empty textfield check
                     if inputName.isEmpty || inputNumber.isEmpty {
                         showAlert = true;
                         return;
@@ -80,10 +81,6 @@ struct EmergencyContact_Add: View {
                     else {
                         isFinished = false;
                     }
-                    
-                    // hasContact back to false for testing
-                    // hasContact = false
-                    // print(hasContact)
                 }
                 .frame(width: 270, height: 80, alignment: .center)
                 .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
@@ -103,4 +100,3 @@ struct EmergencyContact_Add: View {
 
 // REFERENCE
 // Numbers Only in TextField https://stackoverflow.com/questions/58733003/how-to-create-textfield-that-only-accepts-numbers/58736068#58736068
-

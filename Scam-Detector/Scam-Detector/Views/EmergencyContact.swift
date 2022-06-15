@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmergencyContact: View {
+    
     @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = "";
     @AppStorage(StorageKeys.emergencyNumber.rawValue) private var emergencyNumber = "";
 
@@ -16,7 +17,7 @@ struct EmergencyContact: View {
     var body: some View {
         NavigationView{
             ZStack(alignment: .top){
-                Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
+                Color.customLightGreen
                                     .edgesIgnoringSafeArea(.all)
                 VStack(alignment: .center){
                     HStack(alignment: .top){
