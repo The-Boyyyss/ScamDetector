@@ -18,6 +18,8 @@ struct EmergencyContact_Add: View {
     @State var inputName: String = "";
     @State var showAlert: Bool = false;
     
+    @AppStorage(StorageKeys.emergencyExists.rawValue) var hasContact: Bool = false;
+    
     var body: some View {
         ZStack(alignment: .top){
             Color.customLightGreen
@@ -67,13 +69,22 @@ struct EmergencyContact_Add: View {
                 
                 Button("Submit"){
                     // Uncomment for empty textfield check
-                    // if inputName.isEmpty || inputNumber.isEmpty {
-                        // showAlert = true;
-                        // return;
-                    // }
+                    if inputName.isEmpty || inputNumber.isEmpty {
+                        showAlert = true;
+                        return;
+                    }
                     name = inputName;
                     number = inputNumber;
-                    isFinished = false;
+                    if(!hasContact) {
+                        hasContact = true
+                    }
+                    else {
+                        isFinished = false;
+                    }
+                    
+                    // hasContact back to false for testing
+                    // hasContact = false
+                    // print(hasContact)
                 }
                 .frame(width: 270, height: 80, alignment: .center)
                 .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
@@ -92,5 +103,5 @@ struct EmergencyContact_Add: View {
 }
 
 // REFERENCE
-// Numbers only in textfield https://stackoverflow.com/questions/58733003/how-to-create-textfield-that-only-accepts-numbers/58736068#58736068
+// Numbers Only in TextField https://stackoverflow.com/questions/58733003/how-to-create-textfield-that-only-accepts-numbers/58736068#58736068
 

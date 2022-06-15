@@ -2,51 +2,65 @@
 //  Result.swift
 //  Scam-Detector
 //
-//  Created by Danny Deng on 2022-05-21.
+//  Created by Danny Deng on 2022-06-11.
 //
-//  Ref:
-//  Color Bar: https://www.simpleswiftguide.com/how-to-build-linear-progress-bar-in-swiftui/
 
 import Foundation
 import SwiftUI
 
 struct ResultPage: View {
     
-    @State var currentQuestion: Int = 1
-    @State var showPopUp: Bool = false
+    @State private var showFixView = false
+    @State private var showHelpView = false
+    @State private var showHomeView = false
+    @State private var badResults: Bool = true
     
-    @ViewBuilder
     var body: some View {
-        VStack {
-            ProgressIndicator(currentQuestion: $currentQuestion).padding()
-            
+        NavigationView {
             VStack() {
-                Text("<Message Status of the Scam>").padding()
-                if currentQuestion == 5 {
-                    Button(action: {
-                        showPopUp.toggle()
-                    }, label: {
-                        Text("What to do?")
-                    }).sheet(isPresented: $showPopUp, content: { ResultPopUp() })
-                        .buttonStyle(CustomButton())
-                           
-                    Button("Call For Help") {}.buttonStyle(CustomButton())
-                    Button("Home") {}.buttonStyle(CustomButton())
-                }
+                Text("Result").font(.system(size: 42)).bold().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.1, alignment: .bottom)
+                    .padding(.bottom, 10)
                 
-                else if currentQuestion == 3 {
-                    Button("Home") {}.buttonStyle(CustomButton())
+                if (!badResults) {
+                    VStack() {
+                        Text("Looks Good!").font(.system(size: 36)).bold().padding(.top, 30)
+                        Text("it's not a scam").font(.system(size: 32))
+                        Image("checkMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.30)
+                    }
+                    .frame(width: UIScreen.main.bounds.width * 0.80, height: UIScreen.main.bounds.height * 0.65, alignment: .top)
+                    .background(.white)
+                    .cornerRadius(20.0)
+                    .shadow(color: .gray, radius: 5, x: 5, y: 5)
+                    Spacer()
+                    
+                    NavigationLink(destination: homeScreen(), isActive: $showHomeView) {EmptyView()}
+                    Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton())
+                } else {
+                    VStack() {
+                        Text("It's most likely a").font(.system(size: 30)).padding(.top, 25)
+                        Text("SCAM").font(.system(size: 35)).bold()
+                        Image("exclamationMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.60, height: UIScreen.main.bounds.height * 0.25)
+                    }
+                    .frame(width: UIScreen.main.bounds.width * 0.80, height: UIScreen.main.bounds.height * 0.45, alignment: .top)
+                    .background(.white)
+                    .cornerRadius(20.0)
+                    .shadow(color: .gray, radius: 5, x: 5, y: 5)
+                    Spacer()
+                    
+                    NavigationLink(destination: HowToFix(), isActive: $showFixView) {EmptyView()}
+                    Button("How To Fix") {self.showFixView = true}.buttonStyle(CustomButton()).padding(7)
+                    
+                    NavigationLink(destination: EmergencyContact(), isActive: $showHelpView) {EmptyView()}
+                    Button("Get Help") {self.showHelpView = true}.buttonStyle(CustomButton()).padding(7)
+                    
+                    NavigationLink(destination: homeScreen(), isActive: $showHomeView) {EmptyView()}
+                    Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton()).padding(7)
                 }
-
-                Button("Increase count") {
-                    self.currentQuestion += 1
-                }
-            }
-            .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
-            .background(.white)
-            .cornerRadius(20.0)
-            Spacer()
-        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).padding().background(Color.customLightGreen)
+                Spacer()
+            }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).background(GradientBackground().blueGradient)
+                .navigationBarHidden(true)
+                .padding()
+        }
     }
 }
 
