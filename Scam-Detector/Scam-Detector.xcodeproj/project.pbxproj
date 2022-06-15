@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		590C1D002854A12E007B8156 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590C1CFF2854A12E007B8156 /* GradientBackground.swift */; };
+		595F2AB4283EF50B00F648E1 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F2AB3283EF50B00F648E1 /* CustomButton.swift */; };
+		5963DFB32855516700468CC0 /* ResultPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5963DFB22855516700468CC0 /* ResultPage.swift */; };
+		596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596B8503283AD74E0085AC27 /* ColorThemes.swift */; };
+		598D1408284C13AB00901920 /* ProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D1407284C13AB00901920 /* ProgressIndicator.swift */; };
+		598D140B284C188800901920 /* CurrentQuestionDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598D140A284C188800901920 /* CurrentQuestionDisplay.swift */; };
+		59F555B3283B06B60083832C /* HowToFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F555B2283B06B60083832C /* HowToFix.swift */; };
+		C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289A283DEA5F001A101C /* EmergencyContact.swift */; };
+		C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */; };
+		C98E7B1F283DC4D800F55AC0 /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */; };
 		CC0FFE582848477300AC86CA /* QTNodeChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE572848477300AC86CA /* QTNodeChildren.swift */; };
 		CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */; };
+		CC34E8A3285997DB00DECEB7 /* USizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC34E8A2285997DB00DECEB7 /* USizes.swift */; };
 		CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */; };
 		CC80EECA2839AE310064B52B /* QTNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEC92839AE310064B52B /* QTNode.swift */; };
 		CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EECB2839BECD0064B52B /* QTErrors.swift */; };
 		CC80EECE2839C6FF0064B52B /* TestCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EECD2839C6FF0064B52B /* TestCode.swift */; };
 		CC80EEE0284453D80064B52B /* QTData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC80EEDF284453D80064B52B /* QTData.swift */; };
-		CC9209872851BACB00BEB1CA /* uSizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9209862851BACB00BEB1CA /* uSizes.swift */; };
 		CC9209912851BB3E00BEB1CA /* ScamDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9209902851BB3E00BEB1CA /* ScamDetect.swift */; };
 		CC9209942851BB5A00BEB1CA /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9209922851BB5A00BEB1CA /* Questions.swift */; };
 		CC9209972851C3B800BEB1CA /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9209962851C3B800BEB1CA /* Results.swift */; };
@@ -27,14 +37,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		590C1CFF2854A12E007B8156 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		595F2AB3283EF50B00F648E1 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		5963DFB22855516700468CC0 /* ResultPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPage.swift; sourceTree = "<group>"; };
+		596B8503283AD74E0085AC27 /* ColorThemes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorThemes.swift; sourceTree = "<group>"; };
+		598D1407284C13AB00901920 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
+		598D140A284C188800901920 /* CurrentQuestionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentQuestionDisplay.swift; sourceTree = "<group>"; };
+		59F555B2283B06B60083832C /* HowToFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToFix.swift; sourceTree = "<group>"; };
+		C93E289A283DEA5F001A101C /* EmergencyContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
+		C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact_Add.swift; sourceTree = "<group>"; };
+		C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
 		CC0FFE572848477300AC86CA /* QTNodeChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNodeChildren.swift; sourceTree = "<group>"; };
 		CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamDetectAnswer.swift; sourceTree = "<group>"; };
+		CC34E8A2285997DB00DECEB7 /* USizes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USizes.swift; sourceTree = "<group>"; };
 		CC80EEC62839ADEE0064B52B /* QuesitonTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuesitonTree.swift; sourceTree = "<group>"; };
 		CC80EEC92839AE310064B52B /* QTNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNode.swift; sourceTree = "<group>"; };
 		CC80EECB2839BECD0064B52B /* QTErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTErrors.swift; sourceTree = "<group>"; };
 		CC80EECD2839C6FF0064B52B /* TestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCode.swift; sourceTree = "<group>"; };
 		CC80EEDF284453D80064B52B /* QTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTData.swift; sourceTree = "<group>"; };
-		CC9209862851BACB00BEB1CA /* uSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uSizes.swift; sourceTree = "<group>"; };
 		CC9209902851BB3E00BEB1CA /* ScamDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScamDetect.swift; sourceTree = "<group>"; };
 		CC9209922851BB5A00BEB1CA /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CC9209962851C3B800BEB1CA /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -58,6 +78,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		590C1CFE2854A108007B8156 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				590C1CFF2854A12E007B8156 /* GradientBackground.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		596B8505283AE7010085AC27 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				590C1CFE2854A108007B8156 /* Component */,
+				598D1409284C185C00901920 /* ProgressBar */,
+				C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */,
+				596B8503283AD74E0085AC27 /* ColorThemes.swift */,
+				595F2AB3283EF50B00F648E1 /* CustomButton.swift */,
+				CC34E8A2285997DB00DECEB7 /* USizes.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		598D1409284C185C00901920 /* ProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				598D1407284C13AB00901920 /* ProgressIndicator.swift */,
+				598D140A284C188800901920 /* CurrentQuestionDisplay.swift */,
+			);
+			path = ProgressBar;
+			sourceTree = "<group>";
+		};
 		CC0FFE562848475800AC86CA /* QTNodeChildren */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +123,13 @@
 				CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		CC34E8992859960300DECEB7 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		CC80EEBE283998B80064B52B /* Models */ = {
@@ -118,14 +175,6 @@
 			path = QTData;
 			sourceTree = "<group>";
 		};
-		CC9209852851BAAE00BEB1CA /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				CC9209862851BACB00BEB1CA /* uSizes.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		CC9209882851BADA00BEB1CA /* ScamDetect */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +187,7 @@
 		CC92098B2851BAFA00BEB1CA /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				5963DFB22855516700468CC0 /* ResultPage.swift */,
 				CC9209922851BB5A00BEB1CA /* Questions.swift */,
 				CC9209962851C3B800BEB1CA /* Results.swift */,
 			);
@@ -149,6 +199,7 @@
 			children = (
 				FBB15530283347FF003A67D2 /* Scam-Detector */,
 				FBB1552F283347FF003A67D2 /* Products */,
+				CC34E8992859960300DECEB7 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,8 +214,8 @@
 		FBB15530283347FF003A67D2 /* Scam-Detector */ = {
 			isa = PBXGroup;
 			children = (
-				CC9209852851BAAE00BEB1CA /* Utilities */,
 				CC80EEC028399A2F0064B52B /* Controllers */,
+				596B8505283AE7010085AC27 /* Utilities */,
 				CC80EEBE283998B80064B52B /* Models */,
 				FBB15541283348F1003A67D2 /* Views */,
 				FBB15531283347FF003A67D2 /* Scam_DetectorApp.swift */,
@@ -188,6 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				CC9209882851BADA00BEB1CA /* ScamDetect */,
+				C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */,
+				C93E289A283DEA5F001A101C /* EmergencyContact.swift */,
+				59F555B2283B06B60083832C /* HowToFix.swift */,
 				FBB1553F2833481F003A67D2 /* Splash.swift */,
 				FBB1554428335160003A67D2 /* Home.swift */,
 			);
@@ -268,17 +322,28 @@
 				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
 				CC80EEE0284453D80064B52B /* QTData.swift in Sources */,
 				CC80EEC72839ADEE0064B52B /* QuesitonTree.swift in Sources */,
-				CC9209872851BACB00BEB1CA /* uSizes.swift in Sources */,
+				CC34E8A3285997DB00DECEB7 /* USizes.swift in Sources */,
 				CC9209972851C3B800BEB1CA /* Results.swift in Sources */,
 				CC9209942851BB5A00BEB1CA /* Questions.swift in Sources */,
 				CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */,
 				CC80EECA2839AE310064B52B /* QTNode.swift in Sources */,
+				598D1408284C13AB00901920 /* ProgressIndicator.swift in Sources */,
+				590C1D002854A12E007B8156 /* GradientBackground.swift in Sources */,
+				595F2AB4283EF50B00F648E1 /* CustomButton.swift in Sources */,
+				59F555B3283B06B60083832C /* HowToFix.swift in Sources */,
+				5963DFB32855516700468CC0 /* ResultPage.swift in Sources */,
+				596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */,
+				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
+				C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */,
 				FBB155402833481F003A67D2 /* Splash.swift in Sources */,
 				FBB1554528335160003A67D2 /* Home.swift in Sources */,
+				C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */,
+				C98E7B1F283DC4D800F55AC0 /* StorageEnums.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
 				CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */,
 				CC0FFE582848477300AC86CA /* QTNodeChildren.swift in Sources */,
 				CC9209912851BB3E00BEB1CA /* ScamDetect.swift in Sources */,
+				598D140B284C188800901920 /* CurrentQuestionDisplay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
