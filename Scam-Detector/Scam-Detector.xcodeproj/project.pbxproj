@@ -34,7 +34,7 @@
 		CC80EECB2839BECD0064B52B /* QTErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTErrors.swift; sourceTree = "<group>"; };
 		CC80EECD2839C6FF0064B52B /* TestCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCode.swift; sourceTree = "<group>"; };
 		CC80EEDF284453D80064B52B /* QTData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTData.swift; sourceTree = "<group>"; };
-		CC9209862851BACB00BEB1CA /* uSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = uSizes.swift; path = ../../../../../../.Trash/Utilities/uSizes.swift; sourceTree = "<group>"; };
+		CC9209862851BACB00BEB1CA /* uSizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uSizes.swift; sourceTree = "<group>"; };
 		CC9209902851BB3E00BEB1CA /* ScamDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScamDetect.swift; sourceTree = "<group>"; };
 		CC9209922851BB5A00BEB1CA /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		CC9209962851C3B800BEB1CA /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
