@@ -8,10 +8,13 @@
 import Foundation
 import SwiftUI
 
-/// A component for the progress indicator on each of the questions pages
-/// it displays the current question number component.
+/*
+A component for the progress indicator on each of the questions pages
+it displays the current question number component.
+*/
 struct ProgressIndicator: View {
     
+    /// a variable with a binding property to a Integer for storing the question's number
     @Binding var currentQuestion: Int
     
     var body: some View {

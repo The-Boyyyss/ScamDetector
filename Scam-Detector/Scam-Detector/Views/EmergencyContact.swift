@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EmergencyContact: View {
+    
     @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = "";
     @AppStorage(StorageKeys.emergencyNumber.rawValue) private var emergencyNumber = "";
 

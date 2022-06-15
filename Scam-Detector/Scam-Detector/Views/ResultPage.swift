@@ -10,9 +10,13 @@ import SwiftUI
 
 struct ResultPage: View {
     
+    /// a state variable for indicating fix view to be showed if button is clicked
     @State private var showFixView = false
+    /// a state variable for indicating help view to be showed if button is clicked
     @State private var showHelpView = false
+    /// a state variable for indicating home view to be showed if button is clicked
     @State private var showHomeView = false
+    /// a state variable for indicating which content to show after questions are answered
     @State private var badResults: Bool = true
     
     var body: some View {

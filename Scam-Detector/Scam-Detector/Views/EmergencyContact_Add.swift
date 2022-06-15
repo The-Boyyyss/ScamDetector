@@ -10,6 +10,7 @@ import Foundation
 import Combine
 
 struct EmergencyContact_Add: View {
+    
     @Binding var name: String;
     @Binding var number: String;
     @Binding var isFinished: Bool;
