@@ -8,6 +8,7 @@
 /*
  This page include code for home screen which the user fill see.
  */
+
 import SwiftUI
 
 struct HomeScreen:View{

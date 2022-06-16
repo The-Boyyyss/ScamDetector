@@ -13,6 +13,7 @@ import Foundation
 import SwiftUI
 
 struct CustomTextField: View {
+    
     // Used as variable to store string typed in text field
     @Binding var ourText: String
     // placeholder for text field

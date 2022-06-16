@@ -12,6 +12,7 @@
 import Foundation
 
 class LoadData {
+    
     // Function used to load json content into model and return data as array of objects.
     static func load<T: Codable>(name:String) -> [T] {
         

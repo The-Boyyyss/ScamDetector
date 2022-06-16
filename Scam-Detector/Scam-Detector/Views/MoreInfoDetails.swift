@@ -4,9 +4,11 @@
 //
 //  Created by VARUN SIDHU on 2022-06-13.
 //
+
 /*
  This page includes more information like what scam is, how to prevent etc for any selected scam.
  */
+
 import Foundation
 import SwiftUI
 
@@ -65,11 +67,12 @@ struct MoreInfoDetails:View{
                                 Text(data.moreInfo.whatItIs.section16!)
                                     .padding()
                                 VStack{
-                                    Text(data.moreInfo.whatItIs.section17!)
-                                        .frame(maxWidth: .infinity, alignment: .center)
-                                        .padding()
-                                        .font(.system(size: 30, weight: .bold))
-                                }.frame(maxWidth: .infinity, alignment: .center)
+                                    Text("Common signs of an")
+                                    Text("Email scam")
+                                }
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding()
+                                .font(.system(size: 30, weight: .bold))
                                 Text("**\(data.moreInfo.whatItIs.section18!)**\(data.moreInfo.whatItIs.section19!)")
                                     .padding()
                                 Text("**\(data.moreInfo.whatItIs.section20!)**\(data.moreInfo.whatItIs.section21!)")
@@ -174,10 +177,13 @@ struct MoreInfoDetails:View{
                                     .padding()
                             }
                             Group{
-                                Text(data.moreInfo.whatItIs.section27!)
-                                    .padding()
-                                    .frame(maxWidth: .infinity, alignment: .center)
-                                    .font(.system(size: 30, weight: .bold))
+                                VStack{
+                                    Text("Common signs of an")
+                                    Text("Phone scam")
+                                }
+                                .frame(maxWidth: .infinity, alignment: .center)
+                                .padding()
+                                .font(.system(size: 30, weight: .bold))
                                 Text("**\(data.moreInfo.whatItIs.section28!)**\(data.moreInfo.whatItIs.section29!)")
                                     .padding()
                                 Text("**\(data.moreInfo.whatItIs.section30!)**\(data.moreInfo.whatItIs.section31!)")
@@ -305,8 +311,11 @@ struct MoreInfoDetails:View{
                         }
                         .font(.system(size: 25))
                     }else{
-                        Text("Error.!!!")
-                            .font(.system(size: 40, weight: .bold))
+                        VStack{
+                            Text("Error !!!")
+                            Text("Cant load data..")
+                        }
+                        .font(.system(size: 40, weight: .bold))
                     }
                 }
             }.padding()

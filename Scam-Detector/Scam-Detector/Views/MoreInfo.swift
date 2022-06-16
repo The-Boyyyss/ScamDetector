@@ -14,6 +14,7 @@ import Foundation
 import SwiftUI
 
 struct MoreInfoScreen:View{
+    
     // For text field
     @State var info: String = ""
     // To pass id of selected scam. For eg: 1 for email scam.
