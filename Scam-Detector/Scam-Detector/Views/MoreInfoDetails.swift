@@ -4,16 +4,14 @@
 //
 //  Created by VARUN SIDHU on 2022-06-13.
 //
-
-
 /*
  This page includes more information like what scam is, how to prevent etc for any selected scam.
  */
 import Foundation
 import SwiftUI
 
-
 struct MoreInfoDetails:View{
+    
     // it is used to pass data and id from json file for the selected scam type.
     let data: ScamInfo
     
@@ -27,7 +25,6 @@ struct MoreInfoDetails:View{
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .font(.system(size: 45, weight: .bold))
                     .padding(.top, -40)
-                
                 
                 ScrollView{
                     // Image related to scam type

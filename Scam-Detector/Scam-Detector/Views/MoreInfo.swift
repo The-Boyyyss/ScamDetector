@@ -62,11 +62,9 @@ struct MoreInfoScreen:View{
                                 }
                                     .font(.system(size: 30))
                                     .foregroundColor(.white)
-
                             }
                         })
                         .padding()
-                        
                         ForEach(data, id: \.id) { data in
                                 NavigationLink(destination: MoreInfoDetails(data: data), label: {
                                 ZStack{
