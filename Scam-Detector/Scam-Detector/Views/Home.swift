@@ -46,9 +46,9 @@ struct HomeScreen:View{
                 
                 NavigationLink(destination: SplashScreen(), label:{
                     HStack{
-                        Image(systemName: "bookmark")
+                        Image(systemName: "clock.arrow.circlepath")
                             .padding(.trailing, 40)
-                        Text("Bookmarks")
+                        Text("History")
                     }
                     .frame(width: 350, height: 100, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
