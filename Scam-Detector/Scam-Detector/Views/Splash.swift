@@ -5,9 +5,13 @@
 //  Created by VARUN SIDHU on 2022-05-16.
 //
 
+/*
+ This page includes code for splash screen which will be displayed for few seconds after running thhe app.
+ */
+
 import SwiftUI
 
-struct splashScreen: View {
+struct SplashScreen: View {
 
     @State var isActive:Bool = false
     
@@ -17,28 +21,25 @@ struct splashScreen: View {
                     .edgesIgnoringSafeArea(.all)
             VStack {
                 if self.isActive {
-                        homeScreen()
+                        HomeScreen()
                 } else {
                     VStack{
                         Image("scam-Detector-logo1")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: UIScreen.main.bounds.width*0.85, height: UIScreen.main.bounds.height*0.3)
-                            
+                            .frame(width: 550, height: 300)
                     }.padding(.bottom, 100)
                 }
             }
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     withAnimation {
                         self.isActive = true
                     }
                 }
             }
         }
-        
     }
-    
 }
 
 

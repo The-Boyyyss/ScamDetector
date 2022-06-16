@@ -5,13 +5,19 @@
 //  Created by VARUN SIDHU on 2022-05-22.
 //
 
+/*
+ This page includes custom text field which can be used on any page on the app.
+ */
+
 import Foundation
 import SwiftUI
 
 struct CustomTextField: View {
-    
+    // Used as variable to store string typed in text field
     @Binding var ourText: String
+    // placeholder for text field
     let placeholder: Text
+    // image to be displayed as icon on text field
     let systemImage: String
     
     var body: some View{
@@ -31,10 +37,8 @@ struct CustomTextField: View {
                     .frame(width: 20, height: 20)
                     .foregroundColor(.black)
                     .font(.system(size: 25))
-                
                 TextField("", text: $ourText)
             }
-            
         }
         .padding()
         .background(.white)
