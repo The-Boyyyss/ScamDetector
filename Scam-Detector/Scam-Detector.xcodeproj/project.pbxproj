@@ -13,6 +13,7 @@
 		59F555B3283B06B60083832C /* ResultPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F555B2283B06B60083832C /* ResultPopUp.swift */; };
 		C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289A283DEA5F001A101C /* EmergencyContact.swift */; };
 		C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */; };
+		C940542F285C29A80030A494 /* BookmarkedResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940542E285C29A80030A494 /* BookmarkedResult.swift */; };
 		C9A903F8284F229D00C238EF /* Bookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A903F7284F229D00C238EF /* Bookmarks.swift */; };
 		C9A903FA284F230A00C238EF /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A903F9284F230A00C238EF /* BookmarkManager.swift */; };
 		C9A90402284F30F600C238EF /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A90400284F30F600C238EF /* StorageEnums.swift */; };
@@ -39,6 +40,7 @@
 		59F555B2283B06B60083832C /* ResultPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPopUp.swift; sourceTree = "<group>"; };
 		C93E289A283DEA5F001A101C /* EmergencyContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact_Add.swift; sourceTree = "<group>"; };
+		C940542E285C29A80030A494 /* BookmarkedResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkedResult.swift; sourceTree = "<group>"; };
 		C9A903F7284F229D00C238EF /* Bookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarks.swift; sourceTree = "<group>"; };
 		C9A903F9284F230A00C238EF /* BookmarkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
 		C9A90400284F30F600C238EF /* StorageEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				FB68D9AE28401B91004E1F2E /* moreInfo+Selected.swift */,
 				FB68D9B328402875004E1F2E /* Home.swift */,
 				C9A903F7284F229D00C238EF /* Bookmarks.swift */,
+				C940542E285C29A80030A494 /* BookmarkedResult.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			files = (
 				FB68D9B028401B91004E1F2E /* moreInfo+Selected+Details.swift in Sources */,
 				FB68D9B228401B91004E1F2E /* moreInfo+Selected.swift in Sources */,
+				C940542F285C29A80030A494 /* BookmarkedResult.swift in Sources */,
 				C9A903F8284F229D00C238EF /* Bookmarks.swift in Sources */,
 				FB68D9B128401B91004E1F2E /* MoreInfo.swift in Sources */,
 				FB677116283AA76E002880FD /* Shared.swift in Sources */,

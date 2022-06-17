@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    let bookmarks = BookmarkManager()
     @StateObject var settings = passID()
     
     var body: some View {
         NavigationView{
             splashScreen().environmentObject(settings)
-        }.navigationViewStyle(.stack)
+        }.navigationViewStyle(.stack).environmentObject(bookmarks)
     }
 }
 

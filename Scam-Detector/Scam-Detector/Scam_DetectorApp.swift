@@ -9,10 +9,9 @@ import SwiftUI
 
 @main
 struct Scam_DetectorApp: App {
-    let bookmarks = BookmarkManager()
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(bookmarks)
+            ContentView()
         }
     }
 }
