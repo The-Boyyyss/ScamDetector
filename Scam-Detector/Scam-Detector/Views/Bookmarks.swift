@@ -9,10 +9,9 @@ import SwiftUI
 
 /// Bookmarks Page View
 struct Bookmarks: View {
-    //@EnvironmentObject var bookmarks: BookmarkManager
-    @State var data: [String] = ["Result 1", "Result 2", "Result 3", "Result 4", "Result 5", "Result 6", "Result 7", "Result 8", "Result 9", "Result 10"];
-    @State var result: String = "";
-    @State var hasSelected: Bool = false;
+    @EnvironmentObject var bookmarks: BookmarkManager
+    @State var result: Result = Result(id: 0, questions: [], date: Date.now, isAScam: true);
+    @State var hasSelected: Bool = false
     
     var body: some View {
         ZStack{
@@ -30,15 +29,17 @@ struct Bookmarks: View {
                     .font(.system(size: UIScreen.main.bounds.width*0.08, weight: .semibold))
                     .multilineTextAlignment(.center)
                     .padding(.top, -UIScreen.main.bounds.height*0.03)
+                
                 Spacer().frame(height:UIScreen.main.bounds.height * 0.03)
                 
                 NavigationLink(destination: BookmarkedResult(result: $result), isActive: $hasSelected){}
                 List{
                     Section(header: Text("Select a Date")
                         .font(.system(size:UIScreen.main.bounds.width * 0.04, weight: .bold))){
-                        ForEach(data, id: \.self) { d in
+                            ForEach(bookmarks.bookmarkedResults) { d in
+                            
                             HStack(){
-                                Text(d)
+                                Text(d.date, style: .date)
                                     .font(.system(size: UIScreen.main.bounds.width * 0.06))
                                 Spacer()
                                 Image(systemName: "chevron.right")
@@ -62,11 +63,11 @@ struct Bookmarks: View {
     }
 }
 
-struct BookmarksView_Previews: PreviewProvider{
-    static var previews: some View {
-        Bookmarks()
-    }
-}
+//struct BookmarksView_Previews: PreviewProvider{
+//    static var previews: some View {
+//        Bookmarks()
+//    }
+//}
 
 // REFERENES
 // Default row height https://stackoverflow.com/questions/58242342/swiftui-row-height-of-list-how-to-control

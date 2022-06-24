@@ -13,5 +13,5 @@ public enum StorageKeys: String {
         emergencyName,
         emergencyNumber,
         emergencyExists,
-        bookmarkedInfo
+        bookmarkedResults
 }

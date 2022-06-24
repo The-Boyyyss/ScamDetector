@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct BookmarkedResult: View {
-    @Binding var result: String;
+    @Binding var result: Result;
     
     var body: some View {
         ZStack{
@@ -22,11 +22,10 @@ struct BookmarkedResult: View {
                     .font(.system(size: UIScreen.main.bounds.width*0.1, weight: .bold))
                     .padding(.bottom, UIScreen.main.bounds.height*0.04)
                     .padding(.top, -UIScreen.main.bounds.height*0.08)
-                Text("\(result)")
+                Text(result.date, style: .date)
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .font(.system(size: UIScreen.main.bounds.width*0.08, weight: .semibold))
                     .multilineTextAlignment(.center)
-                
             }
             .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
         }

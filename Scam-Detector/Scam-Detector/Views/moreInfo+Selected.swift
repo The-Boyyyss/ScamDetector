@@ -18,7 +18,6 @@ struct moreInfoSelected:View{
     let data: scamInfo
     
     @EnvironmentObject var model : passID
-    @EnvironmentObject var bookmarks: BookmarkManager
     
     @State var isIdTapped = false
     
@@ -77,33 +76,14 @@ struct moreInfoSelected:View{
                     }
                 NavigationLink("", destination: moreInfoSelectedDetails(data: data), isActive: $isIdTapped)
 
-                if bookmarks.bookmarkedInfo.contains(where: { $0.id == data.id }){
-                    Text("Bookmarked")
-                        .frame(width: 300, height: 100, alignment: .center)
-                        .background(.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .font(.system(size: 33))
-                        .padding()
-                        .onTapGesture{
-                            bookmarks.bookmarkedInfo.removeAll(where: { $0.id == data.id })
-                        }
                 }
-                else {
-                    Text("Bookmark")
-                        .frame(width: 300, height: 100, alignment: .center)
-                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .font(.system(size: 33))
-                        .padding()
-                        .onTapGesture{
-                            // Testing
-                            // print(bookmarks.bookmarkedInfo)
-                            bookmarks.bookmarkedInfo.insert(data, at: 0)
-                        }
-                }
-            }
+                Text("Bookmark")
+                    .frame(width: 300, height: 100, alignment: .center)
+                    .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .font(.system(size: 33))
+                    .padding()
         }
     }
 }
