@@ -9,12 +9,10 @@ import SwiftUI
 import Foundation
 
 struct scamDetect:View {
-    @State var progressColor: Color = .red
-    @State var howtoFix: [String] = []
+    /// nodes of answers chosen by users
+    @State var chosenNodes: [QTNode] = []
+    /// whether to display results page
     @State var results: Bool = false
-    
-    init() {
-    }
     
     var body: some View {
         VStack {
@@ -22,12 +20,14 @@ struct scamDetect:View {
                 ResultPage()
             }
             else {
-                scamDetect_Questions(howtoFix: $howtoFix, results: $results)
+                scamDetect_Questions(chosenNodes: $chosenNodes, results: $results)
             }
-        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
         .background(GradientBackground().blueGradient)
-        .frame(width: uSizes.sWidth, height: uSizes.sHeight)
-            
+        .navigationBarHidden(self.results)
+        .navigationBarBackButtonHidden(self.results)
+
     }
 }
 

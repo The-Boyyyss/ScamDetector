@@ -12,18 +12,19 @@ struct scamDetect_Questions:View {
     
     /// the current node in the tree
     @State var node: QTNode = QuestionTree.instance.reset()
-    /// All the fixes we traverse as we navigate the tree
-    @Binding var howtoFix: [String]
+    /// All the nodes we traverse as we navigate the tree
+    @Binding var chosenNodes: [QTNode]
     /// move to the results page when true
     @Binding var results: Bool
     
     
     
+    /// used to create the buttons that handle navigating between nodes via user answers
     func makeButton(name: String, answer: ScamDetectAnswer) -> some View {
         return AnyView(Button(name) {
             do {
                 try node = QuestionTree.instance.answerQuestion(givenAnswer: answer)
-                howtoFix.append(node.howToFix)
+                chosenNodes.append(node)
             }
             catch {
                 results = true
@@ -36,7 +37,6 @@ struct scamDetect_Questions:View {
         
         ZStack {
             VStack {
-                
                 ZStack() {
                     Rectangle()
                         .fill(.white)

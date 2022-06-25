@@ -88,6 +88,7 @@ struct homeScreen: View{
                 }
             }
         }
+        .navigationBarHidden(true)
     }
 }
 
