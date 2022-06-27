@@ -329,7 +329,6 @@
 				59F555B3283B06B60083832C /* HowToFix.swift in Sources */,
 				5963DFB32855516700468CC0 /* ResultPage.swift in Sources */,
 				596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */,
-				FBB15534283347FF003A67D2 /* ContentView.swift in Sources */,
 				C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */,
 				FBB155402833481F003A67D2 /* Splash.swift in Sources */,
 				FBB1554528335160003A67D2 /* Home.swift in Sources */,

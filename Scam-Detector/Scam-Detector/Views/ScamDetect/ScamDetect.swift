@@ -19,7 +19,7 @@ struct scamDetect:View {
     
     var body: some View {
         if (results == true) {
-            ResultPage()
+            ResultPage().navigationBarHidden(true)
         }
         else {
             scamDetect_Questions(node: $node, response: $reponse, results: $results)

@@ -17,7 +17,7 @@ struct CustomButton: ButtonStyle {
         configuration.label
             .frame(
                 width: UIScreen.main.bounds.width * 0.60,
-                height: UIScreen.main.bounds.height * 0.06,
+                height: UIScreen.main.bounds.height * 0.05,
                 alignment: .center)
             .padding()
             .background(Color.customButtonColor)

@@ -12,20 +12,16 @@ struct HowToFix: View {
     
     var body: some View {
         VStack() {
-            VStack() {
-                Text("How To Fix").font(.system(size: 42)).bold().padding()
-            }.frame(width: UIScreen.main.bounds.width, alignment: .leading)
+            Group {
+                Text("How To Fix")
+                    .font(.system(size: 42))
+                    .bold()
+                    .padding()
+            }.frame(width: uSizes.sWidth, alignment: .leading)
             
-            VStack() {
-                Text("...")
-            }.frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
-        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).padding().background(GradientBackground().blueGradient)
-    }
-}
-
-// THIS IS ONLY FOR PREVIEW DURING DEVELOPMENT
-struct ResultHowToFixPreview: PreviewProvider {
-    static var previews: some View {
-        HowToFix()
+            Group() {
+                Text(".....")
+            }.frame(width: uSizes.sWidth * 0.9, alignment: .leading)
+        }.frame(width: uSizes.sWidth, height: uSizes.sHeight, alignment: .top).padding().background(GradientBackground().blueGradient)
     }
 }

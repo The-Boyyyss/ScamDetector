@@ -20,37 +20,38 @@ struct ResultPage: View {
     @State private var badResults: Bool = true
     
     var body: some View {
-        NavigationView {
-            VStack() {
-                Text("Result").font(.system(size: 42)).bold().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.1, alignment: .bottom)
-                    .padding(.bottom, 10)
+        VStack() {
+            Text("Result").font(.system(size: 42)).bold().frame(width: uSizes.sWidth, height: uSizes.sHeight * 0.1, alignment: .bottom)
+                .padding(.bottom, 10)
+            
+            if (!badResults) {
+                VStack() {
+                    Text("Looks Good!").font(.system(size: 36)).bold().padding(.top, 30)
+                    Text("it's not a scam").font(.system(size: 32))
+                    Image("checkMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.7, height: uSizes.sHeight * 0.30)
+                }
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.65, alignment: .top)
+                .background(.white)
+                .cornerRadius(20.0)
+                .shadow(color: .gray, radius: 5, x: 5, y: 5)
+                Spacer()
                 
-                if (!badResults) {
-                    VStack() {
-                        Text("Looks Good!").font(.system(size: 36)).bold().padding(.top, 30)
-                        Text("it's not a scam").font(.system(size: 32))
-                        Image("checkMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.30)
-                    }
-                    .frame(width: UIScreen.main.bounds.width * 0.80, height: UIScreen.main.bounds.height * 0.65, alignment: .top)
-                    .background(.white)
-                    .cornerRadius(20.0)
-                    .shadow(color: .gray, radius: 5, x: 5, y: 5)
-                    Spacer()
-                    
-                    NavigationLink(destination: homeScreen(), isActive: $showHomeView) {EmptyView()}
-                    Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton())
-                } else {
-                    VStack() {
+                NavigationLink(destination: homeScreen(), isActive: $showHomeView) {EmptyView()}
+                Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton())
+            } else {
+                VStack() {
+                    Group {
                         Text("It's most likely a").font(.system(size: 30)).padding(.top, 25)
                         Text("SCAM").font(.system(size: 35)).bold()
-                        Image("exclamationMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.60, height: UIScreen.main.bounds.height * 0.25)
-                    }
-                    .frame(width: UIScreen.main.bounds.width * 0.80, height: UIScreen.main.bounds.height * 0.45, alignment: .top)
-                    .background(.white)
-                    .cornerRadius(20.0)
-                    .shadow(color: .gray, radius: 5, x: 5, y: 5)
-                    Spacer()
-                    
+                    }.frame(width: uSizes.sWidth * 0.7 , height: uSizes.sHeight * 0.07, alignment: .center)
+                    Image("exclamationMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.60, height: uSizes.sHeight * 0.25)
+                }
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.45, alignment: .top)
+                .background(.white)
+                .cornerRadius(20.0)
+                .shadow(color: .gray, radius: 5, x: 5, y: 5)
+                
+                Group {
                     NavigationLink(destination: HowToFix(), isActive: $showFixView) {EmptyView()}
                     Button("How To Fix") {self.showFixView = true}.buttonStyle(CustomButton()).padding(7)
                     
@@ -59,12 +60,14 @@ struct ResultPage: View {
                     
                     NavigationLink(destination: homeScreen(), isActive: $showHomeView) {EmptyView()}
                     Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton()).padding(7)
-                }
-                Spacer()
-            }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).background(GradientBackground().blueGradient)
-                .navigationBarHidden(true)
-                .padding()
-        }
+                }.frame(width: uSizes.sWidth * 0.6, height: uSizes.sHeight * 0.045)
+            }
+            Spacer()
+        }.frame(width: uSizes.sWidth, height: uSizes.sHeight, alignment: .top).background(GradientBackground().blueGradient)
+            .navigationTitle("")
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
+            .ignoresSafeArea(.all)
     }
 }
 
