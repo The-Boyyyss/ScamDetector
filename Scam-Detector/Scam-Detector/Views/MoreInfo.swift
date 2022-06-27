@@ -22,9 +22,6 @@ struct MoreInfoScreen:View{
 
     var body: some View{
         ZStack{
-            Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
-                    .edgesIgnoringSafeArea(.all)
-
             VStack{
                 Text("Information")
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
@@ -39,7 +36,7 @@ struct MoreInfoScreen:View{
                 ScrollView {
                     VStack(spacing: 15) {
                         
-                        NavigationLink(destination: HomeScreen(), label: {
+                        NavigationLink(destination: EmergencyContact(), label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 25)
                                     .fill(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
@@ -96,6 +93,7 @@ struct MoreInfoScreen:View{
                 }
             }
         }
+        .background(GradientBackground().blueGradient)
     }
 }
 

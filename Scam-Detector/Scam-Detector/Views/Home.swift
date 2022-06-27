@@ -15,9 +15,6 @@ struct HomeScreen:View{
     
     var body: some View{
         ZStack{
-            Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
-                .edgesIgnoringSafeArea(.all)
-
             VStack{
                 Image("scam-Detector-logo2")
                     .resizable()
@@ -27,7 +24,7 @@ struct HomeScreen:View{
                     .padding(.top, -175)
                     .padding(.leading, 15)
                 
-                NavigationLink(destination: SplashScreen(), label:{
+                NavigationLink(destination: EmptyView(), label:{
                     VStack{
                         Text("Detect")
                         Text("Scam")
@@ -46,10 +43,11 @@ struct HomeScreen:View{
                 .padding(.top, 40)
                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
-                NavigationLink(destination: SplashScreen(), label:{
+                NavigationLink(destination: EmptyView(), label:{
                     HStack{
                         Image(systemName: "clock.arrow.circlepath")
-                            .padding(.trailing, 40)
+                            .padding(.trailing, 60)
+                            .padding(.leading, -50)
                         Text("History")
                     }
                     .frame(width: 350, height: 100, alignment: .center)
@@ -72,7 +70,8 @@ struct HomeScreen:View{
                     .font(.system(size: 40))
                 }).padding(.bottom, 40).shadow(color: .gray, radius: 5, x: 0, y: 5)
             }.padding(.top, 75)
-        }
+        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(GradientBackground().blueGradient)
     }
 }
 

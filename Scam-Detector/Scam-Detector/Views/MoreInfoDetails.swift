@@ -19,9 +19,6 @@ struct MoreInfoDetails:View{
     
     var body: some View{
         ZStack{
-            Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
-                    .edgesIgnoringSafeArea(.all)
-
             VStack{
                 Text(data.scamType)
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
@@ -320,6 +317,7 @@ struct MoreInfoDetails:View{
                 }
             }.padding()
         }
+        .background(GradientBackground().blueGradient)
     }
 }
 

@@ -14,14 +14,18 @@ import SwiftUI
 struct SplashScreen: View {
 
     @State var isActive:Bool = false
+    @AppStorage(StorageKeys.emergencyExists.rawValue) var hasContact: Bool = false
     
     var body: some View {
         ZStack{
-            Color(red: 192 / 255, green: 223 / 255, blue: 161 / 255)
-                    .edgesIgnoringSafeArea(.all)
             VStack {
                 if self.isActive {
+                    if self.hasContact{
                         HomeScreen()
+                    }
+                   else {
+                        EmergencyContact()
+                   }
                 } else {
                     VStack{
                         Image("scam-Detector-logo1")
@@ -39,6 +43,8 @@ struct SplashScreen: View {
                 }
             }
         }
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(GradientBackground().blueGradient)
     }
 }
 
