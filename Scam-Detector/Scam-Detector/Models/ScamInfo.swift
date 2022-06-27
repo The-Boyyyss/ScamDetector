@@ -11,6 +11,7 @@
 
 import Foundation
 
+// It includes information regarding what scam is all about. Different sections are used to display different information in differents parts.
 struct WhatItIs: Codable{
     /// Section to add required information accordingly.
     let section1: String?
@@ -94,6 +95,7 @@ struct WhatItIs: Codable{
     let section40: String?
 }
 
+// It includes information regarding what a person should do if they become victim of any scam.
 struct WhatToDo: Codable{
     /// Section to add required information accordingly.
     let section1: String?
@@ -117,6 +119,7 @@ struct WhatToDo: Codable{
     let section10: String?
 }
 
+// It includes information regarding how a person can prevent themselves from any scams.
 struct Prevention: Codable{
     /// Section to add required information accordingly.
     let section1: String?
@@ -140,6 +143,7 @@ struct Prevention: Codable{
     let section10: String?
 }
 
+// It includes additional information for any scam (image, online links and written info including prevention measures, what to do if you become victim of scam etc)
 struct MoreInfo: Codable{
     /// id for more information objectt
     let id: Int
@@ -164,6 +168,7 @@ struct MoreInfo: Codable{
     
 }
 
+// It is main scam information object which includes all the above data for each scam type.
 struct ScamInfo:Codable {
     /// id of the scam type
     let id: Int

@@ -10,7 +10,7 @@
  */
 
 import Foundation
-
+// This model loads data from JSON file. 
 class LoadData {
     
     // Function used to load json content into model and return data as array of objects.
