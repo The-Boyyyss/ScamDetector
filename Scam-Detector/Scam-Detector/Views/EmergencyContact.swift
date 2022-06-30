@@ -1,5 +1,3 @@
-//
-//  EmergencyContact.swift
 import SwiftUI
 
 struct EmergencyContact: View {
@@ -12,17 +10,13 @@ struct EmergencyContact: View {
     
     var body: some View {
         VStack(alignment: .center){
-            HStack(alignment: .top){
-                Image(systemName: "phone.fill")
-                    .padding(.trailing, UIScreen.main.bounds.width*0.05)
-                    .padding(.top, UIScreen.main.bounds.height*0.02)
-                Text("Emergency Contact")
-            }
+            Text("Emergency Contact")
             .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-            .font(.system(size: UIScreen.main.bounds.width*0.08, weight: .bold))
-            .padding(.bottom, UIScreen.main.bounds.height*0.04)
-            //.padding(.top, -UIScreen.main.bounds.height*0.05)
-            Spacer().frame(height: 100)
+            .multilineTextAlignment(.center)
+            .font(.system(size: uSizes.sWidth * 0.1, weight: .bold))
+            .padding(.bottom, uSizes.sHeight * 0.04)
+            .padding(.top, uSizes.sHeight*0.05)
+            Spacer().frame(height: uSizes.sHeight * 0.17)
             
             if emergencyName.isEmpty || emergencyNumber.isEmpty {
                 
@@ -30,11 +24,7 @@ struct EmergencyContact: View {
                     Button("Add Emergency Contact"){
                         showAddPage = true;
                     }
-                    .frame(width: 270, height: 80, alignment: .center)
-                    .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .font(.system(size: 30))
+                    .buttonStyle(CustomButton())
                 }
             }
             else {
@@ -45,28 +35,22 @@ struct EmergencyContact: View {
                         guard let call = URL(string: formatted) else { return };
                         UIApplication.shared.open(call);
                     }
-                    .frame(width: 270, height: 80, alignment: .center)
-                    .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                    .font(.system(size: 30))
+                    .buttonStyle(CustomButton())
                     
-                    Spacer().frame(height: 50);
+                    Spacer();
                     
                     NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $showAddPage), isActive: $showAddPage){
                         Button("Update Emergency Contact"){
                             showAddPage = true;
                         }
-                        .frame(width: 270, height: 80, alignment: .center)
-                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .font(.system(size: 30))
+                        .buttonStyle(CustomButton())
                     }
                 }
             }
         }
-        .frame(width: uSizes.sWidth, height: uSizes.sHeight)
+        .padding(.horizontal, uSizes.sWidth * 0.05)
+        .padding(.bottom, uSizes.sHeight * 0.2)
+        .frame(width: uSizes.sWidth, height: uSizes.sHeight, alignment: .top)
         .background(GradientBackground().blueGradient)
     }
 }

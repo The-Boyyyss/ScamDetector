@@ -20,34 +20,30 @@ struct EmergencyContact_Add: View {
     @AppStorage(StorageKeys.emergencyExists.rawValue) var hasContact: Bool = false;
     
     var body: some View {
-        VStack(alignment: .center, spacing: 0){
-            HStack(alignment: .top){
-                Image(systemName: "phone.fill")
-                    .padding(.trailing, UIScreen.main.bounds.width*0.05)
-                    .padding(.top, UIScreen.main.bounds.height*0.02)
-                Text("Emergency Contact")
-            }
+        VStack(spacing: 0){
+            Text("Emergency Contact")
             .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-            .font(.system(size: UIScreen.main.bounds.width*0.08, weight: .bold))
-            .padding(.bottom, UIScreen.main.bounds.height*0.04)
-            .padding(.top, -UIScreen.main.bounds.height*0.05)
-            Spacer().frame(height: 50)
+            .font(.system(size: uSizes.sWidth * 0.1, weight: .bold))
+            .padding(.bottom, uSizes.sHeight * 0.04)
+            .padding(.top, uSizes.sHeight*0.05)
+            .multilineTextAlignment(.center)
+            Spacer().frame(height: uSizes.sHeight * 0.06)
                             
             Text("Contact Name")
-                .font(.system(size: 25, weight: .heavy))
+                .font(.system(size: uSizes.sWidth * 0.06, weight: .heavy))
             TextField("\(name)", text: $inputName)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .font(.system(size: 20))
+                .font(.system(size: 25))
                 .onAppear{
                     inputName = name;
                 }
             
             Text("Phone Number")
-                .font(.system(size: 25, weight: .heavy))
+                .font(.system(size: uSizes.sWidth * 0.06, weight: .heavy))
                 .padding(.top, UIScreen.main.bounds.height * 0.05)
             TextField("\(number)", text: $inputNumber)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .font(.system(size: 20))
+                .font(.system(size: 25))
                 .keyboardType(.decimalPad)
                 .onReceive(Just(inputNumber)) {
                     newValue in let filtered = newValue.filter { "0123456789".contains($0) }
@@ -61,7 +57,7 @@ struct EmergencyContact_Add: View {
                 .onAppear{
                     inputNumber = number;
                 }
-            Spacer().frame(height: 50)
+            Spacer()
             
             Button("Submit"){
                 if inputName.isEmpty || inputNumber.isEmpty {
@@ -77,13 +73,11 @@ struct EmergencyContact_Add: View {
                     isFinished = false;
                 }
             }
-            .frame(width: 270, height: 80, alignment: .center)
-            .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .font(.system(size: 30))
+            .buttonStyle(CustomButton())
         }
-        .frame(width: uSizes.sWidth, height: uSizes.sHeight)
+        .padding(.horizontal, uSizes.sWidth * 0.05)
+        .padding(.bottom, uSizes.sHeight * 0.2)
+        .frame(width: uSizes.sWidth, height: uSizes.sHeight, alignment: .top)
         .background(GradientBackground().blueGradient)
         .alert("Error", isPresented: $showAlert, actions: {
             Button("Try Again", role: .cancel, action: {})
