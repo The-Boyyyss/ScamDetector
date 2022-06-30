@@ -37,7 +37,7 @@ struct ResultPage: View {
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
                 Spacer()
                 
-                NavigationLink(destination: homeScreen(), isActive: $showHomeView) {EmptyView()}
+                NavigationLink(destination: HomeScreen(), isActive: $showHomeView) {EmptyView()}
                 Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton())
             } else {
                 VStack() {
@@ -58,7 +58,7 @@ struct ResultPage: View {
                 Button("Get Help") {self.showHelpView = true}.buttonStyle(CustomButton()).padding(7)
                 
                 ZStack {
-                    NavigationLink(destination: homeScreen(), isActive: $showHomeView) {EmptyView()}
+                    NavigationLink(destination: HomeScreen(), isActive: $showHomeView) {EmptyView()}
                 }
                 Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton()).padding(7)
             }

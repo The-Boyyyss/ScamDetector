@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct scamDetect:View {
+struct ScamDetect:View {
     /// nodes of answers chosen by users
     @State var chosenNodes: [QTNode] = []
     /// whether to display results page
@@ -20,7 +20,7 @@ struct scamDetect:View {
                 ResultPage()
             }
             else {
-                scamDetect_Questions(chosenNodes: $chosenNodes, results: $results)
+                ScamDetect_Questions(chosenNodes: $chosenNodes, results: $results)
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)

@@ -1,0 +1,135 @@
+[
+    {
+        "id":1,
+        "scamType": "Email Scam",
+        "sysImg": "mail.fill",
+        "moreInfo":{
+            "id":1,
+            "whatItIs":{
+                "section1": "If you get an email, expand the pane at the top of the message and see exactly who it has come from, but if you click or hover over the name it might reveal something different. If it’s a scam, the email address the message has come from might not match up with the sender’s name, have misspellings, random numbers or be from one of your contacts that’s been hacked. Here are the common email scams: ",
+                "section2": "Foreign Lottery Scam",
+                "section3": " – When you receive an email from a foreign lottery corporation congratulating you for winning the lottery. ",
+                "section4": "If the sender is an individual (bobjones1234@gmail.com) or is at least not an official lottery email and your name is not on the “To” section of the email; It is a scam. This email is most likely sent to thousands of people. ",
+                "section5": "If you did not enter the lottery, you would not win the lottery. ",
+                "section6": "Nigerian Prince Scam",
+                "section7": " – When you receive an email claiming that the sender is a prince or princess from another country. This so-called prince or princess is asking for help to unlock his funds. He/she will claim that the money is locked in a bank or institution and that if you give him the money to unlock it, he/she will reward you x10 the amount you gave them. ",
+                "section8": "There are many variations of this scam but, ultimately, their goal is to claim your trust in order for you to send them money. They will even seduce you or make up stories that will make you cry. ",
+                "section9": "If someone you do not know is asking for money through your email, it is a scam. ",
+                "section10": "Online Credit Card/Banking Scam",
+                "section11": " – You will receive an email claiming it is from the bank or credit card company and that there is something wrong with your account. There will be logos in the email that mimic the original companies. ",
+                "section12": "They will tell you to act fast or something bad will happen. This will create panic resulting in you clicking the link that will lead you to a fake website that looks identical to the bank or credit card company’s website. Once you log in to the fake website, they will have all the information you entered. ",
+                "section13": "Your bank or credit card company will not send you an email like this. Call your bank or credit card company immediately to verify. ",
+                "section14": "Tax Scam",
+                "section15": " – When you receive an email from the IRS (America) or CRA (Canada) saying that you owe taxes and if you don’t pay up you're going to go to jail.",
+                "section16": "These tax departments never email people, they only send physical mail. If you get an email saying you're going to jail if you don’t pay up, it is a scam. ",
+                "section17": "Common signs of an email scam",
+                "section18": "Request for personal information",
+                "section19": " – If they ask for information such as name, address, age, etc... It is also called a phishing scam which is designed to get you to reveal sensitive information. ",
+                "section20": "Not addressed to you specifically",
+                "section21": " – If the correspondence does not contain your name and starts with “Dear Valued Customer” or something similar. It is most likely sent to thousands of people in hopes of getting a few to respond. ",
+                "section22": "Unknown Link",
+                "section23": " - When an unsolicited email is asking you to click a link or a button that would lead you to another website. "
+            },
+            "whatToDo":{
+                "section1": "Stop sending money straight away. If the payment has been set up as a Direct Debit, get in touch with your bank to stop this immediately. ",
+                "section2": "If you gave out sensitive information about your credit card or bank. Call the bank or credit card company right away and inform them of what happened. ",
+                "section3": "If you have given out personal information such as usernames and passwords, it is best to change them right away. ",
+            },
+            "prevention":{
+                "section1": "Deleted unsolicited email",
+                "section2": " – Legitimate companies will never send you pertinent information by email. ",
+                "section3": "Don’t believe the promises of money or prizes",
+                "section4": " – Emails promising money or prizes should be dismissed as these are almost always scams. ",
+                "section5": "Never disclose sensitive personal information",
+                "section6": " – Any email asking you for sensitive information such as your bank account or social security number is up to no good. ",
+                "section7": "Hover before you click",
+                "section8": " - Beware of unsolicited email asking you to 'Click Here'. "
+            },
+            "link1": "https://www.google.com",
+            "link2": "https://www.apple.com",
+            "image":"emailScam"
+        }
+    },
+    
+    {
+        "id":2,
+        "scamType": "Phone Scam",
+        "sysImg": "phone.fill.arrow.down.left",
+        "moreInfo":{
+            "id":2,
+            "whatItIs":{
+                "section1": "Phone scams can be done through calling or through texting. Here are some of the common types of phone scams: ",
+                "section2": "Investment Scams",
+                "section3": " - You are encouraged to hand over money to invest in a company or product which does not exist. It is unlikely a company will contact you unexpectedly about an investment opportunity. So, if you get an unexpected phone call, it is best to ignore it. A big warning sign should be if you are told an investment offers a high rate of return with minor risk. ",
+                "section4": "Can You Hear Me",
+                "section5": " - Scammers will call your phone and ask a simple question like “Can you hear me?” or “Is this the head of the household?” These questions are designed for you to answer “Yes” If you said “Yes” or “I agree” then you have already got you. The call is recorded and now they have an audio of you agreeing to something.  ",
+                "section6": "Next, they will try to charge you with something like phone bills or an online sale of some sort and edit that audio of you saying you agree. It is possible to apply charges straight to your phone bill using that edited audio. ",
+                "section7": "When you get a call from an unknown source, DO NOT agree to something even if how silly it is. Confirm the caller’s identity first and if they are someone you do not know, it is best to avoid. ",
+                "section8": "Call Forwarding Scam",
+                "section9": " - *72 is one of the star codes that you can type in your phone or even your landline. This code activates call forwarding. In this scam, the scammer will try to get you to type in a phone number beginning with *72. For instance, they might say that they are calling from jail, and they accidentally dialed your number and that they only have one phone call. They would then ask you to forward the call to their loved ones using *72. Now all your calls are going to get forwarded to that number. ",
+                "section10": "The scammer will then give your phone number to someone who wants to call them long distance. Now you would have to pay for all the long distance call bill because the call is technically being forwarded through you. ",
+                "section11": "If someone asks you to type in a star code, it is most likely a scam.  ",
+                "section12": "Tech Support",
+                "section13": " – This is when you get a random phone call from someone who claims to be from Microsoft or from “Windows” it doesn’t make sense sometimes. They will then say something like “Your computer has been sending us error messages, let me help you fix it” They will then guide you through a ridiculous process on your computer that will show the supposed “Error” as proof that they are not lying and that your computer is clearly broken. ",
+                "section14": "They then tell you that to fix you you’d need to download a certain program. This program is a virus that lets them hijack your computer and grab all the information in it. ",
+                "section15": "Microsoft or any other computer companies will not contact you randomly about your computer. Avoid these kinds of calls. ",
+                "section16": "Fake Bank Calls",
+                "section17": " – This is quite tricky because sometimes the bank or credit card company will call you if they suspect that fraud is occurring. A scammer may call you and claim to be the bank and say that your card has a suspicious charge. They may also leave a message saying, “Call back this number for the fraud department” And then before they tell you about the suspicious charge, they would ask your credit number to verify. ",
+                "section18": "What if the credit card company is actually calling? ",
+                "section19": "Anytime you get a call from the bank or credit card company, always make sure that you call them. Go to the bank or credit card company’s website and call the official number there. There will also be some information on the back of your credit/debit card about what number to call in case of emergencies. ",
+                "section20": "Tax Scam",
+                "section21": " – These are pretty easy to spot and almost always involve someone calling you from the IRS (America) or CRA (Canada) saying that you owe taxes and if you don’t pay up you're going to go to jail. They would then ask you to pay for them through some weird way like purchasing gift cards or through PayPal friends and family. ",
+                "section22": "These tax departments never call people without sending a letter first. If you get a call saying you're going to jail if you don’t pay up, it is a scam. ",
+                "section23": "Text Scam",
+                "section24": " - A text scam is any type of unsolicited electronic message that attempts to obtain personal information about your identity, online accounts, or money. ",
+                "section25": "A major problem with text scams is how easy it is to appear to be someone else over text. The technology allows scammers to pretend to be a bank, an email provider or another legitimate company simply by using their name in text messages. ",
+                "section26": "If the text came from an unknown number, asking you to click some sort of link or number, or pretend to be someone you know like they say “Hi this is your daughter” it is a scam. It is best to avoid these types of messages or better yet, delete them right away. ",
+                "section27": "Common signs of a phone scam ",
+                "section28": "Sense of urgency",
+                "section29": " – When they say that you have to do it right now, you can't hang up or call us back.",
+                "section30": "Severe consequence of not complying. ",
+                "section31": " – When they say that if you do not do this right now you will be arrested, your account is going to be suspended, there is going to be fines and penalties. ",
+                "section32": "They demand something specific",
+                "section33": " – Most of the time they want you to pay by gift card. If you hear the words “gift card” hang up right away. It is a scam. "
+            },
+            "whatToDo":{
+                "section1": "Stop sending money straight away. If the payment has been set up as a Direct Debit, get in touch with your bank to stop this immediately. ",
+                "section2": "If you gave out sensitive information about your credit card or bank. Call the bank or credit card company right away and inform them of what happened. "
+            },
+            "prevention":{
+                "section1": "If you get a scam call or text, do not respond in any way even by pressing a number on a keypad. By pressing a keypad, these scam companies now know that you’re number works. Now they put your number on a list and they would keep trying repeatedly to scam you. ",
+                "section2": "Do not interact with these scammers at all and best to not even answer them in the first place. "
+            },
+            "link1": "https://www.google.com",
+            "link2": "https://www.instagram.com",
+            "link3": "https://www.github.com",
+            "image": "phoneScam"
+        }
+    },
+    
+    {
+        "id":3,
+        "scamType": "In-Person Scam",
+        "sysImg": "person.circle.fill",
+        "moreInfo":{
+            "id":3,
+            "whatItIs":{
+                "section1": "These can take many forms, but instead of relying on the anonymity of online communications, they simply knock on your door. ",
+                "section2": "While they can be investment and pension scammers as well, they can also try and scam you in a more practical way – like selling you a product or service. ",
+                "section3": "A common example is a person claiming to be a builder who happened to notice some damage to your roof when they were passing. Fake charity collectors and salespeople are other examples. ",
+                "section4": "A scammer might even claim to be from government agencies, including the Money and Pensions Service. ",
+                "section5": "The Money and Pensions Service has never, and will never, come to your home or contact you out of the blue via phone, WhatsApp, email or text. ",
+            },
+            "whatToDo":{
+                "section1": "Don’t engage with anyone who knocks on your door unannounced and report anyone you suspect of trying to scam you or your neighbours to the police. "
+            },
+            "prevention":{
+                "section1": "Always be suspicious of anyone arriving unannounced at your door. In the age of digital communications, it’s unlikely any legitimate company will attempt to do business this way. ",
+                "section2": "It’s also important not to be fooled just because someone has identification. It’s very easy to make a fake ID and it’s no guarantee of legitimacy. "
+            },
+            "link1": "https://www.google.com",
+            "link2": "https://www.youtube.com",
+            "image": "inPersonScam"
+        }
+    }
+]

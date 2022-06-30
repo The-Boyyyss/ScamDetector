@@ -23,8 +23,6 @@ struct EmergencyContact_Add: View {
     
     var body: some View {
         ZStack(alignment: .top){
-            Color.customLightGreen
-                                .edgesIgnoringSafeArea(.all)
             VStack(alignment: .center, spacing: 0){
                 HStack(alignment: .top){
                     Image(systemName: "phone.fill")
@@ -90,6 +88,7 @@ struct EmergencyContact_Add: View {
             }
             .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.75, alignment: .top)
         }
+        .background(GradientBackground().blueGradient)
         .alert("Error", isPresented: $showAlert, actions: {
             Button("Try Again", role: .cancel, action: {})
         }, message: {

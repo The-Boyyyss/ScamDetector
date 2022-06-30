@@ -8,7 +8,7 @@
 import SwiftUI
 import Foundation
 
-struct scamDetect_Questions:View {
+struct ScamDetect_Questions:View {
     
     /// the current node in the tree
     @State var node: QTNode = QuestionTree.instance.reset()
