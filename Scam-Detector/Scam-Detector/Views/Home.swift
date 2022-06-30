@@ -24,7 +24,7 @@ struct HomeScreen:View{
                     .padding(.top, -175)
                     .padding(.leading, 15)
                 
-                NavigationLink(destination: EmptyView(), label:{
+                NavigationLink(destination: ScamDetect(), label:{
                     VStack{
                         Text("Detect")
                         Text("Scam")
