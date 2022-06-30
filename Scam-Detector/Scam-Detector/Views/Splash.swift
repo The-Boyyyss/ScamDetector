@@ -12,8 +12,9 @@
 import SwiftUI
 
 struct SplashScreen: View {
-
+    /// Check if splash duration is finished then go to homescreen
     @State var isActive:Bool = false
+    /// Saved variable for checking if there is an existing contact in local storage
     @AppStorage(StorageKeys.emergencyExists.rawValue) var hasContact: Bool = false
     
     var body: some View {

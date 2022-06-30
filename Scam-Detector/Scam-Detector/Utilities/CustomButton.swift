@@ -23,7 +23,7 @@ struct CustomButton: ButtonStyle {
             .background(Color.customButtonColor)
             .foregroundColor(.white)
             .cornerRadius(10)
-            .font(.system(size: 20, weight: .bold, design: .default))
+            .font(.system(size: 25, weight: .bold, design: .default))
             .shadow(color: .gray, radius: 4, x: 0, y: 5)
     }
 }

@@ -15,6 +15,8 @@
 		59F555B3283B06B60083832C /* HowToFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F555B2283B06B60083832C /* HowToFix.swift */; };
 		C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289A283DEA5F001A101C /* EmergencyContact.swift */; };
 		C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */; };
+		C958B3FB286D4A64001C68DD /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B3FA286D4A64001C68DD /* BookmarkManager.swift */; };
+		C958B3FD286D4A70001C68DD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B3FC286D4A70001C68DD /* History.swift */; };
 		C98E7B1F283DC4D800F55AC0 /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */; };
 		CC0FFE582848477300AC86CA /* QTNodeChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE572848477300AC86CA /* QTNodeChildren.swift */; };
 		CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */; };
@@ -50,6 +52,8 @@
 		59F555B2283B06B60083832C /* HowToFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToFix.swift; sourceTree = "<group>"; };
 		C93E289A283DEA5F001A101C /* EmergencyContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact_Add.swift; sourceTree = "<group>"; };
+		C958B3FA286D4A64001C68DD /* BookmarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
+		C958B3FC286D4A70001C68DD /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
 		CC0FFE572848477300AC86CA /* QTNodeChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNodeChildren.swift; sourceTree = "<group>"; };
 		CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamDetectAnswer.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 		CC80EEC028399A2F0064B52B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C958B3FA286D4A64001C68DD /* BookmarkManager.swift */,
 				CC4F646A286D423000F64B46 /* LoadData.swift */,
 				CC80EEC52839ADBF0064B52B /* QuestionTree */,
 			);
@@ -220,6 +225,7 @@
 			children = (
 				CC4F646E286D42FC00F64B46 /* ScamDetect */,
 				FB3317A1285D65C4005FFA91 /* Splash.swift */,
+				C958B3FC286D4A70001C68DD /* History.swift */,
 				FB33179F285D6470005FFA91 /* Home.swift */,
 				FB68D9AD28401B91004E1F2E /* MoreInfo.swift */,
 				FB6F2C472857D94A00683475 /* MoreInfoDetails.swift */,
@@ -361,12 +367,14 @@
 				FB677116283AA76E002880FD /* Shared.swift in Sources */,
 				FB5BC779284B33D2003C48E6 /* ScamInfo.swift in Sources */,
 				FB3317A0285D6470005FFA91 /* Home.swift in Sources */,
+				C958B3FD286D4A70001C68DD /* History.swift in Sources */,
 				598D1408284C13AB00901920 /* ProgressIndicator.swift in Sources */,
 				FB3317A2285D65C4005FFA91 /* Splash.swift in Sources */,
 				590C1D002854A12E007B8156 /* GradientBackground.swift in Sources */,
 				CC4F6475286D42FC00F64B46 /* ScamDetect.swift in Sources */,
 				CC4F6474286D42FC00F64B46 /* Questions.swift in Sources */,
 				595F2AB4283EF50B00F648E1 /* CustomButton.swift in Sources */,
+				C958B3FB286D4A64001C68DD /* BookmarkManager.swift in Sources */,
 				59F555B3283B06B60083832C /* HowToFix.swift in Sources */,
 				CC4F646B286D423000F64B46 /* LoadData.swift in Sources */,
 				596B8504283AD74E0085AC27 /* ColorThemes.swift in Sources */,
