@@ -43,7 +43,7 @@ struct HomeScreen:View{
                 .padding(.top, 40)
                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
-                NavigationLink(destination: EmptyView(), label:{
+                NavigationLink(destination: History(), label:{
                     HStack{
                         Image(systemName: "clock.arrow.circlepath")
                             .padding(.trailing, 60)

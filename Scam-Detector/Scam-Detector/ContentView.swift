@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    let bookmark = BookmarkManager()
     var body: some View {
         NavigationView{
             SplashScreen()
-        }
+        }.environmentObject(bookmark)
     }
 }
 

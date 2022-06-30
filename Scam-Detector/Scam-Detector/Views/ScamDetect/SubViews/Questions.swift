@@ -16,8 +16,8 @@ struct ScamDetect_Questions:View {
     @Binding var chosenNodes: [QTNode]
     /// move to the results page when true
     @Binding var results: Bool
-    
-    
+    /// Saved results manager
+    @EnvironmentObject var bookmarks: BookmarkManager
     
     /// used to create the buttons that handle navigating between nodes via user answers
     func makeButton(name: String, answer: ScamDetectAnswer) -> some View {
@@ -27,6 +27,8 @@ struct ScamDetect_Questions:View {
                 chosenNodes.append(node)
             }
             catch {
+                // TODO add boolean result
+                bookmarks.addResultToHistory(qtNodes: chosenNodes)
                 results = true
             }
         })
