@@ -51,10 +51,12 @@ struct ScamDetect_Questions:View {
                     VStack {
                         Text(node.question)
                             .font(.system(size: uSizes.sWidth * 0.07))
+                            .multilineTextAlignment(.center)
                         Rectangle()
-                            .frame(width: uSizes.sWidth * 0.50, height: 3)
+                            .frame(width: uSizes.sWidth * 0.60, height: 3)
                             .border(.black, width: 3)
                     }
+                    .padding(50)
                 }
                 .frame(width:  uSizes.sWidth * 0.70, height: uSizes.sHeight * 0.4)
                 .padding(0)
