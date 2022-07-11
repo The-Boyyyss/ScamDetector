@@ -18,6 +18,8 @@ struct ResultPage: View {
     @State private var showHomeView = false
     /// a state variable for indicating which content to show after questions are answered
     @State private var badResults: Bool = true
+    /// a state variable that contains information on how to fix a bad result
+    @State var howToFixText: String = "a bad result occured."
 
     
     var body: some View {
@@ -43,36 +45,28 @@ struct ResultPage: View {
                 VStack() {
                     Text("It's most likely a").font(.system(size: 30)).padding(.top, 25)
                     Text("SCAM").font(.system(size: 35)).bold()
-                    Image("exclamationMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.60, height: UIScreen.main.bounds.height * 0.25)
+                    Image("exclamationMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.60, height: UIScreen.main.bounds.height * 0.22)
                 }
                 .frame(width: UIScreen.main.bounds.width * 0.80, height: UIScreen.main.bounds.height * 0.45, alignment: .top)
                 .background(.white)
                 .cornerRadius(20.0)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
-                Spacer()
+                Spacer().frame(height: 10)
                 
-                NavigationLink(destination: HowToFix(), isActive: $showFixView) {EmptyView()}
+                NavigationLink(destination: HowToFix(howToFixValue: $howToFixText), isActive: $showFixView) {EmptyView()}
                 Button("How To Fix") {self.showFixView = true}.buttonStyle(CustomButton()).padding(7)
                 
                 NavigationLink(destination: EmergencyContact(), isActive: $showHelpView) {EmptyView()}
                 Button("Get Help") {self.showHelpView = true}.buttonStyle(CustomButton()).padding(7)
                 
-                ZStack {
-                    NavigationLink(destination: HomeScreen(), isActive: $showHomeView) {EmptyView()}
-                }
+                NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(self.showHomeView), isActive: $showHomeView) {EmptyView()}
                 Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton()).padding(7)
             }
             Spacer()
         }
-        .edgesIgnoringSafeArea(.top)
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment:     .top).background(GradientBackground().blueGradient)
+        .ignoresSafeArea(edges: .top)
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(GradientBackground().blueGradient)
         .padding()
     }
 }
-
-// THIS IS ONLY FOR PREVIEW DURING DEVELOPMENT
-//struct ResultPage_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ResultPage()
-//    }
-//}

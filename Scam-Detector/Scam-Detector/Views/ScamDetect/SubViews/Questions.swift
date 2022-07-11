@@ -16,8 +16,12 @@ struct ScamDetect_Questions:View {
     @Binding var chosenNodes: [QTNode]
     /// move to the results page when true
     @Binding var results: Bool
-    /// Saved results manager
+    /// saved results manager
     @EnvironmentObject var bookmarks: BookmarkManager
+    /// remaining questions that are unanswered.
+    @Binding var unAnsweredQuestions: Int
+    /// the current question that is being display.
+    @Binding var currQuestion: Int
     
     /// used to create the buttons that handle navigating between nodes via user answers
     func makeButton(name: String, answer: ScamDetectAnswer) -> some View {
@@ -25,6 +29,7 @@ struct ScamDetect_Questions:View {
             do {
                 try node = QuestionTree.instance.answerQuestion(givenAnswer: answer)
                 chosenNodes.append(node)
+                currQuestion = node.id.0
             }
             catch {
                 // TODO add boolean result
@@ -36,9 +41,13 @@ struct ScamDetect_Questions:View {
     }
     
     var body: some View {
-        
         ZStack {
             VStack {
+                ProgressIndicator(currentQuestion: $currQuestion, totalQuestions: $unAnsweredQuestions)
+                    .frame(width: uSizes.sWidth * 0.85, height: uSizes.sHeight * 0.20, alignment: .center)
+                    .onChange(of: node.id.0, perform: { value in
+                        unAnsweredQuestions -= 1
+                })
                 ZStack() {
                     Rectangle()
                         .fill(.white)
@@ -59,6 +68,7 @@ struct ScamDetect_Questions:View {
                 VStack {
                     makeButton(name: "Yes", answer: ScamDetectAnswer.Yes)
                     makeButton(name: "No", answer: ScamDetectAnswer.No)
+                    Spacer().frame(height: uSizes.sHeight * 0.1)
                 }
                 .frame(width: uSizes.sWidth * 0.85, height: uSizes.sHeight * 0.45)
                 .padding(0)
