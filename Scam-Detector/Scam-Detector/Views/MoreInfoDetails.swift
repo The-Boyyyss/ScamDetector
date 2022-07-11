@@ -14,7 +14,7 @@ import SwiftUI
 
 struct MoreInfoDetails:View{
     
-    // it is used to pass data and id from json file for the selected scam type.
+    // It is used to pass data and id from json file for the selected scam type.
     let data: ScamInfo
     
     var body: some View{
