@@ -14,6 +14,8 @@ struct EmergencyContact_Add: View {
     @State var inputNumber: String = "";
     /// Input variable for contact name
     @State var inputName: String = "";
+    /// Error message to show in the alert
+    @State var alertMessage: String = "";
     /// Alert variable to toggle alerts
     @State var showAlert: Bool = false;
     /// Saved variable for checking if there is an existing contact in local storage
@@ -61,13 +63,24 @@ struct EmergencyContact_Add: View {
             
             Button("Submit"){
                 if inputName.isEmpty || inputNumber.isEmpty {
+                    alertMessage = "Please Fill All Fields";
+                    showAlert = true;
+                    return;
+                }
+                if inputName.count < 2 || inputName.count > 12 {
+                    alertMessage = "Name must have a minimum of 2 and maximum of 12 characters";
+                    showAlert = true;
+                    return;
+                }
+                if inputNumber.count < 10 {
+                    alertMessage = "Please enter a 10-digit phone number";
                     showAlert = true;
                     return;
                 }
                 name = inputName;
                 number = inputNumber;
                 if(!hasContact) {
-                    hasContact = true
+                    hasContact = true;
                 }
                 else {
                     isFinished = false;
@@ -82,7 +95,7 @@ struct EmergencyContact_Add: View {
         .alert("Error", isPresented: $showAlert, actions: {
             Button("Try Again", role: .cancel, action: {})
         }, message: {
-            Text("Please Fill All Fields")
+            Text("\(alertMessage)")
         })
     }
 }

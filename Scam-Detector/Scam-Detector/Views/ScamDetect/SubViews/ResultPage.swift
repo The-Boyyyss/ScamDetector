@@ -13,6 +13,8 @@ struct ResultPage: View {
     @Binding var badResults: Bool
     /// a state variable that contains information on how to fix a bad result
     @State var howToFixText: String = "a bad result occured."
+    /// array of qtnodes that contains the answered questions and how to fix information
+    @Binding var nodes: [QTNode]
     
     var body: some View {
         
