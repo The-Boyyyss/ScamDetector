@@ -16,7 +16,7 @@ struct ScamDetect:View {
     var body: some View {
         VStack {
             if (results == true) {
-                ResultPage(badResults: $badResults)
+                ResultPage(badResults: $badResults, nodes: $chosenNodes)
             }
             else {
                 ScamDetect_Questions(

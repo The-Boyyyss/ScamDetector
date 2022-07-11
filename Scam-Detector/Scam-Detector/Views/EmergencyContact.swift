@@ -21,7 +21,7 @@ struct EmergencyContact: View {
             if emergencyName.isEmpty || emergencyNumber.isEmpty {
                 
                 NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $showAddPage), isActive: $showAddPage){
-                    Button("Add Emergency Contact"){
+                    Button("Add Contact"){
                         showAddPage = true;
                     }
                     .buttonStyle(CustomButton())
@@ -40,8 +40,10 @@ struct EmergencyContact: View {
                     Spacer();
                     
                     NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $showAddPage), isActive: $showAddPage){
-                        Button("Update Emergency Contact"){
+                        Button{
                             showAddPage = true;
+                        } label: {
+                            Label("Contact Info", systemImage: "info.circle")
                         }
                         .buttonStyle(CustomButton())
                     }

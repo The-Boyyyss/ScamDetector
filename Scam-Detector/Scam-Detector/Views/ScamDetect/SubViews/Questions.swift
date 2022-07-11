@@ -20,10 +20,10 @@ struct ScamDetect_Questions:View {
     
     /// changes to the results page
     func changePage(isScam: Bool = true) {
-        /// save the results of the questions
-        bookmarks.addResultToHistory(qtNodes: chosenNodes)
         // assign if the result is a scam or not
         badResults = isScam
+        /// save the results of the questions
+        bookmarks.addResultToHistory(qtNodes: chosenNodes, isAScam: badResults)
         // transitions to results page
         results = true
     }

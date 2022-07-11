@@ -2,9 +2,16 @@ import SwiftUI
 
 /// Bookmarks Page View
 struct History: View {
-    @EnvironmentObject var bookmarks: BookmarkManager
+    /// Environment object for saved results
+    @EnvironmentObject var bookmarks: BookmarkManager;
+    /// History to show
     @State var result: Result = Result(questions: [], date: Date.now, isAScam: true);
-    @State var hasSelected: Bool = false
+    /// Navigation variable
+    @State var hasSelected: Bool = false;
+    /// array of qtnodes that contains the answered questions and how to fix information
+    @State var nodes: [QTNode] = [];
+    /// Boolean value if the chosen result history is a scam or not
+    @State var isAScam: Bool = false;
     
     var body: some View {
         VStack(alignment: .center){
@@ -20,12 +27,11 @@ struct History: View {
             
             Spacer().frame(height:uSizes.sHeight * 0.03)
             
-            NavigationLink(destination: EmptyView(), isActive: $hasSelected){}
+            NavigationLink(destination: ResultPage(badResults: $isAScam, nodes: $nodes), isActive: $hasSelected){}
             List{
                 Section(header: Text("Select a Date")
                     .font(.system(size:uSizes.sWidth * 0.04, weight: .bold))){
                         ForEach(bookmarks.bookmarkedResults, id: \.self) { res in
-                        
                         HStack(){
                             Text(res.date, style: .date)
                                 .font(.system(size: uSizes.sWidth * 0.06))
@@ -36,7 +42,9 @@ struct History: View {
                         .contentShape(Rectangle())
                         .onTapGesture{
                             result = res;
-                            hasSelected = true
+                            isAScam = result.isAScam;
+                            nodes = bookmarks.toQTNode(result: result);
+                            hasSelected = true;
                         }
                     }
                 }

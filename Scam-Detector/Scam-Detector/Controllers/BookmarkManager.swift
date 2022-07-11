@@ -14,7 +14,7 @@ class BookmarkManager: ObservableObject {
             }
         }
     }
-    
+    /// BookmarkManager constructor. Loads data from localstorage
     init(){
         if let data = UserDefaults.standard.data(forKey: StorageKeys.bookmarkedResults.rawValue){
             let bookmarked = try? JSONDecoder().decode([Result].self, from: data)
@@ -35,7 +35,7 @@ class BookmarkManager: ObservableObject {
         return qtNodeArray
     }
     /// Adds a new result to bookmarks
-    func addResultToHistory(qtNodes: [QTNode], isAScam: Bool = true){
+    func addResultToHistory(qtNodes: [QTNode], isAScam: Bool){
         var questions: [Question] = []
         for q in qtNodes {
             let question = Question(idOne: q.id.0, idTwo: q.id.1)
