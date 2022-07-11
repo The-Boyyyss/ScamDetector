@@ -1,10 +1,3 @@
-//
-//  Sizes.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-05-22.
-//
-
 import SwiftUI
 
 /// Get the Devices size when app started

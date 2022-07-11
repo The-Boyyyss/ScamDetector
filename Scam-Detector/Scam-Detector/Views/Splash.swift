@@ -1,10 +1,3 @@
-//
-//  Splash.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-05-16.
-//
-
 /*
  This page includes code for splash screen which will be displayed for few seconds after running thhe app.
  */

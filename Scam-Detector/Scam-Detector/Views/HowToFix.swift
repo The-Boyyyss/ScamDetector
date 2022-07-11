@@ -1,10 +1,3 @@
-//
-//  ResultPopUp.swift
-//  Scam-Detector
-//
-//  Created by Danny Deng on 2022-05-22.
-//
-
 import Foundation
 import SwiftUI
 

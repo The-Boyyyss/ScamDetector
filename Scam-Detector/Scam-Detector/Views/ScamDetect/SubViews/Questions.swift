@@ -1,10 +1,3 @@
-//
-//  Questions.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-05-22.
-//
-
 import SwiftUI
 import Foundation
 
@@ -16,12 +9,24 @@ struct ScamDetect_Questions:View {
     @Binding var chosenNodes: [QTNode]
     /// move to the results page when true
     @Binding var results: Bool
+    /// a state variable for indicating which content to show after questions are answered
+    @Binding var badResults: Bool
     /// saved results manager
     @EnvironmentObject var bookmarks: BookmarkManager
     /// remaining questions that are unanswered.
     @Binding var unAnsweredQuestions: Int
     /// the current question that is being display.
     @Binding var currQuestion: Int
+    
+    /// changes to the results page
+    func changePage(isScam: Bool = true) {
+        /// save the results of the questions
+        bookmarks.addResultToHistory(qtNodes: chosenNodes)
+        // assign if the result is a scam or not
+        badResults = isScam
+        // transitions to results page
+        results = true
+    }
     
     /// used to create the buttons that handle navigating between nodes via user answers
     func makeButton(name: String, answer: ScamDetectAnswer) -> some View {
@@ -30,16 +35,19 @@ struct ScamDetect_Questions:View {
                 try node = QuestionTree.instance.answerQuestion(givenAnswer: answer)
                 chosenNodes.append(node)
                 // last question nodes question is always an empty string.
-                // if it finds this, go to the results page
+                // if it finds this, go to the proper results page
                 if (node.question == "") {
-                    bookmarks.addResultToHistory(qtNodes: chosenNodes)
-                    results = true
+                    if (node.howToFix == "NOSCAM") {
+                        changePage(isScam: false)
+                    }
+                    else {
+                        changePage()
+                    }
                 }
                 currQuestion = node.id.0
             }
             catch {
-                bookmarks.addResultToHistory(qtNodes: chosenNodes)
-                results = true
+                changePage()
             }
         })
         .buttonStyle(CustomButton())

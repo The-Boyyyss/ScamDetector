@@ -1,14 +1,3 @@
-//
-//  scamInfo.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-06-03.
-//
-
-/*
- This page includes objects to load more info data from json file into struct.
- */
-
 import Foundation
 
 // It includes information regarding what scam is all about. Different sections are used to display different information in differents parts.

@@ -1,10 +1,3 @@
-//
-//  NodeAnswers.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-06-01.
-//
-
 import Foundation
 
 /// acceptable answers given from scam detect

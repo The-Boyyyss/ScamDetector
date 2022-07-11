@@ -1,10 +1,3 @@
-//
-//  QTNode.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-05-21.
-//
-
 import Foundation
 import CoreGraphics
 
@@ -38,7 +31,7 @@ class QTNode {
         self.childrenNodes = nil
     }
     
-    init(id: (Int, Int), question: String, howToFix: String = "", parentNode: QTNode? = nil) {
+    init(id: (Int, Int), question: String = "", howToFix: String = "", parentNode: QTNode? = nil) {
         self.id = id
         self.question = question
         self.howToFix = howToFix
