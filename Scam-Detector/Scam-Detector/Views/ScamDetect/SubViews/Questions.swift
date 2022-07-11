@@ -25,9 +25,14 @@ struct ScamDetect_Questions:View {
             do {
                 try node = QuestionTree.instance.answerQuestion(givenAnswer: answer)
                 chosenNodes.append(node)
+                // last question nodes question is always an empty string.
+                // if it finds this, go to the results page
+                if (node.question == "") {
+                    bookmarks.addResultToHistory(qtNodes: chosenNodes)
+                    results = true
+                }
             }
             catch {
-                // TODO add boolean result
                 bookmarks.addResultToHistory(qtNodes: chosenNodes)
                 results = true
             }

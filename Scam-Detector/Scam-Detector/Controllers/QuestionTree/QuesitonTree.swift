@@ -36,7 +36,6 @@ struct QuestionTree {
         guard currentNode.childrenNodes != nil && currentNode.childrenNodes?.child1 != nil && currentNode.childrenNodes?.child2 != nil else {
             throw QTErrors.NoChildAtIndex
         }
-        
         // determine which node to travel too
         if (givenAnswer == ScamDetectAnswer.Yes) {
             currentNode = currentNode.childrenNodes!.child1!
