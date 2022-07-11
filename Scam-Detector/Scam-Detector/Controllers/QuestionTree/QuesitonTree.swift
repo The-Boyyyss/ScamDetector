@@ -1,10 +1,3 @@
-//
-//  QuesitonTree.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-05-21.
-//
-
 import Foundation
 
 ///A singleton of the Question Tree used to navigate through the scam detect feature
@@ -36,7 +29,6 @@ struct QuestionTree {
         guard currentNode.childrenNodes != nil && currentNode.childrenNodes?.child1 != nil && currentNode.childrenNodes?.child2 != nil else {
             throw QTErrors.NoChildAtIndex
         }
-        
         // determine which node to travel too
         if (givenAnswer == ScamDetectAnswer.Yes) {
             currentNode = currentNode.childrenNodes!.child1!
@@ -48,6 +40,7 @@ struct QuestionTree {
         return currentNode
     }
     
+    /// resets tree to parent node
     mutating func reset() -> QTNode {
         currentNode = parentNode
         return currentNode
@@ -66,7 +59,7 @@ struct QuestionTree {
     /// Populates the question tree recursively
     private mutating func build(node: QTNode, data: QTData) {
         
-        // creates the children for the given node if there are any.
+        /// creates the children for the given node if there are any.
         let children: QTNodeChildren? = createChildren(currentNode: node, data: data)
         
         // make sure there are children to create

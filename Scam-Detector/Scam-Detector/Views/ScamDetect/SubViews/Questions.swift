@@ -1,10 +1,3 @@
-//
-//  Questions.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-05-22.
-//
-
 import SwiftUI
 import Foundation
 
@@ -16,6 +9,8 @@ struct ScamDetect_Questions:View {
     @Binding var chosenNodes: [QTNode]
     /// move to the results page when true
     @Binding var results: Bool
+    /// a state variable for indicating which content to show after questions are answered
+    @Binding var badResults: Bool
     /// saved results manager
     @EnvironmentObject var bookmarks: BookmarkManager
     /// remaining questions that are unanswered.
@@ -23,18 +18,36 @@ struct ScamDetect_Questions:View {
     /// the current question that is being display.
     @Binding var currQuestion: Int
     
+    /// changes to the results page
+    func changePage(isScam: Bool = true) {
+        /// save the results of the questions
+        bookmarks.addResultToHistory(qtNodes: chosenNodes)
+        // assign if the result is a scam or not
+        badResults = isScam
+        // transitions to results page
+        results = true
+    }
+    
     /// used to create the buttons that handle navigating between nodes via user answers
     func makeButton(name: String, answer: ScamDetectAnswer) -> some View {
         return AnyView(Button(name) {
             do {
                 try node = QuestionTree.instance.answerQuestion(givenAnswer: answer)
                 chosenNodes.append(node)
+                // last question nodes question is always an empty string.
+                // if it finds this, go to the proper results page
+                if (node.question == "") {
+                    if (node.howToFix == "NOSCAM") {
+                        changePage(isScam: false)
+                    }
+                    else {
+                        changePage()
+                    }
+                }
                 currQuestion = node.id.0
             }
             catch {
-                // TODO add boolean result
-                bookmarks.addResultToHistory(qtNodes: chosenNodes)
-                results = true
+                changePage()
             }
         })
         .buttonStyle(CustomButton())
@@ -55,10 +68,12 @@ struct ScamDetect_Questions:View {
                     VStack {
                         Text(node.question)
                             .font(.system(size: uSizes.sWidth * 0.07))
+                            .multilineTextAlignment(.center)
                         Rectangle()
-                            .frame(width: uSizes.sWidth * 0.50, height: 3)
+                            .frame(width: uSizes.sWidth * 0.60, height: 3)
                             .border(.black, width: 3)
                     }
+                    .padding(50)
                 }
                 .frame(width:  uSizes.sWidth * 0.70, height: uSizes.sHeight * 0.4)
                 .padding(0)

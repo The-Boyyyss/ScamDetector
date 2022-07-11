@@ -1,10 +1,3 @@
-//
-//  QTErrors.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-05-21.
-//
-
 import Foundation
 
 /// an enum of errors that can be thrown in QTNodes

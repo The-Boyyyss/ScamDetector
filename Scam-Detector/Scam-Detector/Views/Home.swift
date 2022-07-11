@@ -1,10 +1,3 @@
-//
-//  Home.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-05-16.
-//
-
 /*
  This page include code for home screen which the user fill see.
  */

@@ -1,10 +1,3 @@
-//
-//  loadData.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-06-03.
-//
-
 /*
  This page includes function to load data from json file for more info pages.
  */

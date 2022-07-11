@@ -1,10 +1,3 @@
-//
-//  QTNodeChildren.swift
-//  Scam-Detector
-//
-//  Created by phillip chadwick on 2022-06-01.
-//
-
 import Foundation
 
 /// used to represent a QTNodes child nodes

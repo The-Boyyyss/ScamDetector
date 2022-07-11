@@ -1,9 +1,3 @@
-//
-//  ProgressIndicator.swift
-//  Scam-Detector
-//
-//  Created by Danny Deng on 2022-06-04.
-//
 //  Refs:
 //  withAnimation: https://swiftontap.com/withanimation(_:_:)
 

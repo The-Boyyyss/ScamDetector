@@ -1,9 +1,3 @@
-//
-//  CustomButton.swift
-//  Scam-Detector
-//
-//  Created by Danny Deng on 2022-05-25.
-//
 //  Ref:
 //  CustomButton: https://www.hackingwithswift.com/quick-start/swiftui/customizing-button-with-buttonstyle
 

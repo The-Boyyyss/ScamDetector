@@ -1,10 +1,3 @@
-//
-//  Shared.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-05-22.
-//
-
 /*
  This page includes custom text field which can be used on any page on the app.
  */

@@ -1,10 +1,3 @@
-//
-//  moreInfoDetails.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-06-13.
-//
-
 /*
  This page includes more information like what scam is, how to prevent etc for any selected scam.
  */
