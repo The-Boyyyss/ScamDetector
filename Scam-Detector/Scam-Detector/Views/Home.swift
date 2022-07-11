@@ -19,9 +19,9 @@ struct HomeScreen:View{
                 Image("scam-Detector-logo2")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 500, height: 200)
-                    .padding(.bottom, 50)
-                    .padding(.top, -175)
+                    .frame(width: UIScreen.main.bounds.width*1.1, height: UIScreen.main.bounds.height*0.22)
+                    .padding(.bottom, UIScreen.main.bounds.width*0.05)
+                    .padding(.top, -UIScreen.main.bounds.width*0.25)
                     .padding(.leading, 15)
                 
                 NavigationLink(destination: EmptyView(), label:{
@@ -29,11 +29,11 @@ struct HomeScreen:View{
                         Text("Detect")
                         Text("Scam")
                     }
-                    .frame(width: 375, height: 180, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.21, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(25)
-                    .font(.system(size: 65, weight: .bold))
+                    .font(.system(size: UIScreen.main.bounds.width*0.15, weight: .bold))
                     .overlay(
                         RoundedRectangle(cornerRadius: 25)
                             .stroke(Color.white, lineWidth: 1.75)
@@ -50,11 +50,11 @@ struct HomeScreen:View{
                             .padding(.leading, -50)
                         Text("History")
                     }
-                    .frame(width: 350, height: 100, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height * 0.12, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    .font(.system(size: 40))
+                    .font(.system(size: UIScreen.main.bounds.width*0.1))
                 }).padding(.bottom, 40).shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
                 NavigationLink(destination: MoreInfoScreen(data: LoadData.load(name: "MoreInfo+Data")), label:{
@@ -63,11 +63,11 @@ struct HomeScreen:View{
                             .padding(.trailing, 40)
                         Text("Information")
                     }
-                    .frame(width: 350, height: 100, alignment: .center)
+                    .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.12, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    .font(.system(size: 40))
+                    .font(.system(size: UIScreen.main.bounds.width*0.1))
                 }).padding(.bottom, 40).shadow(color: .gray, radius: 5, x: 0, y: 5)
             }.padding(.top, 75)
         }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)

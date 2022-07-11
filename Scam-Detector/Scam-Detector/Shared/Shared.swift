@@ -19,7 +19,7 @@ struct CustomTextField: View {
     // placeholder for text field
     let placeholder: Text
     // image to be displayed as icon on text field
-    let systemImage: String
+    let systemImage: String = "magnifyingglass"
     
     var body: some View{
         ZStack(alignment: .leading){
