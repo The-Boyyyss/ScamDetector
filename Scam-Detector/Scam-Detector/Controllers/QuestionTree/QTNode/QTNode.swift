@@ -38,7 +38,7 @@ class QTNode {
         self.childrenNodes = nil
     }
     
-    init(id: (Int, Int), question: String, howToFix: String, parentNode: QTNode? = nil) {
+    init(id: (Int, Int), question: String, howToFix: String = "", parentNode: QTNode? = nil) {
         self.id = id
         self.question = question
         self.howToFix = howToFix
