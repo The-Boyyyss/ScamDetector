@@ -13,6 +13,10 @@ struct ScamDetect:View {
     @State var chosenNodes: [QTNode] = []
     /// whether to display results page
     @State var results: Bool = false
+    /// setting the display for the first question
+    @State var initalQuestion = 1
+    /// setting the max amount of questions the user can answer
+    @State var maxQuestions = 5
     
     var body: some View {
         VStack {
@@ -20,7 +24,12 @@ struct ScamDetect:View {
                 ResultPage()
             }
             else {
-                ScamDetect_Questions(chosenNodes: $chosenNodes, results: $results)
+                ScamDetect_Questions(
+                    chosenNodes: $chosenNodes,
+                    results: $results,
+                    unAnsweredQuestions: $maxQuestions,
+                    currQuestion: $initalQuestion
+                )
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
