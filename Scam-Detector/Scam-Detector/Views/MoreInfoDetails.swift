@@ -7,7 +7,7 @@ import SwiftUI
 
 struct MoreInfoDetails:View{
     
-    // it is used to pass data and id from json file for the selected scam type.
+    // It is used to pass data and id from json file for the selected scam type.
     let data: ScamInfo
     
     var body: some View{
@@ -15,15 +15,15 @@ struct MoreInfoDetails:View{
             VStack{
                 Text(data.scamType)
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                    .font(.system(size: 45, weight: .bold))
-                    .padding(.top, -40)
+                    .font(.system(size: UIScreen.main.bounds.width*0.12, weight: .bold))
+                    .padding(.top, -UIScreen.main.bounds.width*0.09)
                 
                 ScrollView{
                     // Image related to scam type
                     Image(data.moreInfo.image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 350, height: 200)
+                        .frame(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.22)
                         .padding()
                     
                     // For email scam, data.id = 1
@@ -100,11 +100,11 @@ struct MoreInfoDetails:View{
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("Link 1")
-                                        .frame(width: 375, height: 80, alignment: .center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: 35))
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -112,12 +112,14 @@ struct MoreInfoDetails:View{
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("Link 2")
-                                        .frame(width: 375, height: 80, alignment: .center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: 35))
-                                } .padding().shadow(color: .gray, radius: 5, x: 0, y: 5)
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                }
+                                .padding()
+                                .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             }
                         }
                         .font(.system(size: 25))
@@ -205,11 +207,11 @@ struct MoreInfoDetails:View{
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("Link 1")
-                                        .frame(width: 375, height: 80, alignment: .center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: 35))
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -217,11 +219,11 @@ struct MoreInfoDetails:View{
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("Link 2")
-                                        .frame(width: 375, height: 80, alignment: .center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: 35))
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -229,11 +231,11 @@ struct MoreInfoDetails:View{
                                 // Link 3
                                 Link(destination: URL(string: data.moreInfo.link3!)!) {
                                     Text("Link 3")
-                                        .frame(width: 375, height: 80, alignment: .center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: 35))
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -279,11 +281,11 @@ struct MoreInfoDetails:View{
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("Link 1")
-                                        .frame(width: 375, height: 80, alignment: .center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: 35))
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -291,12 +293,14 @@ struct MoreInfoDetails:View{
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("Link 2")
-                                        .frame(width: 375, height: 80, alignment: .center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: 35))
-                                } .padding().shadow(color: .gray, radius: 5, x: 0, y: 5)
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                }
+                                .padding()
+                                .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             }
                         }
                         .font(.system(size: 25))

@@ -133,7 +133,7 @@ struct Prevention: Codable{
 }
 
 // It includes additional information for any scam (image, online links and written info including prevention measures, what to do if you become victim of scam etc)
-struct MoreInfo: Codable{
+struct MoreInfo:Identifiable, Codable{
     /// id for more information objectt
     let id: Int
     /// Information regarding what that scam is all about.
@@ -158,7 +158,7 @@ struct MoreInfo: Codable{
 }
 
 // It is main scam information object which includes all the above data for each scam type.
-struct ScamInfo:Codable {
+struct ScamInfo: Codable, Identifiable  {
     /// id of the scam type
     let id: Int
     /// Name of scam type

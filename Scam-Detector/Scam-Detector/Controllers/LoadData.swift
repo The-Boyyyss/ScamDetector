@@ -7,7 +7,7 @@ import Foundation
 class LoadData {
     
     // Function used to load json content into model and return data as array of objects.
-    static func load<T: Codable>(name:String) -> [T] {
+    static func load<T: Decodable>(name:String) -> [T] {
         
         // path to json file
         if let path = Bundle.main.path(forResource: name, ofType: "json") {

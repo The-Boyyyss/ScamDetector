@@ -12,6 +12,8 @@ struct MoreInfoScreen:View{
     @State var info: String = ""
     // To pass id of selected scam. For eg: 1 for email scam.
     let data: [ScamInfo]
+    // To add all the scam types in array and then filter then for search feature.
+    @State private var arrayofInfo: [String] = []
 
     var body: some View{
         ZStack{
@@ -23,58 +25,55 @@ struct MoreInfoScreen:View{
                     .padding(.top, -UIScreen.main.bounds.height*0.05)
 
                 
-                CustomTextField(ourText: $info, placeholder: Text("Search"), systemImage: "magnifyingglass")
+                CustomTextField(ourText: $info, placeholder: Text("Search"))
                     .padding()
-                
+
                 ScrollView {
                     VStack(spacing: 15) {
-                        
                         NavigationLink(destination: EmergencyContact(), label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 25)
                                     .fill(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                     .shadow(radius: 10)
-                                    .frame(width: 375, height: 140)
+                                    .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.15)
                                     .padding()
                                     .shadow(color: .gray, radius: 5, x: 0, y: 5)
                                 HStack{
                                     Image(systemName: "phone.circle")
-                                        .font(.system(size: 50))
+                                        .font(.system(size: UIScreen.main.bounds.width*0.1))
+                                        .padding(.leading, 30)
+                                    Text("Emergency Contact")
+                                        .font(.system(size: UIScreen.main.bounds.width*0.085))
                                         .padding()
-                                    
-                                    VStack{
-                                        Text("Emergency")
-                                        Text("Contact")
-                                    }.padding()
-                                    
+                                        .frame(maxWidth: 210)
                                     Image(systemName: "arrow.forward")
-                                        .font(.system(size: 50))
-                                        .padding()
+                                        .font(.system(size: UIScreen.main.bounds.width*0.1))
+                                        .padding(.leading, 15)
+                                        .padding(.trailing, 15)
                                 }
-                                    .font(.system(size: 30))
-                                    .foregroundColor(.white)
+                                .foregroundColor(.white)
                             }
                         })
                         .padding()
                         ForEach(data, id: \.id) { data in
-                                NavigationLink(destination: MoreInfoDetails(data: data), label: {
+                            NavigationLink(destination: MoreInfoDetails(data: data), label: {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 25)
                                         .fill(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .shadow(radius: 10)
-                                        .frame(width: 375, height: 140)
+                                        .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.15)
                                         .padding()
                                         .shadow(color: .gray, radius: 5, x: 0, y: 5)
                                     HStack{
                                         Image(systemName: data.sysImg)
-                                            .font(.system(size: 50))
+                                            .font(.system(size: UIScreen.main.bounds.width*0.1))
                                             .padding(.leading, 30)
                                         Text(data.scamType)
-                                            .font(.system(size: 30))
+                                            .font(.system(size: UIScreen.main.bounds.width*0.085))
                                             .padding()
-                                            .frame(maxWidth: 200 )
+                                            .frame(maxWidth: 200)
                                         Image(systemName: "arrow.forward")
-                                            .font(.system(size: 50))
+                                            .font(.system(size: UIScreen.main.bounds.width*0.1))
                                             .padding(.leading, 15)
                                             .padding(.trailing, 15)
                                     }
