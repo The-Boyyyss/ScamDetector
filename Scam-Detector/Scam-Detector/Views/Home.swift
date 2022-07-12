@@ -1,10 +1,3 @@
-//
-//  Home.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-05-16.
-//
-
 /*
  This page include code for home screen which the user fill see.
  */
@@ -24,7 +17,7 @@ struct HomeScreen:View{
                     .padding(.top, -UIScreen.main.bounds.width*0.25)
                     .padding(.leading, 15)
                 
-                NavigationLink(destination: EmptyView(), label:{
+                NavigationLink(destination: ScamDetect(), label:{
                     VStack{
                         Text("Detect")
                         Text("Scam")
@@ -43,7 +36,7 @@ struct HomeScreen:View{
                 .padding(.top, 40)
                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
-                NavigationLink(destination: EmptyView(), label:{
+                NavigationLink(destination: History(), label:{
                     HStack{
                         Image(systemName: "clock.arrow.circlepath")
                             .padding(.trailing, 60)

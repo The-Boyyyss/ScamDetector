@@ -1,10 +1,3 @@
-//
-//  GradientBackground.swift
-//  Scam-Detector
-//
-//  Created by Danny Deng on 2022-06-11.
-//
-
 import Foundation
 import SwiftUI
 

@@ -1,10 +1,3 @@
-//
-//  Splash.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-05-16.
-//
-
 /*
  This page includes code for splash screen which will be displayed for few seconds after running thhe app.
  */
@@ -12,8 +5,9 @@
 import SwiftUI
 
 struct SplashScreen: View {
-
+    /// Check if splash duration is finished then go to homescreen
     @State var isActive:Bool = false
+    /// Saved variable for checking if there is an existing contact in local storage
     @AppStorage(StorageKeys.emergencyExists.rawValue) var hasContact: Bool = false
     
     var body: some View {

@@ -1,10 +1,3 @@
-//
-//  MoreInfo.swift
-//  Scam-Detector
-//
-//  Created by VARUN SIDHU on 2022-05-22.
-//
-
 /*
  This page includes code of list of different types of scams and navigation to more information on particular scam.
  Also it inludes option to update emercency contact.
