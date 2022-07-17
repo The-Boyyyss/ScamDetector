@@ -39,7 +39,9 @@ struct ResultPage: View {
                 Spacer()
                 
                 NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(self.showHomeView), isActive: $showHomeView) {EmptyView()}
-                Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton())
+                Button {self.showHomeView = true} label: {
+                    Label("Home", systemImage: "house.circle").padding()
+                }.buttonStyle(CustomButton())
                 
             } else {
                 VStack() {
@@ -54,7 +56,7 @@ struct ResultPage: View {
                 Spacer().frame(height: 10)
                 
                 NavigationLink(destination: HowToFix(howToFixValues: $howToFixTexts), isActive: $showFixView) {EmptyView()}
-                Button("How To Fix") {
+                Button {
                     guard nodes.contains(where: { node in
                         node.howToFix.isEmpty
                     }) else {
@@ -65,13 +67,19 @@ struct ResultPage: View {
                         howToFixTexts.append(j.howToFix)
                     }
                     self.showFixView = true
+                } label: {
+                    Label("How To Fix", systemImage: "questionmark.circle")
                 }.buttonStyle(CustomButton()).padding(7)
                 
                 NavigationLink(destination: EmergencyContact(), isActive: $showHelpView) {EmptyView()}
-                Button("Get Help") {self.showHelpView = true}.buttonStyle(CustomButton()).padding(7)
+                Button {self.showHelpView = true} label: {
+                    Label("Get Help", systemImage: "phone.circle")
+                }.buttonStyle(CustomButton()).padding(7)
                 
                 NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(self.showHomeView), isActive: $showHomeView) {EmptyView()}
-                Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton()).padding(7)
+                Button {self.showHomeView = true} label: {
+                    Label("Home", systemImage: "house.circle")
+                }.buttonStyle(CustomButton()).padding(7)
             }
             Spacer()
         }
