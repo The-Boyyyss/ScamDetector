@@ -1,6 +1,10 @@
 import Foundation
 import SwiftUI
 
+// Refs:
+// SwiftUI enumeration of an sequence:
+// https://developer.apple.com/documentation/swiftui/binding/enumerated()
+
 struct ResultPage: View {
     
     /// a state variable for indicating fix view to be showed if button is clicked
@@ -12,7 +16,7 @@ struct ResultPage: View {
     /// a state variable for indicating which content to show after questions are answered
     @Binding var badResults: Bool
     /// a state variable that contains information on how to fix a bad result
-    @State var howToFixText: String = "a bad result occured."
+    @State var howToFixTexts = [String]()
     /// array of qtnodes that contains the answered questions and how to fix information
     @Binding var nodes: [QTNode]
     
@@ -36,6 +40,7 @@ struct ResultPage: View {
                 
                 NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(self.showHomeView), isActive: $showHomeView) {EmptyView()}
                 Button("Home") {self.showHomeView = true}.buttonStyle(CustomButton())
+                
             } else {
                 VStack() {
                     Text("It's most likely a").font(.system(size: 30)).padding(.top, 25)
@@ -48,8 +53,19 @@ struct ResultPage: View {
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
                 Spacer().frame(height: 10)
                 
-                NavigationLink(destination: HowToFix(howToFixValue: $howToFixText), isActive: $showFixView) {EmptyView()}
-                Button("How To Fix") {self.showFixView = true}.buttonStyle(CustomButton()).padding(7)
+                NavigationLink(destination: HowToFix(howToFixValues: $howToFixTexts), isActive: $showFixView) {EmptyView()}
+                Button("How To Fix") {
+                    guard nodes.contains(where: { node in
+                        node.howToFix.isEmpty
+                    }) else {
+                        howToFixTexts.append("bad result occured...")
+                        return
+                    }
+                    for (_, j) in nodes.enumerated() {
+                        howToFixTexts.append(j.howToFix)
+                    }
+                    self.showFixView = true
+                }.buttonStyle(CustomButton()).padding(7)
                 
                 NavigationLink(destination: EmergencyContact(), isActive: $showHelpView) {EmptyView()}
                 Button("Get Help") {self.showHelpView = true}.buttonStyle(CustomButton()).padding(7)
