@@ -55,7 +55,9 @@ struct MoreInfoScreen:View{
                             }
                         })
                         .padding()
-                        ForEach(data, id: \.id) { data in
+                        ForEach(data.filter({
+                            info.isEmpty || info.contains($0.scamType)
+                        }), id: \.id) { data in
                             NavigationLink(destination: MoreInfoDetails(data: data), label: {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 25)
