@@ -7,10 +7,8 @@ import CoreGraphics
  - Parameter question: The question to be given to the user
  - Parameter parentNode: The QTNode that led to this question node
  - Parameter howToFix: The steps you can take to fix the problem that occurs if you answer yes to this question
- - Parameter Tips: The Repsonse Tips for each corrisponding answer. Must match the index order of the children nodes (max 3). Ex. index 0 is when a user selects yes, 1 for no.
- - Parameter childrenNodes: Nodes that contain all possible answers to this question (max 3)
 */
-class Test: Codable {
+struct QTDict: Codable {
     
     /// unique idetifier used to represent the node and it's depth in the tree
     let id: [Int]
@@ -29,5 +27,9 @@ class Test: Codable {
         self.id = id
         self.question = question
         self.howToFix = howToFix
+    }
+    
+    func idToString() -> String{
+        return "\(id[0]).\(id[1])"
     }
 }

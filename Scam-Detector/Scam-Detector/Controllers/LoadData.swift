@@ -24,6 +24,39 @@ class LoadData {
         }
         return[]
     }
+    
+    static func loadDict(name: String) -> [String: QTDict] {
+        // path to json file
+        var nodeInfo = [String: QTDict]()
+        print("HERE?")
+        if let path = Bundle.main.path(forResource: name, ofType: "json") {
+            do {
+                // load data
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: [])
+                // Json decoder to return array of data.
+                let json = try JSONSerialization.jsonObject(with: data)
+                if let results = json as? [String: QTDict] {
+                    print(results)
+                    return results
+                }
+                else if let results = json as? [Any] {
+                    for node in results as! [Dictionary<String, AnyObject>]{
+                        let qtId = node[""] as! [Int]
+                        let question = node[""] as! String
+                        let howToFix = node[""] as! String
+                        let qtDict = QTDict(id: qtId, question: question, howToFix: howToFix)
+                        nodeInfo[qtDict.idToString()] = qtDict
+                    }
+                }
+            } catch {
+                // return empty erray if any error happens.
+                print("HEEEERE")
+                return[:]
+            }
+        }
+        print(nodeInfo)
+        return[:]
+    }
 }
 
 // Refrence: https://www.youtube.com/watch?v=EycwLxTU-EA&t=258s
