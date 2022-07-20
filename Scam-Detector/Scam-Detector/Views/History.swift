@@ -36,6 +36,9 @@ struct History: View {
                             Text(res.date, style: .date)
                                 .font(.system(size: uSizes.sWidth * 0.06))
                             Spacer()
+                            Text(res.date, style: .time)
+                                .font(.system(size: uSizes.sWidth * 0.06))
+                            Spacer()
                             Image(systemName: "chevron.right")
                                 .font(.system(size: uSizes.sWidth * 0.06))
                         }

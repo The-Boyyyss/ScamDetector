@@ -14,6 +14,9 @@ struct ContentView: View {
         NavigationView{
             SplashScreen()
         }.environmentObject(bookmark).navigationViewStyle(.stack)
+            .onAppear{
+                QTData.loadData()
+            }
     }
 }
 

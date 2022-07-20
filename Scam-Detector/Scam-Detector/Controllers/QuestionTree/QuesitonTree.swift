@@ -15,7 +15,7 @@ struct QuestionTree {
         // create an instance of our data object to load our tree
         let data: QTData = QTData()
         // assign the parent node and current node
-        parentNode = data.buildNode(nodeID: (1,1), parentNode: nil) ?? QTNode()
+        parentNode = data.buildNode(nodeID: (1,1), parentNode: nil)!
         currentNode = parentNode
         
         // build tree using data
