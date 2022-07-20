@@ -120,6 +120,18 @@ struct MoreInfoDetails:View{
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                                
+                                // Link 3
+                                Link(destination: URL(string: data.moreInfo.link3!)!) {
+                                    Text("Link 2")
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .foregroundColor(.white)
+                                        .cornerRadius(10)
+                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                }
+                                .padding()
+                                .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             }
                         }
                         .font(.system(size: 25))
