@@ -14,7 +14,11 @@ struct HowToFix: View {
                     .frame(width: UIScreen.main.bounds.width, alignment: .leading)
                 
                 VStack(spacing: 5) {
-                    Image(systemName: "lightbulb.fill").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.30)
+                    Image(systemName: "lightbulb.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: uSizes.sWidth * 0.7, height: uSizes.sHeight * 0.30)
+                    
                     ForEach(howToFixValues, id: \.self) { value in
                         Text(value)
                     }
