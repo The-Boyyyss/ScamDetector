@@ -62,6 +62,7 @@ struct HomeScreen:View{
                     .cornerRadius(10)
                     .font(.system(size: UIScreen.main.bounds.width*0.1))
                 }).padding(.bottom, 40).shadow(color: .gray, radius: 5, x: 0, y: 5)
+                Spacer()
             }.padding(.top, 75)
         }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .background(GradientBackground().blueGradient)

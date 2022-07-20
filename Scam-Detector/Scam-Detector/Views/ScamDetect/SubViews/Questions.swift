@@ -29,8 +29,8 @@ struct ScamDetect_Questions:View {
     }
     
     /// used to create the buttons that handle navigating between nodes via user answers
-    func makeButton(name: String, answer: ScamDetectAnswer) -> some View {
-        return AnyView(Button(name) {
+    func makeButton(name: String, buttonImage:String, answer: ScamDetectAnswer) -> some View {
+        return AnyView(Button {
             do {
                 try node = QuestionTree.instance.answerQuestion(givenAnswer: answer)
                 chosenNodes.append(node)
@@ -49,6 +49,8 @@ struct ScamDetect_Questions:View {
             catch {
                 changePage()
             }
+        } label: {
+            Label("\(name)", systemImage: "\(buttonImage)")
         })
         .buttonStyle(CustomButton())
     }
@@ -81,8 +83,8 @@ struct ScamDetect_Questions:View {
                 .shadow(color: .gray, radius: 4, x: 4, y: 5)
                 
                 VStack {
-                    makeButton(name: "Yes", answer: ScamDetectAnswer.Yes)
-                    makeButton(name: "No", answer: ScamDetectAnswer.No)
+                    makeButton(name: "Yes", buttonImage: "checkmark", answer: ScamDetectAnswer.Yes).padding(.bottom, 8)
+                    makeButton(name: "No", buttonImage: "xmark", answer: ScamDetectAnswer.No)
                     Spacer().frame(height: uSizes.sHeight * 0.1)
                 }
                 .frame(width: uSizes.sWidth * 0.85, height: uSizes.sHeight * 0.45)
