@@ -23,16 +23,16 @@ struct ResultPage: View {
     var body: some View {
         
         VStack() {
-            Text("Result").font(.system(size: 42)).bold().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.1, alignment: .bottom)
+            Text("Result").font(.system(size: 42)).bold().frame(width: uSizes.sWidth, height: uSizes.sHeight * 0.1, alignment: .bottom)
                 .padding(.bottom, 10)
             
             if (!badResults) {
                 VStack() {
                     Text("Looks Good!").font(.system(size: 36)).bold().padding(.top, 30)
                     Text("it's not a scam").font(.system(size: 32))
-                    Image("checkMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.7, height: UIScreen.main.bounds.height * 0.30)
+                    Image("checkMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.7, height: uSizes.sHeight * 0.30)
                 }
-                .frame(width: UIScreen.main.bounds.width * 0.80, height: UIScreen.main.bounds.height * 0.65, alignment: .top)
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.65, alignment: .top)
                 .background(.white)
                 .cornerRadius(20.0)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
@@ -47,9 +47,9 @@ struct ResultPage: View {
                 VStack() {
                     Text("It's most likely a").font(.system(size: 30)).padding(.top, 25)
                     Text("SCAM").font(.system(size: 35)).bold()
-                    Image("exclamationMarkImg").resizable().scaledToFit().frame(width: UIScreen.main.bounds.width * 0.60, height: UIScreen.main.bounds.height * 0.22)
+                    Image("exclamationMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.60, height: uSizes.sHeight * 0.22)
                 }
-                .frame(width: UIScreen.main.bounds.width * 0.80, height: UIScreen.main.bounds.height * 0.45, alignment: .top)
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.45, alignment: .top)
                 .background(.white)
                 .cornerRadius(20.0)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
@@ -84,7 +84,7 @@ struct ResultPage: View {
             Spacer()
         }
         .ignoresSafeArea(edges: .top)
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .frame(width: uSizes.sWidth, height: uSizes.sHeight)
         .background(GradientBackground().blueGradient)
         .padding()
     }
