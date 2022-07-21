@@ -45,8 +45,9 @@
                 "section7": "Hover before you click",
                 "section8": " - Beware of unsolicited email asking you to 'Click Here'. "
             },
-            "link1": "https://www.google.com",
-            "link2": "https://www.apple.com",
+            "link1": "https://www.netcetera.ca/identify-email-scam/",
+            "link2": "https://cba.ca/email-fraud-phishing",
+            "link3": "https://www.cnbc.com/2019/12/08/what-to-do-when-you-fall-for-a-social-security-scam-or-ransomware.html",
             "image":"emailScam"
         }
     },
@@ -100,9 +101,9 @@
                 "section1": "If you get a scam call or text, do not respond in any way even by pressing a number on a keypad. By pressing a keypad, these scam companies now know that you’re number works. Now they put your number on a list and they would keep trying repeatedly to scam you. ",
                 "section2": "Do not interact with these scammers at all and best to not even answer them in the first place. "
             },
-            "link1": "https://www.google.com",
-            "link2": "https://www.instagram.com",
-            "link3": "https://www.github.com",
+            "link1": "https://consumer.ftc.gov/articles/phone-scams",
+            "link2": "https://www.youtube.com/watch?v=sQIpAhYgGGU",
+            "link3": "https://www.youtube.com/watch?v=5zlnI3Bzslo",
             "image": "phoneScam"
         }
     },
@@ -127,8 +128,8 @@
                 "section1": "Always be suspicious of anyone arriving unannounced at your door. In the age of digital communications, it’s unlikely any legitimate company will attempt to do business this way. ",
                 "section2": "It’s also important not to be fooled just because someone has identification. It’s very easy to make a fake ID and it’s no guarantee of legitimacy. "
             },
-            "link1": "https://www.google.com",
-            "link2": "https://www.youtube.com",
+            "link1": "https://www.moneyhelper.org.uk/en/money-troubles/scams/a-beginners-guide-to-scams",
+            "link2": "https://www.usa.gov/common-scams-frauds#:~:text=includes%20an%20overpayment.-,Telephone%20Scams,or%20receive%20free%20product%20trials",
             "image": "inPersonScam"
         }
     }

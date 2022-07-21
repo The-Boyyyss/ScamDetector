@@ -55,7 +55,9 @@ struct MoreInfoScreen:View{
                             }
                         })
                         .padding()
-                        ForEach(data, id: \.id) { data in
+                        ForEach(data.filter({
+                            info.isEmpty || "\($0)".contains(info)
+                        }), id: \.id) { data in
                             NavigationLink(destination: MoreInfoDetails(data: data), label: {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 25)
@@ -86,6 +88,9 @@ struct MoreInfoScreen:View{
             }
         }
         .background(GradientBackground().blueGradient)
+        .onTapGesture {
+            KeyboardDismiss()
+        }
     }
 }
 
@@ -93,3 +98,4 @@ struct MoreInfoScreen:View{
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-horizontal-and-vertical-scrolling-using-scrollview
 // https://www.youtube.com/watch?v=9QhhpeYKjOs&t=106s
 // https://www.youtube.com/watch?v=BCSP_uh0co0
+// https://www.youtube.com/watch?v=vgvbrBX2FnE&list=LL&index=3&t=965s

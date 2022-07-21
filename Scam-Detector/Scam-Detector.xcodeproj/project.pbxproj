@@ -17,7 +17,10 @@
 		C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */; };
 		C958B3FB286D4A64001C68DD /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B3FA286D4A64001C68DD /* BookmarkManager.swift */; };
 		C958B3FD286D4A70001C68DD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B3FC286D4A70001C68DD /* History.swift */; };
+		C97AB372288A026200422BD7 /* KeyboardDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AB371288A026200422BD7 /* KeyboardDismiss.swift */; };
 		C98E7B1F283DC4D800F55AC0 /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */; };
+		C9B5A86B2887B05800D5DD24 /* DictionaryData.json in Resources */ = {isa = PBXBuildFile; fileRef = C90FBB2328878063007C483C /* DictionaryData.json */; };
+		C9B5A86C2887B24600D5DD24 /* MoreInfo+Data.json in Resources */ = {isa = PBXBuildFile; fileRef = FBE3F98A2848595B00C950C6 /* MoreInfo+Data.json */; };
 		CC0FFE582848477300AC86CA /* QTNodeChildren.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE572848477300AC86CA /* QTNodeChildren.swift */; };
 		CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */; };
 		CC34E8A3285997DB00DECEB7 /* USizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC34E8A2285997DB00DECEB7 /* USizes.swift */; };
@@ -32,6 +35,7 @@
 		CC83793128645A1A0085BE45 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC83793028645A1A0085BE45 /* Result.swift */; };
 		FB3317A0285D6470005FFA91 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB33179F285D6470005FFA91 /* Home.swift */; };
 		FB3317A2285D65C4005FFA91 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3317A1285D65C4005FFA91 /* Splash.swift */; };
+		FB4AEB4A2886262700634173 /* QTDict.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4AEB492886262700634173 /* QTDict.swift */; };
 		FB5BC779284B33D2003C48E6 /* ScamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5BC778284B33D2003C48E6 /* ScamInfo.swift */; };
 		FB677116283AA76E002880FD /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB677115283AA76E002880FD /* Shared.swift */; };
 		FB68D9B128401B91004E1F2E /* MoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB68D9AD28401B91004E1F2E /* MoreInfo.swift */; };
@@ -40,7 +44,6 @@
 		FBB15534283347FF003A67D2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB15533283347FF003A67D2 /* ContentView.swift */; };
 		FBB1553628334800003A67D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB1553528334800003A67D2 /* Assets.xcassets */; };
 		FBB1553928334800003A67D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBB1553828334800003A67D2 /* Preview Assets.xcassets */; };
-		FBE3F98B2848595B00C950C6 /* MoreInfo+Data.json in Resources */ = {isa = PBXBuildFile; fileRef = FBE3F98A2848595B00C950C6 /* MoreInfo+Data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +53,12 @@
 		598D1407284C13AB00901920 /* ProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressIndicator.swift; sourceTree = "<group>"; };
 		598D140A284C188800901920 /* CurrentQuestionDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentQuestionDisplay.swift; sourceTree = "<group>"; };
 		59F555B2283B06B60083832C /* HowToFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToFix.swift; sourceTree = "<group>"; };
+		C90FBB2328878063007C483C /* DictionaryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DictionaryData.json; sourceTree = "<group>"; };
 		C93E289A283DEA5F001A101C /* EmergencyContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact.swift; sourceTree = "<group>"; };
 		C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact_Add.swift; sourceTree = "<group>"; };
 		C958B3FA286D4A64001C68DD /* BookmarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
 		C958B3FC286D4A70001C68DD /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		C97AB371288A026200422BD7 /* KeyboardDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismiss.swift; sourceTree = "<group>"; };
 		C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
 		CC0FFE572848477300AC86CA /* QTNodeChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNodeChildren.swift; sourceTree = "<group>"; };
 		CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamDetectAnswer.swift; sourceTree = "<group>"; };
@@ -69,6 +74,7 @@
 		CC83793028645A1A0085BE45 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		FB33179F285D6470005FFA91 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FB3317A1285D65C4005FFA91 /* Splash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		FB4AEB492886262700634173 /* QTDict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTDict.swift; sourceTree = "<group>"; };
 		FB5BC778284B33D2003C48E6 /* ScamInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamInfo.swift; sourceTree = "<group>"; };
 		FB677115283AA76E002880FD /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
 		FB68D9AD28401B91004E1F2E /* MoreInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfo.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 				596B8503283AD74E0085AC27 /* ColorThemes.swift */,
 				595F2AB3283EF50B00F648E1 /* CustomButton.swift */,
 				CC34E8A2285997DB00DECEB7 /* USizes.swift */,
+				C97AB371288A026200422BD7 /* KeyboardDismiss.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -192,6 +199,7 @@
 			children = (
 				CC0FFE562848475800AC86CA /* QTNodeChildren */,
 				CC80EEC92839AE310064B52B /* QTNode.swift */,
+				FB4AEB492886262700634173 /* QTDict.swift */,
 			);
 			path = QTNode;
 			sourceTree = "<group>";
@@ -281,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				FBE3F98A2848595B00C950C6 /* MoreInfo+Data.json */,
+				C90FBB2328878063007C483C /* DictionaryData.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -343,9 +352,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B5A86C2887B24600D5DD24 /* MoreInfo+Data.json in Resources */,
+				C9B5A86B2887B05800D5DD24 /* DictionaryData.json in Resources */,
 				FBB1553928334800003A67D2 /* Preview Assets.xcassets in Resources */,
 				FBB1553628334800003A67D2 /* Assets.xcassets in Resources */,
-				FBE3F98B2848595B00C950C6 /* MoreInfo+Data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +371,7 @@
 				CC34E8A3285997DB00DECEB7 /* USizes.swift in Sources */,
 				CC0FFE5B2848490300AC86CA /* ScamDetectAnswer.swift in Sources */,
 				CC83793128645A1A0085BE45 /* Result.swift in Sources */,
+				FB4AEB4A2886262700634173 /* QTDict.swift in Sources */,
 				CC80EECA2839AE310064B52B /* QTNode.swift in Sources */,
 				FB68D9B128401B91004E1F2E /* MoreInfo.swift in Sources */,
 				FB6F2C482857D94A00683475 /* MoreInfoDetails.swift in Sources */,
@@ -382,6 +393,7 @@
 				C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */,
 				CC4F6477286D439800F64B46 /* ResultPage.swift in Sources */,
 				C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */,
+				C97AB372288A026200422BD7 /* KeyboardDismiss.swift in Sources */,
 				C98E7B1F283DC4D800F55AC0 /* StorageEnums.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
 				CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */,
@@ -515,7 +527,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scam-Detector/Preview Content\"";
-				DEVELOPMENT_TEAM = 99634ZCZN7;
+				DEVELOPMENT_TEAM = 8MB5D7W4FH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -528,7 +540,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.vsidhu.Scam-Detector";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.matt.Scam-Detector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -544,7 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scam-Detector/Preview Content\"";
-				DEVELOPMENT_TEAM = 99634ZCZN7;
+				DEVELOPMENT_TEAM = 8MB5D7W4FH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -557,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.vsidhu.Scam-Detector";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.matt.Scam-Detector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
