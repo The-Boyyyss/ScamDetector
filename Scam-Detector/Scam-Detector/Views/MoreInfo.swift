@@ -95,3 +95,4 @@ struct MoreInfoScreen:View{
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-add-horizontal-and-vertical-scrolling-using-scrollview
 // https://www.youtube.com/watch?v=9QhhpeYKjOs&t=106s
 // https://www.youtube.com/watch?v=BCSP_uh0co0
+// https://www.youtube.com/watch?v=vgvbrBX2FnE&list=LL&index=3&t=965s
