@@ -88,6 +88,9 @@ struct MoreInfoScreen:View{
             }
         }
         .background(GradientBackground().blueGradient)
+        .onTapGesture {
+            KeyboardDismiss()
+        }
     }
 }
 

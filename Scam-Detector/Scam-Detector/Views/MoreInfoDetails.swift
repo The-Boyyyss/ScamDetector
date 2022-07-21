@@ -123,7 +123,7 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 3
                                 Link(destination: URL(string: data.moreInfo.link3!)!) {
-                                    Text("Link 2")
+                                    Text("Link 3")
                                         .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)

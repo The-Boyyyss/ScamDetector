@@ -17,6 +17,7 @@
 		C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */; };
 		C958B3FB286D4A64001C68DD /* BookmarkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B3FA286D4A64001C68DD /* BookmarkManager.swift */; };
 		C958B3FD286D4A70001C68DD /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C958B3FC286D4A70001C68DD /* History.swift */; };
+		C97AB372288A026200422BD7 /* KeyboardDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97AB371288A026200422BD7 /* KeyboardDismiss.swift */; };
 		C98E7B1F283DC4D800F55AC0 /* StorageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */; };
 		C9B5A86B2887B05800D5DD24 /* DictionaryData.json in Resources */ = {isa = PBXBuildFile; fileRef = C90FBB2328878063007C483C /* DictionaryData.json */; };
 		C9B5A86C2887B24600D5DD24 /* MoreInfo+Data.json in Resources */ = {isa = PBXBuildFile; fileRef = FBE3F98A2848595B00C950C6 /* MoreInfo+Data.json */; };
@@ -57,6 +58,7 @@
 		C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmergencyContact_Add.swift; sourceTree = "<group>"; };
 		C958B3FA286D4A64001C68DD /* BookmarkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookmarkManager.swift; sourceTree = "<group>"; };
 		C958B3FC286D4A70001C68DD /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		C97AB371288A026200422BD7 /* KeyboardDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismiss.swift; sourceTree = "<group>"; };
 		C98E7B1E283DC4D800F55AC0 /* StorageEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageEnums.swift; sourceTree = "<group>"; };
 		CC0FFE572848477300AC86CA /* QTNodeChildren.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QTNodeChildren.swift; sourceTree = "<group>"; };
 		CC0FFE5A2848490300AC86CA /* ScamDetectAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScamDetectAnswer.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				596B8503283AD74E0085AC27 /* ColorThemes.swift */,
 				595F2AB3283EF50B00F648E1 /* CustomButton.swift */,
 				CC34E8A2285997DB00DECEB7 /* USizes.swift */,
+				C97AB371288A026200422BD7 /* KeyboardDismiss.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				C93E289D283DEA5F001A101C /* EmergencyContact_Add.swift in Sources */,
 				CC4F6477286D439800F64B46 /* ResultPage.swift in Sources */,
 				C93E289C283DEA5F001A101C /* EmergencyContact.swift in Sources */,
+				C97AB372288A026200422BD7 /* KeyboardDismiss.swift in Sources */,
 				C98E7B1F283DC4D800F55AC0 /* StorageEnums.swift in Sources */,
 				FBB15532283347FF003A67D2 /* Scam_DetectorApp.swift in Sources */,
 				CC80EECC2839BECD0064B52B /* QTErrors.swift in Sources */,
@@ -523,7 +527,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scam-Detector/Preview Content\"";
-				DEVELOPMENT_TEAM = 99634ZCZN7;
+				DEVELOPMENT_TEAM = 8MB5D7W4FH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -536,7 +540,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.vsidhu.Scam-Detector";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.matt.Scam-Detector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -552,7 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Scam-Detector/Preview Content\"";
-				DEVELOPMENT_TEAM = 99634ZCZN7;
+				DEVELOPMENT_TEAM = 8MB5D7W4FH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -565,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ca.vsidhu.Scam-Detector";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.matt.Scam-Detector";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
