@@ -3,15 +3,15 @@ import SwiftUI
 /// Bookmarks Page View
 struct History: View {
     /// Environment object for saved results
-    @EnvironmentObject var bookmarks: BookmarkManager;
+    @EnvironmentObject var bookmarks: BookmarkManager
     /// History to show
-    @State var result: Result = Result(questions: [], date: Date.now, isAScam: true);
+    @State var result: Result = Result(questions: [], date: Date.now, isAScam: true)
     /// Navigation variable
-    @State var hasSelected: Bool = false;
+    @State var hasSelected: Bool = false
     /// array of qtnodes that contains the answered questions and how to fix information
-    @State var nodes: [QTNode] = [];
+    @State var nodes: [QTNode] = []
     /// Boolean value if the chosen result history is a scam or not
-    @State var isAScam: Bool = false;
+    @State var isAScam: Bool = false
     
     var body: some View {
         VStack(alignment: .center){
@@ -44,10 +44,10 @@ struct History: View {
                         }
                         .contentShape(Rectangle())
                         .onTapGesture{
-                            result = res;
-                            isAScam = result.isAScam;
-                            nodes = bookmarks.toQTNode(result: result);
-                            hasSelected = true;
+                            result = res
+                            isAScam = result.isAScam
+                            nodes = bookmarks.toQTNode(result: result)
+                            hasSelected = true
                         }
                     }
                 }
@@ -55,6 +55,7 @@ struct History: View {
             .border(Color.black)
             .listStyle(.plain)
             .environment(\.defaultMinListRowHeight, 70)
+            
             Spacer().frame(height:uSizes.sHeight * 0.05)
         }
         .padding(.horizontal, uSizes.sWidth * 0.05)
