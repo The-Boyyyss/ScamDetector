@@ -23,13 +23,12 @@ struct EmergencyContact_Add: View {
     @AppStorage(StorageKeys.emergencyExists.rawValue) var hasContact: Bool = false;
     
     var body: some View {
-        ZStack{
             VStack{
                 Text("Emergency Contact")
                 .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                 .font(.system(size: uSizes.sWidth * 0.1, weight: .bold))
                 .padding(.bottom, uSizes.sHeight * 0.04)
-                .padding(.top, -uSizes.sHeight*0.08)
+                .padding(.top, -uSizes.sHeight * 0.16)
                 .multilineTextAlignment(.center)
                 
                 ScrollView(.vertical){
@@ -66,6 +65,7 @@ struct EmergencyContact_Add: View {
                             .onAppear{
                                 inputNumber = number;
                             }
+
                         Button("Submit"){
                             if inputName.isEmpty || inputNumber.isEmpty {
                                 alertMessage = "Please Fill All Fields";
@@ -92,11 +92,13 @@ struct EmergencyContact_Add: View {
                             }
                         }
                         .buttonStyle(CustomButton())
-                        .padding(.top, uSizes.sHeight * 0.215)
+                        .padding(.top, uSizes.sHeight * 0.20)
                     }
                 }
+                .padding(.bottom, -uSizes.sWidth * 0.03)
             }
-            .padding()
+            .padding(.horizontal, uSizes.sWidth * 0.05)
+            .padding(.vertical, uSizes.sHeight * 0.1)
             .alert("Error", isPresented: $showAlert, actions: {
                 Button("Try Again", role: .cancel, action: {})
             }, message: {
@@ -107,7 +109,7 @@ struct EmergencyContact_Add: View {
                 // Dismisses keyboard when clicked outside
                 KeyboardDismiss()
             }
-        }
+        
     }
 }
 
