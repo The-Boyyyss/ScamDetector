@@ -5,6 +5,8 @@ struct HowToFix: View {
     
     /// a variable that contains a information about how to fix or what to do after a bad result, it is a value of string
     @Binding var howToFixValues: [String]
+    /// a variable that contains a string of a image name that is used to display on the screen
+    @Binding var fixImage: String
     
     var body: some View {
         ScrollView {
@@ -14,7 +16,7 @@ struct HowToFix: View {
                     .frame(width: UIScreen.main.bounds.width, alignment: .leading)
                 
                 VStack(spacing: 5) {
-                    Image(systemName: "lightbulb.fill")
+                    Image(systemName: "\(fixImage)")
                         .resizable()
                         .scaledToFit()
                         .frame(width: uSizes.sWidth * 0.7, height: uSizes.sHeight * 0.30)

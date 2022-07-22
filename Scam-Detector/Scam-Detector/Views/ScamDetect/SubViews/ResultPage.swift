@@ -17,6 +17,8 @@ struct ResultPage: View {
     @Binding var badResults: Bool
     /// a state variable that contains information on how to fix a bad result
     @State var howToFixTexts = [String]()
+    /// a state variable that is used to set a image for the howToFix page
+    @State var fixImageString = ""
     /// array of qtnodes that contains the answered questions and how to fix information
     @Binding var nodes: [QTNode]
     
@@ -55,7 +57,7 @@ struct ResultPage: View {
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
                 Spacer().frame(height: 10)
                 
-                NavigationLink(destination: HowToFix(howToFixValues: $howToFixTexts), isActive: $showFixView) {EmptyView()}
+                NavigationLink(destination: HowToFix(howToFixValues: $howToFixTexts, fixImage: $fixImageString), isActive: $showFixView) {EmptyView()}
                 Button {
                     guard nodes.contains(where: { node in
                         node.howToFix.isEmpty
@@ -65,6 +67,9 @@ struct ResultPage: View {
                     }
                     for (_, j) in nodes.enumerated() {
                         howToFixTexts.append(j.howToFix)
+                        if !j.fixImage.isEmpty {
+                            fixImageString = j.fixImage
+                        }
                     }
                     self.showFixView = true
                 } label: {

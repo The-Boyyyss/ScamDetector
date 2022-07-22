@@ -10,5 +10,6 @@ struct QTDict: Codable {
     let question: String
     /// The steps you can take to fix the problem that occurs if you answer yes to this question
     let howToFix: String
-
+    /// The image attached to a specific question node for displaying on the howToFix page
+    let fixImage: String
 }
