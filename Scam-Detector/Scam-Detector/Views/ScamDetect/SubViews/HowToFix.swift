@@ -1,8 +1,8 @@
 import Foundation
 import SwiftUI
 
+/// information on how to fix the current situation if it is determined you are being scammed
 struct HowToFix: View {
-    
     /// a variable that contains a information about how to fix or what to do after a bad result, it is a value of string
     @Binding var howToFixValues: [String]
     

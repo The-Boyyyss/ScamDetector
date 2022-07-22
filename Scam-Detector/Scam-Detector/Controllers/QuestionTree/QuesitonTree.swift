@@ -36,13 +36,14 @@ struct QuestionTree {
         else {
             currentNode = currentNode.childrenNodes!.child2!
         }
-        print(currentNode.id)
+        
         return currentNode
     }
     
     /// resets tree to parent node
     mutating func reset() -> QTNode {
         currentNode = parentNode
+        
         return currentNode
     }
     
@@ -50,6 +51,7 @@ struct QuestionTree {
     mutating func previousQuestion() {
         
         guard currentNode.parentNode != nil else {
+            
             return
         }
         
@@ -64,6 +66,7 @@ struct QuestionTree {
         
         // make sure there are children to create
         guard children != nil else {
+            
             return
         }
         // assign the children to the node

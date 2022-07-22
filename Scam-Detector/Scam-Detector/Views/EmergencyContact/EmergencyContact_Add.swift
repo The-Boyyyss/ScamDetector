@@ -2,6 +2,7 @@ import SwiftUI
 import Foundation
 import Combine
 
+/// used to add a new emergency conact to the app
 struct EmergencyContact_Add: View {
     /// Saved emergency contact name of type string
     @Binding var name: String;

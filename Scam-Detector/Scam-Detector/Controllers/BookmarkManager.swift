@@ -3,6 +3,7 @@ import SwiftUI
 
 /// Manager class for Bookmarks
 class BookmarkManager: ObservableObject {
+    
     /// Bookmarked Results
     @Published var bookmarkedResults: [Result]{
         didSet{
@@ -14,6 +15,7 @@ class BookmarkManager: ObservableObject {
             }
         }
     }
+    
     /// BookmarkManager constructor. Loads data from localstorage
     init(){
         if let data = UserDefaults.standard.data(forKey: StorageKeys.bookmarkedResults.rawValue){
@@ -24,6 +26,7 @@ class BookmarkManager: ObservableObject {
             self.bookmarkedResults = []
         }
     }
+    
     /// Convert results object to qtnode
     func toQTNode(result: Result) -> [QTNode]{
         let data: QTData = QTData()
@@ -32,8 +35,10 @@ class BookmarkManager: ObservableObject {
             let qtNode = data.buildNode(nodeID: (q.idOne, q.idTwo))
             qtNodeArray.append(qtNode!)
         }
+        
         return qtNodeArray
     }
+    
     /// Adds a new result to bookmarks
     func addResultToHistory(qtNodes: [QTNode], isAScam: Bool){
         var questions: [Question] = []

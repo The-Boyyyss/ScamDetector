@@ -28,7 +28,7 @@
             5,
             10
         ],
-        "question": "Have you already given them anything? This could be giftcard numbers, money, personal information, or anything else of value.",
+        "question": "Have you given them: gift-card numbers, money or personal information.",
         "howToFix": ""
     },
     "5.7": {
@@ -44,7 +44,7 @@
             2,
             1
         ],
-        "question": "Did you get the contact information (phone, email, fax) from a source you trust?",
+        "question": "Did you get their contact information from a source you trust?",
         "howToFix": ""
     },
     "6.18": {
@@ -61,7 +61,7 @@
             3
         ],
         "question": "Have you given them money, giftcards or personal information before",
-        "howToFix": "Immediately Hang-up and don’t answer if they call back. If they start to get angry or threaten you as you hang up this is most likely a scam. \nOnce you hang up, if they were claiming to be from your bank or an organization that you trust, you should call that organization from a number you have previously used and trust or you should find the organizations number either using a phonebook or searching for the organizatins number using a trusted search engine such as www.google.com or www.yahoo.ca. \nIf you are uncomfortable with all of these options and the organization has a location near you, you could also go to the organizations physical location an ask for assistance in person."
+        "howToFix": "Immediately Hang-up and don’t answer if they call back. If they start to get angry or threaten you as you hang up this is most likely a scam. \nOnce you hang up, if they were claiming to be from your bank or an organization that you trust, you should call that organization from a number you have previously used and trust or you should find the organizations number either using a phonebookor searching for the organizatins number using a trusted search engine such as www.google.com or www.yahoo.ca. \nIf you are uncomfortable with all of these options and the organization has a location near you, you could also go to the organizations physical location an ask for assistance in person."
     },
     "6.14": {
         "id": [
@@ -127,20 +127,12 @@
         "question": "Have you given them money, giftcards or personal information before",
         "howToFix": ""
     },
-    "5.1": {
-        "id": [
-            5,
-            1
-        ],
-        "question": "p",
-        "howToFix": "q5.1 how to fix"
-    },
     "5.11": {
         "id": [
             5,
             11
         ],
-        "question": "Have they ever, or are they currently connected or have they installed anything to your computer?",
+        "question": "Have they connected to or installed anything on your computer?",
         "howToFix": "Scammers will often install screen sharing software so they can watch and control your screen remotely. They will then get you to log onto your banking information or bring up a square black window and get you to type amounts into it. \nThey will then claim that too much money was transfered and demand that you compensate them for the mistake"
     },
     "5.9": {
@@ -148,7 +140,7 @@
             5,
             9
         ],
-        "question": "Have you already given them anything? This could be giftcard numbers, money, personal information, or anything else of value.",
+        "question": "Have you already given them anything of value including personal info.",
         "howToFix": "Immediately Hang-up and don’t answer if they call back. If they start to get angry or threaten you as you hang up this is most likely a scam. \nOnce you hang up, if they were claiming to be from your bank or an organization that you trust, you should call that organization from a number you have previously used and trust or you should find the organizations number either using a phonebook or searching for the organizatins number using a trusted search engine such as www.google.com or www.yahoo.ca. \nIf you are uncomfortable with all of these options and the organization has a location near you, you could also go to the organizations physical location an ask for assistance in person."
     },
     "6.19": {
@@ -174,14 +166,6 @@
         ],
         "question": "Are you still currently on the phone with them?",
         "howToFix": ""
-    },
-    "5.2": {
-        "id": [
-            5,
-            2
-        ],
-        "question": "q",
-        "howToFix": "q5.2 how to fix"
     },
     "6.11": {
         "id": [
@@ -212,7 +196,7 @@
             3,
             1
         ],
-        "question": "Are they asking for something valuable other than money or your personal information (like gift-cards)",
+        "question": "Are they asking for valuables other than money or personal information",
         "howToFix": "Consider if you are 100% positive the person you got this information from was credible."
     },
     "6.31": {
@@ -228,7 +212,7 @@
             4,
             6
         ],
-        "question": "have they tried to get access, or claimed something is wrong with, your computer?",
+        "question": "did they ask to access, or claim something is wrong with your computer?",
         "howToFix": "If during the call the rep becomes hostile, begins threatening you with legal action, or asks you for money, giftcards, or valuables, immediatly hang up and call someone you can trust for assistance."
     },
     "5.12": {
@@ -236,7 +220,7 @@
             5,
             12
         ],
-        "question": "Have they claimed that you’ve won a prize or are offering you something too good to be true?",
+        "question": "Did they say you've won a prize or are entitled to something of value?",
         "howToFix": "Scammers will often try to lure people in by pretending that you’ve won something. Odds are if something sounds too good to be true, it probably is."
     },
     "5.3": {
@@ -340,7 +324,7 @@
             3,
             3
         ],
-        "question": "Did they ask for money, giftcards, money-transfers, for you to receive and ship a box or personal information such as Social insurance number, licence number, etc?",
+        "question": "Did they ask for money, or for you to receive and ship a box?",
         "howToFix": ""
     },
     "5.5": {

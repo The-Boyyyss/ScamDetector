@@ -1,11 +1,7 @@
-/*
- This page include code for home screen which the user fill see.
- */
-
 import SwiftUI
 
+// Initial access point and portal for application 
 struct HomeScreen:View{
-    
     var body: some View{
         ZStack{
             VStack{
@@ -68,7 +64,6 @@ struct HomeScreen:View{
         .background(GradientBackground().blueGradient)
     }
 }
-
 
 // Ref:
 // For Buttons: https://www.hackingwithswift.com/books/ios-swiftui/buttons-and-images

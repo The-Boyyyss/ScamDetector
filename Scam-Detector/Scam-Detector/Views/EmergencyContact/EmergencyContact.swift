@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// displays emergency contact information 
 struct EmergencyContact: View {
     /// Saved emergency contact name
     @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = ""
@@ -59,4 +60,3 @@ struct EmergencyContact: View {
 
 // REFERENCE
 // Make a Phone Call https://localcoder.org/how-to-create-tappable-url-phone-number-in-swiftui
-

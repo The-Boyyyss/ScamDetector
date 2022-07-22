@@ -10,5 +10,4 @@ struct QTDict: Codable {
     let question: String
     /// The steps you can take to fix the problem that occurs if you answer yes to this question
     let howToFix: String
-
 }
