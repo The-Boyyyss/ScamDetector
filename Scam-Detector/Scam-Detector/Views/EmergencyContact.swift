@@ -2,11 +2,11 @@ import SwiftUI
 
 struct EmergencyContact: View {
     /// Saved emergency contact name
-    @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = "";
+    @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = ""
     /// Saved emergency contact number
-    @AppStorage(StorageKeys.emergencyNumber.rawValue) private var emergencyNumber = "";
+    @AppStorage(StorageKeys.emergencyNumber.rawValue) private var emergencyNumber = ""
     /// Navigation variable to add a contact page
-    @State var showAddPage: Bool = false;
+    @State var showAddPage: Bool = false
     
     var body: some View {
         VStack(alignment: .center){
@@ -22,7 +22,7 @@ struct EmergencyContact: View {
                 
                 NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $showAddPage), isActive: $showAddPage){
                     Button("Add Contact"){
-                        showAddPage = true;
+                        showAddPage = true
                     }
                     .buttonStyle(CustomButton())
                 }
@@ -33,11 +33,11 @@ struct EmergencyContact: View {
                         let tel = "tel://";
                         let formatted = tel + emergencyNumber;
                         guard let call = URL(string: formatted) else { return };
-                        UIApplication.shared.open(call);
+                        UIApplication.shared.open(call)
                     }
                     .buttonStyle(CustomButton())
                     
-                    Spacer();
+                    Spacer()
                     
                     NavigationLink(destination: EmergencyContact_Add(name: $emergencyName, number: $emergencyNumber, isFinished: $showAddPage), isActive: $showAddPage){
                         Button{
