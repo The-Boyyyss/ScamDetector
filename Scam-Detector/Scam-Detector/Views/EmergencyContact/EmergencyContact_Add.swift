@@ -28,7 +28,7 @@ struct EmergencyContact_Add: View {
                 .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                 .font(.system(size: uSizes.sWidth * 0.1, weight: .bold))
                 .padding(.bottom, uSizes.sHeight * 0.04)
-                .padding(.top, -uSizes.sHeight * 0.16)
+                .padding(.top, -uSizes.sHeight * 0.15)
                 .multilineTextAlignment(.center)
                 
                 ScrollView(.vertical){

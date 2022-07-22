@@ -17,7 +17,7 @@ struct EmergencyContact: View {
             .font(.system(size: uSizes.sWidth * 0.1, weight: .bold))
             .padding(.bottom, uSizes.sHeight * 0.04)
             .padding(.top, uSizes.sHeight*0.05)
-            Spacer().frame(height: uSizes.sHeight * 0.17)
+            Spacer().frame(height: uSizes.sHeight * 0.15)
             
             if emergencyName.isEmpty || emergencyNumber.isEmpty {
                 
@@ -30,13 +30,22 @@ struct EmergencyContact: View {
             }
             else {
                 VStack{
-                    Button("Call \(emergencyName)"){
+                    Button("Call\n\(emergencyName)"){
                         let tel = "tel://";
                         let formatted = tel + emergencyNumber;
                         guard let call = URL(string: formatted) else { return };
                         UIApplication.shared.open(call)
                     }
-                    .buttonStyle(CustomButton())
+                    .frame(width: UIScreen.main.bounds.width * 0.61)
+                    .padding()
+                    .multilineTextAlignment(.center)
+                    .background(Color.customButtonColor)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .font(.system(size: 28, weight: .bold, design: .default))
+                    .shadow(color: .gray, radius: 4, x: 0, y: 5)
+                    
+                    
                     
                     Spacer()
                     
@@ -44,7 +53,7 @@ struct EmergencyContact: View {
                         Button{
                             showAddPage = true;
                         } label: {
-                            Label("Contact Info", systemImage: "info.circle")
+                            Label("Update", systemImage: "info.circle")
                         }
                         .buttonStyle(CustomButton())
                     }
