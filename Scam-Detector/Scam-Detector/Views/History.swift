@@ -55,6 +55,7 @@ struct History: View {
             .border(Color.black)
             .listStyle(.plain)
             .environment(\.defaultMinListRowHeight, 70)
+            
             Spacer().frame(height:uSizes.sHeight * 0.05)
         }
         .padding(.horizontal, uSizes.sWidth * 0.05)

@@ -64,7 +64,7 @@ struct EmergencyContact_Add: View {
                             .onAppear{
                                 inputNumber = number;
                             }
-                        
+
                         Button("Submit"){
                             if inputName.isEmpty || inputNumber.isEmpty {
                                 alertMessage = "Please Fill All Fields";
@@ -94,9 +94,8 @@ struct EmergencyContact_Add: View {
                         .padding(.top, uSizes.sHeight * 0.20)
                     }
                 }
-                .padding(.bottom, -uSizes.sWidth * 0.03 )
+                .padding(.bottom, -uSizes.sWidth * 0.03)
             }
-            //.ignoresSafeArea(.keyboard, edges: .bottom)
             .padding(.horizontal, uSizes.sWidth * 0.05)
             .padding(.vertical, uSizes.sHeight * 0.1)
             .alert("Error", isPresented: $showAlert, actions: {
