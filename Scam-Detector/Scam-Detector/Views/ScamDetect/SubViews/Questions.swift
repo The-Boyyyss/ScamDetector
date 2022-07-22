@@ -1,6 +1,7 @@
 import SwiftUI
 import Foundation
 
+/// displays the questions for the user to navigate through
 struct ScamDetect_Questions:View {
     /// the current node in the tree
     @State var node: QTNode = QuestionTree.instance.reset()

@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// displays emergency contact information 
 struct EmergencyContact: View {
     /// Saved emergency contact name
     @AppStorage(StorageKeys.emergencyName.rawValue) private var emergencyName = "";

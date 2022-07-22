@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Bookmarks Page View
+/// History Page showing previous results of the scam-detect feature
 struct History: View {
     /// Environment object for saved results
     @EnvironmentObject var bookmarks: BookmarkManager;

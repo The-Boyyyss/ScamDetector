@@ -158,10 +158,29 @@
 		CC4F646F286D42FC00F64B46 /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				59F555B2283B06B60083832C /* HowToFix.swift */,
 				CC4F6476286D439800F64B46 /* ResultPage.swift */,
 				CC4F6471286D42FC00F64B46 /* Questions.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		CC4F64FD288B1EF200F64B46 /* MoreInfo */ = {
+			isa = PBXGroup;
+			children = (
+				FB68D9AD28401B91004E1F2E /* MoreInfo.swift */,
+				FB6F2C472857D94A00683475 /* MoreInfoDetails.swift */,
+			);
+			path = MoreInfo;
+			sourceTree = "<group>";
+		};
+		CC4F64FE288B1EFF00F64B46 /* EmergencyContact */ = {
+			isa = PBXGroup;
+			children = (
+				C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */,
+				C93E289A283DEA5F001A101C /* EmergencyContact.swift */,
+			);
+			path = EmergencyContact;
 			sourceTree = "<group>";
 		};
 		CC80EEBE283998B80064B52B /* Models */ = {
@@ -231,15 +250,12 @@
 		FB68D9AA28401B91004E1F2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC4F64FE288B1EFF00F64B46 /* EmergencyContact */,
+				CC4F64FD288B1EF200F64B46 /* MoreInfo */,
 				CC4F646E286D42FC00F64B46 /* ScamDetect */,
 				FB3317A1285D65C4005FFA91 /* Splash.swift */,
 				C958B3FC286D4A70001C68DD /* History.swift */,
 				FB33179F285D6470005FFA91 /* Home.swift */,
-				FB68D9AD28401B91004E1F2E /* MoreInfo.swift */,
-				FB6F2C472857D94A00683475 /* MoreInfoDetails.swift */,
-				C93E289B283DEA5F001A101C /* EmergencyContact_Add.swift */,
-				C93E289A283DEA5F001A101C /* EmergencyContact.swift */,
-				59F555B2283B06B60083832C /* HowToFix.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+/// displays the results of the scam detect detect feature
 struct ResultPage: View {
     /// a state variable for indicating fix view to be showed if button is clicked
     @State private var showFixView = false

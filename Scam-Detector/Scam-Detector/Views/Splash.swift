@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// The initial splashscreen with logo
 struct SplashScreen: View {
     /// Check if splash duration is finished then go to homescreen
     @State var isActive:Bool = false

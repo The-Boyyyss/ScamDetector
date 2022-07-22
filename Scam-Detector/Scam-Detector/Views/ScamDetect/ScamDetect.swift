@@ -1,6 +1,7 @@
 import SwiftUI
 import Foundation
 
+/// the view manager for the scam detect feature
 struct ScamDetect:View {
     /// nodes of answers chosen by users
     @State var chosenNodes: [QTNode] = []

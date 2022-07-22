@@ -1,5 +1,6 @@
 import SwiftUI
 
+// Initial access point and portal for application 
 struct HomeScreen:View{
     var body: some View{
         ZStack{

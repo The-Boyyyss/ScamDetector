@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+/// displays links for users to access additional information
 struct MoreInfoScreen:View{
     // For text field
     @State var info: String = ""
