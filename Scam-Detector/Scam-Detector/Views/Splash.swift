@@ -1,7 +1,3 @@
-/*
- This page includes code for splash screen which will be displayed for few seconds after running thhe app.
- */
-
 import SwiftUI
 
 struct SplashScreen: View {
@@ -41,6 +37,5 @@ struct SplashScreen: View {
         .background(GradientBackground().blueGradient)
     }
 }
-
 
 // Refrence: https://mobiraft.com/ios/swiftui/how-to-add-splash-screen-in-swiftui/

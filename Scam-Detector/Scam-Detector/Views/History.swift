@@ -24,7 +24,7 @@ struct History: View {
                 .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                 .font(.system(size: uSizes.sWidth*0.08, weight: .semibold))
                 .multilineTextAlignment(.center)
-            
+
             Spacer().frame(height:uSizes.sHeight * 0.03)
             
             NavigationLink(destination: ResultPage(badResults: $isAScam, nodes: $nodes), isActive: $hasSelected){}

@@ -2,7 +2,6 @@ import SwiftUI
 import Foundation
 
 struct ScamDetect_Questions:View {
-    
     /// the current node in the tree
     @State var node: QTNode = QuestionTree.instance.reset()
     /// All the nodes we traverse as we navigate the tree
@@ -69,7 +68,7 @@ struct ScamDetect_Questions:View {
                     
                     VStack {
                         Text(node.question)
-                            .font(.system(size: uSizes.sWidth * 0.07))
+                            .font(.system(size: uSizes.sWidth * 0.065))
                             .multilineTextAlignment(.center)
                         Rectangle()
                             .frame(width: uSizes.sWidth * 0.60, height: 3)

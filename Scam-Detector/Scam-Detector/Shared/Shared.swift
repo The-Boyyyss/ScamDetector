@@ -1,7 +1,3 @@
-/*
- This page includes custom text field which can be used on any page on the app.
- */
-
 import Foundation
 import SwiftUI
 
@@ -42,7 +38,5 @@ struct CustomTextField: View {
     }
 }
 
-
 // Refrence
 // https://www.youtube.com/watch?v=qa9fzIxQb7o&t=289s
-

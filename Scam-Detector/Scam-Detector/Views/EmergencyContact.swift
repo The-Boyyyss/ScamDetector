@@ -59,4 +59,3 @@ struct EmergencyContact: View {
 
 // REFERENCE
 // Make a Phone Call https://localcoder.org/how-to-create-tappable-url-phone-number-in-swiftui
-

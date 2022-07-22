@@ -1,10 +1,3 @@
-//
-//  KeyboardDismiss.swift
-//  Scam-Detector
-//
-//  Created by Matt Hilarry Caballero on 2022-07-21.
-//
-
 import Foundation
 import SwiftUI
 

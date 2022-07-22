@@ -1,6 +1,3 @@
-//  Refs:
-//  withAnimation: https://swiftontap.com/withanimation(_:_:)
-
 import Foundation
 import SwiftUI
 
@@ -50,3 +47,6 @@ struct ProgressIndicator: View {
         }
     }
 }
+
+//  Refs:
+//  withAnimation: https://swiftontap.com/withanimation(_:_:)

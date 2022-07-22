@@ -1,12 +1,7 @@
-/*
- This page includes more information like what scam is, how to prevent etc for any selected scam.
- */
-
 import Foundation
 import SwiftUI
 
 struct MoreInfoDetails:View{
-    
     // It is used to pass data and id from json file for the selected scam type.
     let data: ScamInfo
     
@@ -329,7 +324,6 @@ struct MoreInfoDetails:View{
         .background(GradientBackground().blueGradient)
     }
 }
-
 
 // Ref:
 // To navigate to url: https://www.hackingwithswift.com/quick-start/swiftui/how-to-open-web-links-in-safari
