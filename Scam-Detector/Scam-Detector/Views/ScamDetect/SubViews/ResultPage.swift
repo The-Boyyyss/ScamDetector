@@ -44,11 +44,14 @@ struct ResultPage: View {
                 
             } else {
                 VStack() {
-                    Text("It's most likely a").font(.system(size: 30)).padding(.top, 25)
+                    Text("It's most likely a").font(.system(size: 30)).padding(.top, 10)
                     Text("SCAM").font(.system(size: 35)).bold()
-                    Image("exclamationMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.60, height: uSizes.sHeight * 0.22)
+                    Image("exclamationMarkImg")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: uSizes.sWidth * 0.60, height: uSizes.sHeight * 0.20)
                 }
-                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.45, alignment: .top)
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.40, alignment: .top)
                 .background(.white)
                 .cornerRadius(20.0)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
