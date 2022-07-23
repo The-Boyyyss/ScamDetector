@@ -14,13 +14,14 @@ struct ResultPage: View {
     /// a state variable that contains information on how to fix a bad result
     @State var howToFixTexts = [String]()
     /// a state variable that is used to set a image for the howToFix page
-    @State var fixImageString = ""
+    @State var fixImageString = "lightbulb"
     /// array of qtnodes that contains the answered questions and how to fix information
     @Binding var nodes: [QTNode]
     
     var body: some View {
         
         VStack() {
+            Spacer().frame(height: uSizes.sHeight * 0.05)
             Text("Result").font(.system(size: 42)).bold().frame(width: uSizes.sWidth, height: uSizes.sHeight * 0.1, alignment: .bottom)
                 .padding(.bottom, 10)
             
@@ -57,12 +58,16 @@ struct ResultPage: View {
                 Button {
                     guard nodes.contains(where: { node in
                         node.howToFix.isEmpty
-                    }) else {
+                    })
+                    else {
                         howToFixTexts.append("bad result occured...")
                         return
                     }
+                    howToFixTexts.removeAll()
                     for (_, j) in nodes.enumerated() {
-                        howToFixTexts.append(j.howToFix)
+                        if !j.howToFix.isEmpty {
+                            howToFixTexts.append(j.howToFix)
+                        }
                         if !j.fixImage.isEmpty {
                             fixImageString = j.fixImage
                         }
