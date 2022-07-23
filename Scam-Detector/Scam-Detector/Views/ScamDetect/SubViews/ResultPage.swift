@@ -31,11 +31,11 @@ struct ResultPage: View {
                     Text("it's not a scam").font(.system(size: 32))
                     Image("checkMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.7, height: uSizes.sHeight * 0.30)
                 }
-                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.65, alignment: .top)
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.63, alignment: .top)
                 .background(.white)
                 .cornerRadius(20.0)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
-                Spacer()
+                Spacer().frame(height: 20)
                 
                 NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(self.showHomeView), isActive: $showHomeView) {EmptyView()}
                 Button {self.showHomeView = true} label: {
