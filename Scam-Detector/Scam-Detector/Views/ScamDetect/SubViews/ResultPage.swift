@@ -1,12 +1,8 @@
 import Foundation
 import SwiftUI
 
-// Refs:
-// SwiftUI enumeration of an sequence:
-// https://developer.apple.com/documentation/swiftui/binding/enumerated()
-
+/// displays the results of the scam detect detect feature
 struct ResultPage: View {
-    
     /// a state variable for indicating fix view to be showed if button is clicked
     @State private var showFixView = false
     /// a state variable for indicating help view to be showed if button is clicked
@@ -94,3 +90,7 @@ struct ResultPage: View {
         .padding()
     }
 }
+
+// Refs:
+// SwiftUI enumeration of an sequence:
+// https://developer.apple.com/documentation/swiftui/binding/enumerated()

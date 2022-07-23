@@ -6,5 +6,4 @@ struct uSizes {
     static let sWidth: CGFloat = UIScreen.main.bounds.width
     /// The Device height when app starts
     static let sHeight: CGFloat = UIScreen.main.bounds.height
-    
 }

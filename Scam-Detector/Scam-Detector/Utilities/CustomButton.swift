@@ -1,6 +1,3 @@
-//  Ref:
-//  CustomButton: https://www.hackingwithswift.com/quick-start/swiftui/customizing-button-with-buttonstyle
-
 import Foundation
 import SwiftUI
 
@@ -21,3 +18,5 @@ struct CustomButton: ButtonStyle {
             .shadow(color: .gray, radius: 4, x: 0, y: 5)
     }
 }
+//  Ref:
+//  CustomButton: https://www.hackingwithswift.com/quick-start/swiftui/customizing-button-with-buttonstyle

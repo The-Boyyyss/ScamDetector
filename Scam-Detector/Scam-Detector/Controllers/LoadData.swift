@@ -1,8 +1,5 @@
-/*
- This page includes function to load data from json file for more info pages.
- */
-
 import Foundation
+
 // This model loads data from JSON file. 
 class LoadData {
     
@@ -18,10 +15,12 @@ class LoadData {
                 let results = try JSONDecoder().decode([T].self, from: data)
                 return results
             } catch {
+                
                 // return empty erray if any error happens.
                 return[]
             }
         }
+        
         return[]
     }
     
@@ -29,6 +28,7 @@ class LoadData {
     static func loadDict(name: String) -> [String: QTDict] {
         // path to json file
         var nodeInfo = [String: QTDict]()
+        
         if let path = Bundle.main.path(forResource: name, ofType: "json") {
             do {
                 // load data
@@ -37,10 +37,12 @@ class LoadData {
                 let results = try JSONDecoder().decode([String : QTDict].self, from: data)
                 nodeInfo = results
             } catch {
+                
                 // return empty erray if any error happens.
                 return[:]
             }
         }
+        
         return nodeInfo
     }
 }

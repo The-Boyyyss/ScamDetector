@@ -1,12 +1,8 @@
-/*
- This page includes more information like what scam is, how to prevent etc for any selected scam.
- */
-
 import Foundation
 import SwiftUI
 
+/// A break-down of the details in each more-info section
 struct MoreInfoDetails:View{
-    
     // It is used to pass data and id from json file for the selected scam type.
     let data: ScamInfo
     
@@ -99,8 +95,8 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
-                                    Text("Link 1")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("netcetera.ca/email")
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -111,8 +107,8 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
-                                    Text("Link 2")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("cba.ca/email_fraud")
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -123,8 +119,8 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 3
                                 Link(destination: URL(string: data.moreInfo.link3!)!) {
-                                    Text("Link 3")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("cnbc.com/social_scam")
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -215,11 +211,11 @@ struct MoreInfoDetails:View{
                                     .font(.system(size: 30, weight: .bold))
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .padding()
-                                
+    
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
-                                    Text("Link 1")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("consumer.ftc.gov")
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -230,8 +226,9 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
-                                    Text("Link 2")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("Youtube\n Phone Scam signs")
+                                        .multilineTextAlignment(.center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -242,8 +239,9 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 3
                                 Link(destination: URL(string: data.moreInfo.link3!)!) {
-                                    Text("Link 3")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("Youtube\n Common Phone Scam")
+                                        .multilineTextAlignment(.center)
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -292,8 +290,8 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
-                                    Text("Link 1")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("moneyhelper.org.uk")
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -304,8 +302,8 @@ struct MoreInfoDetails:View{
                                 
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
-                                    Text("Link 2")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.085, alignment: .center)
+                                    Text("usa.gov/fraud")
+                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
@@ -329,7 +327,6 @@ struct MoreInfoDetails:View{
         .background(GradientBackground().blueGradient)
     }
 }
-
 
 // Ref:
 // To navigate to url: https://www.hackingwithswift.com/quick-start/swiftui/how-to-open-web-links-in-safari

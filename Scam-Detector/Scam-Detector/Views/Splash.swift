@@ -1,9 +1,6 @@
-/*
- This page includes code for splash screen which will be displayed for few seconds after running thhe app.
- */
-
 import SwiftUI
 
+/// The initial splashscreen with logo
 struct SplashScreen: View {
     /// Check if splash duration is finished then go to homescreen
     @State var isActive:Bool = false
@@ -41,6 +38,5 @@ struct SplashScreen: View {
         .background(GradientBackground().blueGradient)
     }
 }
-
 
 // Refrence: https://mobiraft.com/ios/swiftui/how-to-add-splash-screen-in-swiftui/

@@ -1,13 +1,8 @@
-/*
- This page includes code of list of different types of scams and navigation to more information on particular scam.
- Also it inludes option to update emercency contact.
- */
-
 import Foundation
 import SwiftUI
 
+/// displays links for users to access additional information
 struct MoreInfoScreen:View{
-    
     // For text field
     @State var info: String = ""
     // To pass id of selected scam. For eg: 1 for email scam.
