@@ -28,6 +28,7 @@ public struct QTData {
             id: (QTData.nodeInfo[key]!.id[0], QTData.nodeInfo[key]!.id[1]),
             question: QTData.nodeInfo[key]!.question,
             howToFix: QTData.nodeInfo[key]!.howToFix,
+            fixImage: QTData.nodeInfo[key]!.fixImage,
             parentNode: parentNode)
     }
 }

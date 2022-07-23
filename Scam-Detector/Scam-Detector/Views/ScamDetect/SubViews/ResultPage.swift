@@ -13,12 +13,15 @@ struct ResultPage: View {
     @Binding var badResults: Bool
     /// a state variable that contains information on how to fix a bad result
     @State var howToFixTexts = [String]()
+    /// a state variable that is used to set a image for the howToFix page
+    @State var fixImageString = "lightbulb"
     /// array of qtnodes that contains the answered questions and how to fix information
     @Binding var nodes: [QTNode]
     
     var body: some View {
         
         VStack() {
+            Spacer().frame(height: uSizes.sHeight * 0.05)
             Text("Result").font(.system(size: 42)).bold().frame(width: uSizes.sWidth, height: uSizes.sHeight * 0.1, alignment: .bottom)
                 .padding(.bottom, 10)
             
@@ -28,11 +31,11 @@ struct ResultPage: View {
                     Text("it's not a scam").font(.system(size: 32))
                     Image("checkMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.7, height: uSizes.sHeight * 0.30)
                 }
-                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.65, alignment: .top)
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.63, alignment: .top)
                 .background(.white)
                 .cornerRadius(20.0)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
-                Spacer()
+                Spacer().frame(height: 20)
                 
                 NavigationLink(destination: HomeScreen().navigationBarBackButtonHidden(self.showHomeView), isActive: $showHomeView) {EmptyView()}
                 Button {self.showHomeView = true} label: {
@@ -41,26 +44,36 @@ struct ResultPage: View {
                 
             } else {
                 VStack() {
-                    Text("It's most likely a").font(.system(size: 30)).padding(.top, 25)
+                    Text("It's most likely a").font(.system(size: 30)).padding(.top, 10)
                     Text("SCAM").font(.system(size: 35)).bold()
-                    Image("exclamationMarkImg").resizable().scaledToFit().frame(width: uSizes.sWidth * 0.60, height: uSizes.sHeight * 0.22)
+                    Image("exclamationMarkImg")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: uSizes.sWidth * 0.60, height: uSizes.sHeight * 0.20)
                 }
-                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.45, alignment: .top)
+                .frame(width: uSizes.sWidth * 0.80, height: uSizes.sHeight * 0.40, alignment: .top)
                 .background(.white)
                 .cornerRadius(20.0)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
                 Spacer().frame(height: 10)
                 
-                NavigationLink(destination: HowToFix(howToFixValues: $howToFixTexts), isActive: $showFixView) {EmptyView()}
+                NavigationLink(destination: HowToFix(howToFixValues: $howToFixTexts, fixImage: $fixImageString), isActive: $showFixView) {EmptyView()}
                 Button {
                     guard nodes.contains(where: { node in
                         node.howToFix.isEmpty
-                    }) else {
+                    })
+                    else {
                         howToFixTexts.append("bad result occured...")
                         return
                     }
+                    howToFixTexts.removeAll()
                     for (_, j) in nodes.enumerated() {
-                        howToFixTexts.append(j.howToFix)
+                        if !j.howToFix.isEmpty {
+                            howToFixTexts.append(j.howToFix)
+                        }
+                        if !j.fixImage.isEmpty {
+                            fixImageString = j.fixImage
+                        }
                     }
                     self.showFixView = true
                 } label: {

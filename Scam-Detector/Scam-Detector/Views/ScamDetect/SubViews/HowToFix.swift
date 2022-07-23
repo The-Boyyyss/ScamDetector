@@ -5,26 +5,36 @@ import SwiftUI
 struct HowToFix: View {
     /// a variable that contains a information about how to fix or what to do after a bad result, it is a value of string
     @Binding var howToFixValues: [String]
+    /// a variable that contains a string of a image name that is used to display on the screen
+    @Binding var fixImage: String
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Spacer().frame(height: 20)
+        VStack {
+                Spacer().frame(height: 8)
                 Text("How To Fix").font(.system(size: 42)).bold().padding()
-                    .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                .frame(width: uSizes.sWidth, alignment: .leading)
                 
-                VStack(spacing: 5) {
-                    Image(systemName: "lightbulb.fill")
+                ScrollView {
+                    Image(systemName: "\(fixImage)")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: uSizes.sWidth * 0.7, height: uSizes.sHeight * 0.30)
-                    
-                    ForEach(howToFixValues, id: \.self) { value in
-                        Text(value)
-                    }
-                    Spacer()
-                }.frame(width: UIScreen.main.bounds.width * 0.9, height: uSizes.sHeight, alignment: .leading).padding()
-            }
-        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .top).padding().background(GradientBackground().blueGradient)
+                        .frame(width: uSizes.sWidth * 0.5, height: uSizes.sHeight * 0.3, alignment: .leading)
+                        .padding()
+                    VStack {
+                        ForEach(Array(howToFixValues.enumerated()), id: \.element) { index, element in
+                            Text("Step \(index + 1)")
+                                .font(.system(size: 18)).bold()
+                                .frame(width: uSizes.sWidth, alignment: .leading)
+                                .padding(.top, 10)
+                            Text(element).frame(width: uSizes.sWidth * 0.80, alignment: .leading)
+                        }.frame(width: uSizes.sWidth * 0.9, alignment: .leading)
+                        Spacer()
+                    }.frame(width: uSizes.sWidth * 0.85, alignment: .leading).padding()
+                }.padding(.bottom, uSizes.sHeight * 0.12)
+        }.frame(width: uSizes.sWidth, height: uSizes.sHeight).background(GradientBackground().blueGradient).padding()
     }
 }
+
+// Refs:
+// SwiftUI get the index of each element in an array:
+// https://stackoverflow.com/questions/57244713/get-index-in-foreach-in-swiftui
