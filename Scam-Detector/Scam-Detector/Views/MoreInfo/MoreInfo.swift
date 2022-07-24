@@ -27,7 +27,7 @@ struct MoreInfoScreen:View{
                     VStack(spacing: 15) {
                         NavigationLink(destination: EmergencyContact(), label: {
                             ZStack{
-                                RoundedRectangle(cornerRadius: uSizes.sWidth*0.065)
+                                RoundedRectangle(cornerRadius: 10)
                                     .fill(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                     .shadow(radius: 10)
                                     .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.16)
@@ -39,12 +39,12 @@ struct MoreInfoScreen:View{
                                         .padding(.leading, uSizes.sWidth*0.08)
                                     Text("Emergency Contact")
                                         .font(.system(size: uSizes.sWidth*0.085))
-                                        .padding(.leading, uSizes.sWidth*0.06)
-                                        .frame(maxWidth: 210)
+                                        .padding(.leading, uSizes.sWidth*0.0175)
+                                        .frame(width: uSizes.sWidth*0.5)
                                     Image(systemName: "arrow.forward")
                                         .font(.system(size: uSizes.sWidth*0.1))
-                                        .padding(.leading, uSizes.sWidth*0.08)
-                                        .padding(.trailing, uSizes.sWidth*0.085)
+                                        .padding(.leading, uSizes.sWidth*0.025)
+                                        .padding(.trailing, uSizes.sWidth*0.065)
                                 }
                                 .foregroundColor(.white)
                             }
@@ -56,7 +56,7 @@ struct MoreInfoScreen:View{
                         }), id: \.id) { data in
                             NavigationLink(destination: MoreInfoDetails(data: data), label: {
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: uSizes.sWidth*0.065)
+                                    RoundedRectangle(cornerRadius: 10)
                                         .fill(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .shadow(radius: 10)
                                         .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.16)
@@ -65,15 +65,15 @@ struct MoreInfoScreen:View{
                                     HStack{
                                         Image(systemName: data.sysImg)
                                             .font(.system(size: uSizes.sWidth*0.09))
-                                            .padding(.leading, uSizes.sWidth*0.15)
+                                            .padding(.leading, uSizes.sWidth*0.08)
                                         Text(data.scamType)
                                             .font(.system(size: uSizes.sWidth*0.085))
-                                            .padding(.leading, uSizes.sWidth*0.055)
-                                            .frame(maxWidth: 200)
+                                            .padding(.leading, uSizes.sWidth*0.0175)
+                                            .frame(width: uSizes.sWidth*0.5)
                                         Image(systemName: "arrow.forward")
                                             .font(.system(size: uSizes.sWidth*0.1))
-                                            .padding(.leading, uSizes.sWidth*0.06)
-                                            .padding(.trailing, uSizes.sWidth*0.12)
+                                            .padding(.leading, uSizes.sWidth*0.025)
+                                            .padding(.trailing, uSizes.sWidth*0.065)
                                     }
                                     .foregroundColor(.white)
                                 }

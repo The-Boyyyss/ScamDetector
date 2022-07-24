@@ -21,25 +21,25 @@ struct HomeScreen:View{
                     .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.22, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
-                    .cornerRadius(25)
+                    .cornerRadius(15)
                     .font(.system(size: uSizes.sWidth*0.14, weight: .bold))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 25)
+                        RoundedRectangle(cornerRadius: 15)
                             .stroke(Color.white, lineWidth: 1.75)
                     )
                 })
-                .padding(.bottom, uSizes.sWidth*0.075)
-                .padding(.top, uSizes.sWidth*0.01)
+                .padding(.bottom, uSizes.sWidth*0.08)
+                .padding(.top, uSizes.sWidth*0.009)
                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
                 NavigationLink(destination: History(), label:{
                     HStack{
                         Image(systemName: "clock.arrow.circlepath")
-                            .padding(.trailing, uSizes.sWidth*0.15)
-                            .padding(.leading, -uSizes.sWidth*0.15)
+                            .padding(.trailing, uSizes.sWidth*0.125)
+                            .padding(.leading, -uSizes.sWidth*0.12)
                         Text("History")
                     }
-                    .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight * 0.12, alignment: .center)
+                    .frame(width: uSizes.sWidth*0.83, height: uSizes.sHeight * 0.12, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
@@ -49,10 +49,11 @@ struct HomeScreen:View{
                 NavigationLink(destination: MoreInfoScreen(data: LoadData.load(name: "MoreInfo+Data")), label:{
                     HStack{
                         Image(systemName: "info.circle")
-                            .padding(.trailing, uSizes.sWidth*0.12)
+                            .padding(.trailing, uSizes.sWidth*0.075)
+                            .padding(.leading, uSizes.sWidth*0.015)
                         Text("Information")
                     }
-                    .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.12, alignment: .center)
+                    .frame(width: uSizes.sWidth*0.83, height: uSizes.sHeight*0.12, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
