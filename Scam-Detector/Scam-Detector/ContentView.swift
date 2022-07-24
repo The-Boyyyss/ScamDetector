@@ -5,8 +5,7 @@ struct ContentView: View {
     let bookmark = BookmarkManager()
     var body: some View {
         NavigationView{
-//            SplashScreen()
-            HomeScreen()
+            SplashScreen()
         }.environmentObject(bookmark).navigationViewStyle(.stack)
             .onAppear{
                 QTData.loadData()
