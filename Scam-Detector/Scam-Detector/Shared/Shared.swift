@@ -33,6 +33,7 @@ struct CustomTextField: View {
         .padding()
         .background(.white)
         .cornerRadius(10)
+        .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.16)
         .padding(.horizontal)
         .foregroundColor(.black)
     }
