@@ -34,7 +34,7 @@ struct SplashScreen: View {
                 }
             }
         }
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .frame(width: uSizes.sWidth, height: uSizes.sHeight)
         .background(GradientBackground().blueGradient)
     }
 }

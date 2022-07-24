@@ -11,15 +11,15 @@ struct MoreInfoDetails:View{
             VStack{
                 Text(data.scamType)
                     .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
-                    .font(.system(size: UIScreen.main.bounds.width*0.12, weight: .bold))
-                    .padding(.top, -UIScreen.main.bounds.width*0.09)
+                    .font(.system(size: uSizes.sWidth*0.12, weight: .bold))
+                    .padding(.top, -uSizes.sWidth*0.09)
                 
                 ScrollView{
                     // Image related to scam type
                     Image(data.moreInfo.image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: UIScreen.main.bounds.width*0.75, height: UIScreen.main.bounds.height*0.22)
+                        .frame(width: uSizes.sWidth*0.75, height: uSizes.sHeight*0.22)
                         .padding()
                     
                     // For email scam, data.id = 1
@@ -59,6 +59,7 @@ struct MoreInfoDetails:View{
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .padding()
                                 .font(.system(size: 30, weight: .bold))
+                                .multilineTextAlignment(.center)
                                 Text("**\(data.moreInfo.whatItIs.section18!)**\(data.moreInfo.whatItIs.section19!)")
                                     .padding()
                                 Text("**\(data.moreInfo.whatItIs.section20!)**\(data.moreInfo.whatItIs.section21!)")
@@ -96,11 +97,11 @@ struct MoreInfoDetails:View{
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("netcetera.ca/email")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -108,11 +109,11 @@ struct MoreInfoDetails:View{
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("cba.ca/email_fraud")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -120,17 +121,17 @@ struct MoreInfoDetails:View{
                                 // Link 3
                                 Link(destination: URL(string: data.moreInfo.link3!)!) {
                                     Text("cnbc.com/social_scam")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             }
                         }
-                        .font(.system(size: 25))
+                        .font(.system(size: uSizes.sHeight*0.035))
                     } // For phone scam, data.id = 2
                     else if(data.id == 2){
                         VStack(alignment: .leading){
@@ -184,6 +185,7 @@ struct MoreInfoDetails:View{
                                 .frame(maxWidth: .infinity, alignment: .center)
                                 .padding()
                                 .font(.system(size: 30, weight: .bold))
+                                .multilineTextAlignment(.center)
                                 Text("**\(data.moreInfo.whatItIs.section28!)**\(data.moreInfo.whatItIs.section29!)")
                                     .padding()
                                 Text("**\(data.moreInfo.whatItIs.section30!)**\(data.moreInfo.whatItIs.section31!)")
@@ -215,11 +217,11 @@ struct MoreInfoDetails:View{
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("consumer.ftc.gov")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -228,11 +230,11 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("Youtube\n Phone Scam signs")
                                         .multilineTextAlignment(.center)
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -241,17 +243,17 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link3!)!) {
                                     Text("Youtube\n Common Phone Scam")
                                         .multilineTextAlignment(.center)
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             }
                         }
-                        .font(.system(size: 25))
+                        .font(.system(size: uSizes.sHeight*0.035))
                     } //For in-person scam, data.id = 3
                     else if(data.id == 3){
                         VStack(alignment: .leading){
@@ -291,11 +293,11 @@ struct MoreInfoDetails:View{
                                 // Link 1
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("moneyhelper.org.uk")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
@@ -303,23 +305,23 @@ struct MoreInfoDetails:View{
                                 // Link 2
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("usa.gov/fraud")
-                                        .frame(width: UIScreen.main.bounds.width*0.88, height: UIScreen.main.bounds.height*0.15, alignment: .center)
+                                        .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
                                         .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
-                                        .font(.system(size: UIScreen.main.bounds.width*0.08))
+                                        .font(.system(size: uSizes.sWidth*0.08))
                                 }
                                 .padding()
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                             }
                         }
-                        .font(.system(size: 25))
+                        .font(.system(size: uSizes.sHeight*0.035))
                     }else{
                         VStack{
                             Text("Error !!!")
                             Text("Cant load data..")
                         }
-                        .font(.system(size: 40, weight: .bold))
+                        .font(.system(size: uSizes.sHeight*0.04, weight: .bold))
                     }
                 }
             }.padding()

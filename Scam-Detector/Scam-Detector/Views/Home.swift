@@ -8,9 +8,9 @@ struct HomeScreen:View{
                 Image("scam-Detector-logo2")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: UIScreen.main.bounds.width*1.1, height: UIScreen.main.bounds.height*0.22)
-                    .padding(.bottom, UIScreen.main.bounds.width*0.05)
-                    .padding(.top, -UIScreen.main.bounds.width*0.25)
+                    .frame(width: uSizes.sWidth*1.24, height: uSizes.sHeight*0.25)
+                    .padding(.bottom, uSizes.sHeight*0.04)
+                    .padding(.top, -uSizes.sHeight*0.14)
                     .padding(.leading, 15)
                 
                 NavigationLink(destination: ScamDetect(), label:{
@@ -18,49 +18,49 @@ struct HomeScreen:View{
                         Text("Detect")
                         Text("Scam")
                     }
-                    .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.21, alignment: .center)
+                    .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.22, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(25)
-                    .font(.system(size: UIScreen.main.bounds.width*0.15, weight: .bold))
+                    .font(.system(size: uSizes.sWidth*0.14, weight: .bold))
                     .overlay(
                         RoundedRectangle(cornerRadius: 25)
                             .stroke(Color.white, lineWidth: 1.75)
                     )
                 })
-                .padding(.bottom, 40)
-                .padding(.top, 40)
+                .padding(.bottom, uSizes.sWidth*0.075)
+                .padding(.top, uSizes.sWidth*0.01)
                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
                 NavigationLink(destination: History(), label:{
                     HStack{
                         Image(systemName: "clock.arrow.circlepath")
-                            .padding(.trailing, 60)
-                            .padding(.leading, -50)
+                            .padding(.trailing, uSizes.sWidth*0.15)
+                            .padding(.leading, -uSizes.sWidth*0.15)
                         Text("History")
                     }
-                    .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height * 0.12, alignment: .center)
+                    .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight * 0.12, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    .font(.system(size: UIScreen.main.bounds.width*0.1))
-                }).padding(.bottom, 40).shadow(color: .gray, radius: 5, x: 0, y: 5)
+                    .font(.system(size: uSizes.sWidth*0.1))
+                }).padding(.bottom, uSizes.sWidth*0.075).shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
                 NavigationLink(destination: MoreInfoScreen(data: LoadData.load(name: "MoreInfo+Data")), label:{
                     HStack{
                         Image(systemName: "info.circle")
-                            .padding(.trailing, 40)
+                            .padding(.trailing, uSizes.sWidth*0.12)
                         Text("Information")
                     }
-                    .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height*0.12, alignment: .center)
+                    .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.12, alignment: .center)
                     .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    .font(.system(size: UIScreen.main.bounds.width*0.1))
-                }).padding(.bottom, 40).shadow(color: .gray, radius: 5, x: 0, y: 5)
+                    .font(.system(size: uSizes.sWidth*0.1))
+                }).padding(.bottom, uSizes.sWidth*0.12).shadow(color: .gray, radius: 5, x: 0, y: 5)
                 Spacer()
-            }.padding(.top, 75)
-        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            }.padding(.top, uSizes.sHeight*0.145)
+        }.frame(width: uSizes.sWidth, height: uSizes.sHeight)
         .background(GradientBackground().blueGradient)
     }
 }
