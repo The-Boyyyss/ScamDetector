@@ -1,3 +1,3 @@
 # Scam Detector
 
-<img src="logo/logo.png">
+<img src="logo/logo2.png">
