@@ -23,10 +23,12 @@ struct HowToFix: View {
                     VStack {
                         ForEach(Array(howToFixValues.enumerated()), id: \.element) { index, element in
                             Text("Step \(index + 1)")
-                                .font(.system(size: 18)).bold()
+                                .font(.system(size: 32)).bold()
                                 .frame(width: uSizes.sWidth, alignment: .leading)
                                 .padding(.top, 10)
-                            Text(element).frame(width: uSizes.sWidth * 0.80, alignment: .leading)
+                            Text(element)
+                                .font(.system(size: 30))
+                                .frame(width: uSizes.sWidth * 0.80, alignment: .leading)
                         }.frame(width: uSizes.sWidth * 0.9, alignment: .leading)
                         Spacer()
                     }.frame(width: uSizes.sWidth * 0.85, alignment: .leading).padding()
