@@ -22,7 +22,10 @@ struct ResultPage: View {
         
         VStack() {
             Spacer().frame(height: uSizes.sHeight * 0.05)
-            Text("Result").font(.system(size: 42)).bold().frame(width: uSizes.sWidth, height: uSizes.sHeight * 0.1, alignment: .bottom)
+            Text("Result")
+                .font(.system(size: 42))
+                .bold()
+                .frame(width: uSizes.sWidth, height: uSizes.sHeight * 0.1, alignment: .bottom)
                 .padding(.bottom, 10)
             
             if (!badResults) {

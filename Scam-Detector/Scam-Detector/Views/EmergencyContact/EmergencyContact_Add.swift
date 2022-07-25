@@ -25,7 +25,6 @@ struct EmergencyContact_Add: View {
     var body: some View {
             VStack{
                 Text("Emergency Contact")
-                .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                 .font(.system(size: uSizes.sWidth * 0.1, weight: .bold))
                 .padding(.bottom, uSizes.sHeight * 0.04)
                 .padding(.top, -uSizes.sHeight * 0.15)

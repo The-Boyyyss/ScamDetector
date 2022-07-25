@@ -14,7 +14,7 @@ struct CurrentQuestionDisplay: View {
     
     var body: some View {
         Circle()
-            .strokeBorder(Color.customButtonColor, lineWidth: 3.5)
+            .strokeBorder(Color.customDarkBlue, lineWidth: 3.5)
             .background(Circle().foregroundColor(.white))
             .frame(width: uSizes.sWidth * 0.18, height: uSizes.sHeight * 0.1)
             .overlay(Text("\(questionNum)")
