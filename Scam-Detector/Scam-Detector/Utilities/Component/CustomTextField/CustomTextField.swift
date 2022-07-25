@@ -15,7 +15,7 @@ struct CustomTextField: View {
             
             if ourText.isEmpty{
                 placeholder
-                    .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                    .foregroundColor(Color.customDarkBlue)
                     .padding(.leading, 40)
                     .font(.system(size: 25))
             }
@@ -33,7 +33,7 @@ struct CustomTextField: View {
         .padding()
         .background(.white)
         .cornerRadius(10)
-        .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.16)
+        .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.12)
         .padding(.horizontal)
         .foregroundColor(.black)
     }

@@ -27,7 +27,7 @@ struct QuestionTree {
         
         // there should be children to traverse too otherwise throw an error
         guard currentNode.childrenNodes != nil && currentNode.childrenNodes?.child1 != nil && currentNode.childrenNodes?.child2 != nil else {
-            throw QTErrors.NoChildAtIndex
+            throw SDError.NoChildAtIndex
         }
         // determine which node to travel too
         if (givenAnswer == ScamDetectAnswer.Yes) {
@@ -53,7 +53,7 @@ struct QuestionTree {
         
         guard currentNode.parentNode != nil else {
             
-            throw QTErrors.NoNodeAboveParent
+            throw SDError.NoNodeAboveParent
         }
         
         currentNode = currentNode.parentNode!

@@ -18,7 +18,6 @@ struct MoreInfoScreen:View{
 
                 
                 CustomTextField(ourText: $info, placeholder: Text("Search"))
-                    .padding()
 
                 ScrollView {
                     VStack(spacing: 15) {
