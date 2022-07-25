@@ -6,4 +6,6 @@ enum QTErrors: Error {
     case TooManyChildren
     /// occurs when you attempt to access a child node at an index that does not exist
     case NoChildAtIndex
+    /// occurs when attempting to go above the parent node
+    case NoNodeAboveParent
 }

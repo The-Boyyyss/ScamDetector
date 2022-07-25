@@ -42,17 +42,18 @@ struct QuestionTree {
     
     /// resets tree to parent node
     mutating func reset() -> QTNode {
+        
         currentNode = parentNode
         
         return currentNode
     }
     
     /// returns to the previous question node if not at the parent
-    mutating func previousQuestion() {
+    mutating func previousQuestion() throws {
         
         guard currentNode.parentNode != nil else {
             
-            return
+            throw QTErrors.NoNodeAboveParent
         }
         
         currentNode = currentNode.parentNode!
