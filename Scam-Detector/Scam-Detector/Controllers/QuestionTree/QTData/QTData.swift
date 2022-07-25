@@ -10,7 +10,7 @@ public struct QTData {
      
     /// Loads data from json file to populate nodeInfo dictionary
     static func loadData(){
-        QTData.nodeInfo = LoadData.loadDict(name: "DictionaryData")
+        QTData.nodeInfo = try! LoadData.loadDict(name: "DictionaryData")
     }
     
     /// builds attempts to build a node from the nodeInfo dictionary. Can optionally accept a parent node to be assigned

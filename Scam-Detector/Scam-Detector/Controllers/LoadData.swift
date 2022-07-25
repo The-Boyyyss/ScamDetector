@@ -4,7 +4,7 @@ import Foundation
 class LoadData {
     
     // Function used to load json content into model and return data as array of objects.
-    static func load<T: Decodable>(name:String) -> [T] {
+    static func load<T: Decodable>(name:String)throws -> [T] {
         
         // path to json file
         if let path = Bundle.main.path(forResource: name, ofType: "json") {
@@ -16,16 +16,15 @@ class LoadData {
                 return results
             } catch {
                 
-                // return empty erray if any error happens.
-                return[]
+                throw SDError.JsonDataLoadFailed
             }
         }
         
-        return[]
+        throw SDError.JsonDataLoadFailed
     }
     
     // Function used to load json content into dictionary and return that dictionary
-    static func loadDict(name: String) -> [String: QTDict] {
+    static func loadDict(name: String)throws -> [String: QTDict] {
         // path to json file
         var nodeInfo = [String: QTDict]()
         
@@ -38,8 +37,7 @@ class LoadData {
                 nodeInfo = results
             } catch {
                 
-                // return empty erray if any error happens.
-                return[:]
+                throw SDError.DictionaryDataLoadFailed
             }
         }
         
