@@ -25,6 +25,10 @@ $ git clone git@github.com:The-Boyyyss/ScamDetector.git
 ```
 
 ## Credits
+Software used in this project:
+- [Swift](https://www.swift.org/)
+- [XCode](https://developer.apple.com/xcode/)
+
 Many of symbols and imagery are from SF symbols:
 - [SF Symbols](https://sfsymbols.com/)
 
