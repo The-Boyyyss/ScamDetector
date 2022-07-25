@@ -67,7 +67,6 @@ struct QuestionTree {
         
         // make sure there are children to create
         guard children != nil else {
-            
             return
         }
         // assign the children to the node

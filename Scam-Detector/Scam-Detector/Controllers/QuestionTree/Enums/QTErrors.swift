@@ -8,4 +8,6 @@ enum QTErrors: Error {
     case NoChildAtIndex
     /// occurs when attempting to go above the parent node
     case NoNodeAboveParent
+    /// occcurs when dictionary tries to load but the data isn't found
+    case DictionaryDataLoadFailed
 }
