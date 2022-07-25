@@ -35,5 +35,11 @@ Many of symbols and imagery are from SF symbols:
 Resources used for writing the questions and possible solutions can be found in this document:
 - [Document](https://docs.google.com/document/d/1xPldZtW0jv-biDFJtSytTEAWaTzccLYtXDuxeBcHyUQ/edit)
 
+## Authors
+* Matt Caballero
+* Phillip Chadwick
+* Danny Deng
+* Varun Sidhu
+
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
