@@ -19,7 +19,7 @@ struct HomeScreen:View{
                         Text("Scam")
                     }
                     .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.22, alignment: .center)
-                    .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                    .background(Color.customDarkBlue)
                     .foregroundColor(.white)
                     .cornerRadius(15)
                     .font(.system(size: uSizes.sWidth*0.14, weight: .bold))
@@ -40,7 +40,7 @@ struct HomeScreen:View{
                         Text("History")
                     }
                     .frame(width: uSizes.sWidth*0.83, height: uSizes.sHeight * 0.12, alignment: .center)
-                    .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                    .background(Color.customDarkBlue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.system(size: uSizes.sWidth*0.1))
@@ -54,7 +54,7 @@ struct HomeScreen:View{
                         Text("Information")
                     }
                     .frame(width: uSizes.sWidth*0.83, height: uSizes.sHeight*0.12, alignment: .center)
-                    .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                    .background(Color.customDarkBlue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.system(size: uSizes.sWidth*0.1))

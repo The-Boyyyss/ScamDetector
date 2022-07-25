@@ -24,7 +24,7 @@ struct ProgressIndicator: View {
         ZStack {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .frame(width: progressBarWidth, height: uSizes.sHeight * 0.01)
-                .foregroundColor(Color.customButtonColor)
+                .foregroundColor(Color.customDarkBlue)
             HStack(spacing: progressBarWidth * 0.02) {
                 ForEach(0..<totalQuestions, id:\.self) { index in
                     Circle()

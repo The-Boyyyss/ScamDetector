@@ -12,7 +12,6 @@ struct EmergencyContact: View {
     var body: some View {
         VStack(alignment: .center){
             Text("Emergency Contact")
-            .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
             .multilineTextAlignment(.center)
             .font(.system(size: uSizes.sWidth * 0.1, weight: .bold))
             .padding(.bottom, uSizes.sHeight * 0.04)
@@ -39,7 +38,7 @@ struct EmergencyContact: View {
                     .frame(width: UIScreen.main.bounds.width * 0.61)
                     .padding()
                     .multilineTextAlignment(.center)
-                    .background(Color.customButtonColor)
+                    .background(Color.customDarkBlue)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     .font(.system(size: 28, weight: .bold, design: .default))

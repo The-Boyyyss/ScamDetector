@@ -7,14 +7,11 @@ struct MoreInfoScreen:View{
     @State var info: String = ""
     // To pass id of selected scam. For eg: 1 for email scam.
     let data: [ScamInfo]
-    // To add all the scam types in array and then filter then for search feature.
-    @State private var arrayofInfo: [String] = []
 
     var body: some View{
         ZStack{
             VStack{
                 Text("Information")
-                    .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .font(.system(size: uSizes.sWidth*0.11, weight: .bold))
                     .padding(.bottom, uSizes.sHeight*0.03)
                     .padding(.top, -uSizes.sHeight*0.05)
@@ -28,7 +25,7 @@ struct MoreInfoScreen:View{
                         NavigationLink(destination: EmergencyContact(), label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 10)
-                                    .fill(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                    .fill(Color.customDarkBlue)
                                     .shadow(radius: 10)
                                     .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.16)
                                     .padding()
@@ -57,7 +54,7 @@ struct MoreInfoScreen:View{
                             NavigationLink(destination: MoreInfoDetails(data: data), label: {
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 10)
-                                        .fill(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .fill(Color.customDarkBlue)
                                         .shadow(radius: 10)
                                         .frame(width: uSizes.sWidth*0.9, height: uSizes.sHeight*0.16)
                                         .padding()

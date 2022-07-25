@@ -13,7 +13,7 @@ struct CustomButton: ButtonStyle {
                 height: UIScreen.main.bounds.height * 0.05,
                 alignment: .center)
             .padding()
-            .background(Color.customButtonColor)
+            .background(Color.customDarkBlue)
             .foregroundColor(.white)
             .cornerRadius(10)
             .font(.system(size: 28, weight: .bold, design: .default))

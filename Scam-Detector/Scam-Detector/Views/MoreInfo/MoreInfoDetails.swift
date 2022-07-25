@@ -10,7 +10,6 @@ struct MoreInfoDetails:View{
         ZStack{
             VStack{
                 Text(data.scamType)
-                    .foregroundColor(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
                     .font(.system(size: uSizes.sWidth*0.12, weight: .bold))
                     .padding(.top, -uSizes.sWidth*0.09)
                 
@@ -98,7 +97,7 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("netcetera.ca/email")
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
@@ -110,7 +109,7 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("cba.ca/email_fraud")
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
@@ -122,7 +121,7 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link3!)!) {
                                     Text("cnbc.com/social_scam")
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
@@ -218,7 +217,7 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("consumer.ftc.gov")
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
@@ -231,7 +230,7 @@ struct MoreInfoDetails:View{
                                     Text("Youtube\n Phone Scam signs")
                                         .multilineTextAlignment(.center)
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
@@ -244,7 +243,7 @@ struct MoreInfoDetails:View{
                                     Text("Youtube\n Common Phone Scam")
                                         .multilineTextAlignment(.center)
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
@@ -294,7 +293,7 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link1)!) {
                                     Text("moneyhelper.org.uk")
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
@@ -306,7 +305,7 @@ struct MoreInfoDetails:View{
                                 Link(destination: URL(string: data.moreInfo.link2!)!) {
                                     Text("usa.gov/fraud")
                                         .frame(width: uSizes.sWidth*0.88, height: uSizes.sHeight*0.15, alignment: .center)
-                                        .background(Color(red: 1 / 255, green: 25 / 255, blue: 54 / 255))
+                                        .background(Color.customDarkBlue)
                                         .foregroundColor(.white)
                                         .cornerRadius(10)
                                         .font(.system(size: uSizes.sWidth*0.08))
