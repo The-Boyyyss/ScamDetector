@@ -46,7 +46,7 @@ struct HomeScreen:View{
                     .font(.system(size: uSizes.sWidth*0.1))
                 }).padding(.bottom, uSizes.sWidth*0.075).shadow(color: .gray, radius: 5, x: 0, y: 5)
                 
-                NavigationLink(destination: MoreInfoScreen(data: LoadData.load(name: "MoreInfo+Data")), label:{
+                NavigationLink(destination: MoreInfoScreen(data: try! LoadData.load(name: "MoreInfo+Data")), label:{
                     HStack{
                         Image(systemName: "info.circle")
                             .padding(.trailing, uSizes.sWidth*0.075)

@@ -64,6 +64,7 @@ struct EmergencyContact_Add: View {
                             .onAppear{
                                 inputNumber = number;
                             }
+                            
 
                         Button("Submit"){
                             if inputName.isEmpty || inputNumber.isEmpty {
