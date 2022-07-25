@@ -14,7 +14,7 @@ struct ProgressIndicator: View {
     /// a variable that represents the progress bar width. It has a value of the device's screen size in width multiply by a scaling of CGFloat.
     var progressBarWidth = uSizes.sWidth * 0.85
     /// a variable that represents an array of Bool and is used when a question has been answered. Then it will append a true value to its' collection.
-    @State var answeredQuestions: [Bool] = []
+    @State var answeredQuestions: [Int] = []
     /// a variable that determines the width of the small circle used for displaying remaining questions on the progress bar
     var smallCircleWidth = 0.05
     /// a variable that determines the height of the small circle used for displaying remaining questions on the progress bar
@@ -32,7 +32,7 @@ struct ProgressIndicator: View {
                         .frame(width: uSizes.sWidth * smallCircleWidth, height: uSizes.sHeight * smallCircleHeight)
                 }.onChange(of: totalQuestions, perform: { value in
                     withAnimation(.easeInOut(duration: 0.4)) {
-                        answeredQuestions.append(true)
+                        answeredQuestions.append(currentQuestion)
                     }
                 })
             }.frame(width: progressBarWidth, alignment: .trailing)
