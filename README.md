@@ -14,12 +14,12 @@ A SwiftUI application that provides relevant information on scammers, their meth
 ## Installation
 Must have an IOS device that can run the XCode application.
 
-### Option1: Clone using HTTPS
+### Option 1: Clone using HTTPS
 ```
 $ git clone https://github.com/The-Boyyyss/ScamDetector.git
 ```
 
-### Clone using SSH
+### Option 2: Clone using SSH
 ```
 $ git clone git@github.com:The-Boyyyss/ScamDetector.git
 ```
