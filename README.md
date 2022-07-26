@@ -24,6 +24,27 @@ $ git clone https://github.com/The-Boyyyss/ScamDetector.git
 $ git clone git@github.com:The-Boyyyss/ScamDetector.git
 ```
 
+### File Structure
+- Scam-Detector (root)
+    - Controllers (contains functions that are used to manage data to the views)
+        - QuestionTree
+        - ...
+    - Data (contains raw data files that are in json format)
+    - Utilities (contains reusable features that are common in some views)
+        - Enums
+        - Component
+        - ProgressBar
+        - ...
+    - Models (contains all the schemas for modeling the data)
+        - Result
+        - ...
+    - Views (all the screens for displaying the views to the application)
+        - EmergencyContact
+        - MoreInfo
+        - ScamDetect
+        - ...
+
+
 ## Credits
 Software used in this project:
 - [Swift](https://www.swift.org/)
